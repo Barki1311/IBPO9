@@ -1,0 +1,220 @@
+xmlport 67032 "UTT O9MaterialPurchasePrice_SP"
+{
+    Caption = 'UTT O9MaterialPurchasePrice_SP';
+    Format = VariableText;
+    Direction = Export;
+    TextEncoding = UTF8;
+    UseRequestPage = false;
+    FileName = 'O9MaterialPurchasePrice_SP.dsv';
+    TableSeparator = '<NewLine>';
+    FieldSeparator = '|';
+    schema
+    {
+
+        textelement(Root)
+        {
+            tableelement(Integer; Integer)
+            {
+                XmlName = 'Header';
+                SourceTableView = SORTING(Number) WHERE(Number = CONST(1));
+                textelement(MaterialLbl)
+                {
+                    trigger OnBeforePassVariable()
+                    begin
+                        MaterialLbl := 'Material';
+                    end;
+                }
+                textelement(MatDescLbl)
+                {
+                    trigger OnBeforePassVariable()
+                    begin
+                        MatDescLbl := 'MaterialDescription';
+                    end;
+                }
+                textelement(QualityLbl)
+                {
+                    trigger OnBeforePassVariable()
+                    var
+                        myInt: Integer;
+                    begin
+                        QualityLbl := 'Quality';
+
+                    end;
+                }
+
+                textelement(BaseUOMLbl)
+                {
+                    trigger OnBeforePassVariable()
+                    begin
+                        BaseUOMLbl := 'BaseUOM'
+                    end;
+                }
+
+                textelement(LocationCodeLbl)
+                {
+                    trigger OnBeforePassVariable()
+                    begin
+                        LocationCodeLbl := 'LocationCode'
+                    end;
+                }
+                textelement(MaterialPurchasePriceLbl)
+                {
+                    trigger OnBeforePassVariable()
+                    var
+                        myInt: Integer;
+                    begin
+                        MaterialPurchasePriceLbl := 'MaterialPurchasePrice';
+
+                    end;
+                }
+                textelement(CurrencyMaterialPurchasePriceLbl)
+                {
+                    trigger OnBeforePassVariable()
+
+                    begin
+                        CurrencyMaterialPurchasePriceLbl := 'CurrencyMaterialPurchasePrice';
+
+                    end;
+                }
+
+
+
+            }
+            tableelement(Item; Item)
+            {
+                XmlName = 'ItemDim';
+                // SourceTableView = sorting("No.") WHERE("KVSTEX Item Type" = filter("Finished Product" | "yarn"));
+                RequestFilterFields = "No.";
+                fieldelement(Material; item."No.")
+                {
+                }
+
+                textelement(Material_Description)
+
+                {
+                    trigger OnBeforePassVariable()
+                    var
+                        myInt: Integer;
+                    begin
+                        Material_Description := DelChr(item.Description, '=', '"');
+
+                    end;
+                }
+                textelement(Quality)
+                {
+                    trigger OnBeforePassVariable()
+                    begin
+                        Quality := 'Standard'
+                    end;
+                }
+
+                fieldelement(UOM; item."Base Unit of Measure") { }
+
+
+                textelement(LocationCode)
+                {
+                    trigger OnBeforePassVariable()
+                    var
+                        CompanyInfo: Record "Company Information";
+                    begin
+                        CompanyInfo.get();
+                        case CompanyInfo."Country/Region Code" of
+                            'DE':
+                                LocationCode := 'IVMK';
+                            'MX':
+                                LocationCode := 'IVMP';
+
+                        end;
+                    end;
+                }
+
+                textelement(MaterialPurchasePrice)
+                {
+                    trigger OnBeforePassVariable()
+
+
+                    begin
+                        MaterialPurchasePrice := getPurchasePrice(Item."No.", PurchPrice, PurchUOM, PurchCurrency);
+
+                    end;
+                }
+                textelement(CurrencyMaterialPurchasePrice)
+                {
+                    trigger OnBeforePassVariable()
+
+                    begin
+                        CurrencyMaterialPurchasePrice := 'CurrencyMaterialPurchasePrice';
+
+                    end;
+                }
+
+                trigger OnAfterGetRecord()
+                var
+                    myInt: Integer;
+                    ItemledEntry: Record "Item Ledger Entry";
+                    PolymerNA: Boolean;
+
+                begin
+                    if (item."KVSTEX Item Type" = item."KVSTEX Item Type"::Standard) then
+                        if item."KVSTEX Composition Key Total" = '' then
+                            if item."Gen. Prod. Posting Group" in ['OPW LAMFOL', 'SILIKON', 'YARN', 'EKA', 'HILO'] then
+                                PolymerNA := true
+                            else
+                                currXMLport.skip;
+
+                    itemledEntry.SetCurrentKey("Item No.");
+                    itemledEntry.SetRange("Item No.", item."No.");
+                    if itemledEntry.IsEmpty then
+                        currXMLport.skip;
+
+
+
+                end;
+
+                trigger OnPreXmlItem()
+                var
+                    myInt: Integer;
+                begin
+
+                    //Item.Setfilter("KVSTEX Item Type", '%1|%2|%3|%4|%5|%6', item."KVSTEX Item Type"::"Finished Product", item."KVSTEX Item Type"::Yarn, item."KVSTEX Item Type"::"KVS Cutset", item."KVSTEX Item Type"::"KVS Colour Ribbon", item."KVSTEX Item Type"::Standard, item."KVSTEX Item Type"::Warp);
+                    //item.SetRange("KVSTEX Item Status", item."KVSTEX Item Status"::Certified);
+                    item.SetFilter("KVS Default Location Code", '<>%1&<>%2&<>%3&<>%4&<>%5', 'ERSATZTEIL', 'REFACCIONE', 'REVISTA', 'MAGAZIN', 'PRODUCION');
+                    item.Setfilter("Unit Cost", '<>%1', 0);
+
+
+                end;
+
+            }
+
+        }
+
+    }
+
+
+
+    local procedure getPurchasePrice(ItemNo: Code[20]; var PurchPrice: Decimal; var PurchUOM: Code[20]; var PurchCurrency: Code[20]): Variant
+    var
+        PurchasePrice: Record "Purchase Price";
+
+
+
+    begin
+        PurchasePrice.RESET;
+        PurchasePrice.SETCURRENTKEY("Item No.", "Vendor No.", "Starting Date", "Currency Code", "Variant Code",
+                                    "Unit of Measure Code", "Minimum Quantity");
+        PurchasePrice.SETFILTER("Item No.", ItemNo);
+        //PurchasePrice.SETFILTER("Vendor No.", "Source No.");
+        PurchasePrice.SETFILTER("Starting Date", '<=%1|%2', WORKDATE, 0D);
+        PurchasePrice.SETFILTER("Ending Date", '>=%1|%2', WORKDATE, 0D);
+        if PurchasePrice.FINDlast then begin
+            PurchPrice := PurchasePrice."Direct Unit Cost";
+            PurchUOM := PurchasePrice."Unit of Measure Code";
+            PurchCurrency := PurchasePrice."Currency Code";
+        end;
+    end;
+
+    var
+        PurchPrice: Decimal;
+        PurchUOM: Code[20];
+        purchCurrency: code[20];
+}

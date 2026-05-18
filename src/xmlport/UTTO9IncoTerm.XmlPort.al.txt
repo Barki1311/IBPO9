@@ -1,0 +1,321 @@
+xmlport 67027 "UTT O9InCoTerm"
+{
+    Caption = 'UTT O9IncoTerm';
+    Format = VariableText;
+    Direction = Export;
+    TextEncoding = UTF8;
+    UseRequestPage = false;
+    FileName = 'IVMK_IncoTerm.csv';
+    TableSeparator = '<NewLine>';
+    FieldSeparator = '|';
+    schema
+    {
+        textelement(Root)
+        {
+            tableelement(Integer; Integer)
+            {
+                XmlName = 'Header';
+                SourceTableView = SORTING(Number) WHERE(Number = CONST(1));
+
+                textelement(MaterialLbl)
+                {
+                    trigger OnBeforePassVariable()
+                    begin
+                        MaterialLbl := 'Material'
+                    end;
+                }
+                textelement(MaterialDescLbl)
+                {
+                    trigger OnBeforePassVariable()
+                    var
+                        myInt: Integer;
+                    begin
+                        MaterialDescLbl := 'MaterialDescription'
+                    end;
+                }
+                textelement(QualityLbl)
+                {
+                    trigger OnBeforePassVariable()
+                    begin
+                        QualityLbl := 'Quality'
+                    end;
+                }
+                textelement(FromLocationCodeLbl)
+                {
+                    trigger OnBeforePassVariable()
+                    var
+                        myInt: Integer;
+                    begin
+                        FromLocationCodeLbl := 'FromLocationCode'
+                    end;
+                }
+                textelement(ShipToLbl)
+                {
+                    trigger OnBeforePassVariable()
+                    var
+                        myInt: Integer;
+                    begin
+                        ShipToLbl := 'ShipTo'
+                    end;
+                }
+                textelement(SoldToLbl)
+                {
+                    trigger OnBeforePassVariable()
+                    var
+                        myInt: Integer;
+                    begin
+                        SoldToLbl := 'SoldTo'
+                    end;
+                }
+                textelement(TransmodeCodeLbl)
+                {
+                    trigger OnBeforePassVariable()
+                    var
+                        myInt: Integer;
+                    begin
+                        TransmodeCodeLbl := 'TransmodeCode'
+                    end;
+                }
+                textelement(TransmodeDescriptionLbl)
+                {
+                    trigger OnBeforePassVariable()
+                    var
+                        myInt: Integer;
+                    begin
+                        TransmodeDescriptionLbl := 'TransmodeDescription'
+                    end;
+                }
+                textelement(LeadTimeLbl)
+                {
+                    trigger OnBeforePassVariable()
+                    var
+                        myInt: Integer;
+                    begin
+                        LeadTimeLbl := 'LeadTime'
+                    end;
+                }
+                textelement(IncotermLbl)
+                {
+                    trigger OnBeforePassVariable()
+                    var
+                        myInt: Integer;
+                    begin
+                        IncotermLbl := 'Incoterm'
+
+                    end;
+                }
+
+                textelement(InvoiceDatedefinitionLbl)
+                {
+                    trigger OnBeforePassVariable()
+                    var
+                        myInt: Integer;
+                    begin
+                        InvoiceDatedefinitionLbl := 'InvoiceDatedefinition'
+                    end;
+                }
+                textelement(InventoryStorageTypeLbl)
+                {
+                    trigger OnBeforePassVariable()
+                    var
+                        myInt: Integer;
+                    begin
+                        InventoryStorageTypeLbl := 'InventoryStorageType'
+
+                    end;
+                }
+                textelement(IncotermsPlaceLbl)
+                {
+                    trigger OnBeforePassVariable()
+                    begin
+                        IncotermsPlaceLbl := 'IncotermsPlace';
+                    end;
+                }
+
+
+            }
+
+            tableelement(SIV; "UTT SalesBuffer")
+            {
+                XmlName = 'o9SalesActual';
+                textelement(Material)
+                {
+                    trigger OnBeforePassVariable()
+                    begin
+                        Material := siv."Artikelnr.";
+
+                    end;
+                }
+                textelement(MaterialDescription)
+                {
+                    trigger OnBeforePassVariable()
+                    var
+                        myInt: Integer;
+                    begin
+                        MaterialDescription := ItemRec.Description;
+                    end;
+                }
+                textelement(Quality)
+                {
+                    trigger OnBeforePassVariable()
+                    var
+                        myInt: Integer;
+                    begin
+                        Quality := 'Standard';
+                    end;
+                }
+
+                textelement(FromLocationCode)
+                {
+                    trigger OnBeforePassVariable()
+                    var
+                        myInt: Integer;
+                    begin
+                        if CompanyInfo."Country/Region Code" = 'DE' then
+                            FromLocationCode := 'IVMK';
+                        if CompanyInfo."Country/Region Code" = 'MX' then
+                            FromLocationCode := 'IVMP';
+
+                    end;
+                }
+                textelement(ShiptoID)
+                {
+                    trigger OnBeforePassVariable()
+                    var
+                        myInt: Integer;
+                    begin
+                        ShiptoID := siv.Debitor;
+                    end;
+                }
+                textelement(SoldtoID)
+                {
+                    trigger OnBeforePassVariable()
+                    var
+                        myInt: Integer;
+                    begin
+                        SoldtoID := siv.Debitor;
+                    end;
+                }
+                textelement(TransmodeCode)
+                {
+                    trigger OnBeforePassVariable()
+                    var
+                        myInt: Integer;
+                        Customer: Record Customer;
+                    begin
+                        Customer.get(siv.Debitor);
+                        if CompanyInfo."Country/Region Code" = 'DE' then
+                            if Customer."Gen. Bus. Posting Group" in ['INLAND', 'EU'] then
+                                TransmodeCode := 'Truck'
+                            else
+                                TransmodeCode := 'Ship';
+
+                        if CompanyInfo."Country/Region Code" = 'MX' then
+                            if Customer."No." = '10025' then
+                                TransmodeCode := 'Ship'
+                            else
+                                TransmodeCode := 'Truck';
+                    end;
+                }
+                textelement(TransmodeDescription)
+                {
+                    trigger OnBeforePassVariable()
+                    
+                    begin
+                        TransmodeDescription := TransmodeCode;
+                        
+                        
+                    end;
+                }
+                textelement(LeadTime)
+                {
+                    trigger OnBeforePassVariable()
+                    var
+                        myInt: Integer;
+                    begin
+                        if siv.Incoterm in ['AAA', 'CAC', 'EXW', 'EXWA', 'EXWE', 'EXWK', 'FCA', 'FCA TTOP'] then
+                            LeadTime := '1'
+                        else
+                            LeadTime := '5';
+                    end;
+                }
+                textelement(Incoterm)
+                {
+                    trigger OnBeforePassVariable()
+                    var
+                        myInt: Integer;
+                    begin
+                        Incoterm := siv.incoterm;
+
+                    end;
+                }
+
+                textelement(InvoiceDatedefinition)
+                {
+                    trigger OnBeforePassVariable()
+                    var
+                        myInt: Integer;
+                    begin
+                        if siv.Incoterm in ['AAA', 'CAC', 'EXW', 'EXWA', 'EXWE', 'EXWK', 'FCA', 'FCA TTOP'] then
+                            if siv.Debitor in ['17031', '17237', '18064', '10002', '10013'] then
+                                InvoiceDatedefinition := 'Consumption date'
+                            else
+                                InvoiceDatedefinition := 'Goods Issue date'
+                    end;
+                }
+                textelement(InventoryStorageType)
+                {
+                    trigger OnBeforePassVariable()
+                    var
+                        myInt: Integer;
+                    begin
+                        if siv.Debitor in ['17031', '17237', '18064', '10002', '10013'] then
+                            InventoryStorageType := 'Consignment'
+                        else
+                            InventoryStorageType := 'Regular'
+
+                    end;
+                }
+                textelement(IncotermsPlace)
+                {
+                    trigger OnBeforePassVariable()
+                    var
+                        myInt: Integer;
+                    begin
+                        IncotermsPlace := siv.City;
+
+                    end;
+                }
+                trigger OnPreXmlItem()
+                var
+                    myInt: Integer;
+                begin
+                    CompanyInfo.get();
+
+                end;
+
+                trigger OnAfterGetRecord()
+                var
+                    myInt: Integer;
+                begin
+                    ItemRec.get(SIV."Artikelnr.");
+
+                end;
+
+            }
+
+        }
+
+    }
+    procedure SetDataItem(PSIV: Record "UTT SalesBuffer")
+
+    begin
+        SIV := PSIV;
+
+    end;
+
+    var
+        CompanyInfo: Record "Company Information";
+        ItemRec: Record Item;
+
+}

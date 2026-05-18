@@ -1,0 +1,444 @@
+xmlport 67016 "UTT O9RountingMaster"
+{
+    Caption = 'UTT O9 Routing Master';
+    Format = VariableText;
+    Direction = Export;
+    TextEncoding = UTF8;
+    UseRequestPage = false;
+    FileName = 'IVMK_P_RoutingMaster.dsv';
+    TableSeparator = '<NewLine>';
+    FieldSeparator = '|';
+    schema
+    {
+
+        textelement(Root)
+        {
+            tableelement(Integer; Integer)
+            {
+                XmlName = 'Header';
+                SourceTableView = SORTING(Number) WHERE(Number = CONST(1));
+
+                textelement(MaterialcodeLbl)
+                {
+                    trigger OnBeforePassVariable()
+                    begin
+                        MaterialcodeLbl := 'Material';
+                    end;
+                }
+                textelement(MaterialDescLbl)
+                {
+                    trigger OnBeforePassVariable()
+                    begin
+                        MaterialDescLbl := 'MaterialDescription';
+                    end;
+                }
+                textelement(QualityLbl)
+                {
+                    trigger OnBeforePassVariable()
+                    begin
+                        QualityLbl := 'Quality';
+                    end;
+                }
+                textelement(LocationCodeLbl)
+                {
+                    trigger OnBeforePassVariable()
+                    begin
+                        LocationCodeLbl := 'LocationCode';
+                    end;
+                }
+
+                textelement(ResourceCodeLbl)
+                {
+                    trigger OnBeforePassVariable()
+                    begin
+                        ResourceCodeLbl := 'ResourceCode';
+                    end;
+                }
+                textelement(RoutingIDLbl)
+                {
+                    trigger OnBeforePassVariable()
+                    begin
+                        RoutingIDLbl := 'RoutingID';
+                    end;
+                }
+                textelement(BOMVersionLbl)
+                {
+                    trigger OnBeforePassVariable()
+                    begin
+                        BOMVersionLbl := 'BOMVersion';
+                    end;
+                }
+                textelement(BOMIDLbl)
+                {
+                    trigger OnBeforePassVariable()
+                    begin
+                        BOMIDLbl := 'BOMID';
+                    end;
+                }
+
+
+                textelement(ProdRateperDayLbl)
+                {
+                    trigger OnBeforePassVariable()
+                    begin
+                        ProdRateperDayLbl := 'ProductionRateperday';
+                    end;
+                }
+                textelement(PriorityLbl)
+                {
+                    trigger OnBeforePassVariable()
+                    begin
+                        PriorityLbl := 'Priority';
+                    end;
+                }
+                textelement(MinOrderQtyLbl)
+                {
+                    trigger OnBeforePassVariable()
+                    begin
+                        MinOrderQtyLbl := 'MinimumOrderQuantity';
+                    end;
+                }
+                textelement(UOMMinOrderQtyLbl)
+                {
+                    trigger OnBeforePassVariable()
+                    begin
+                        UOMMinOrderQtyLbl := 'UoMMinimumOrderQuantity';
+                    end;
+                }
+                textelement(LotSizeLbl)
+                {
+                    trigger OnBeforePassVariable()
+                    begin
+                        LotSizeLbl := 'LotSize';
+                    end;
+                }
+
+                // textelement(MaxLotsizeLbl)
+                // {
+                //     trigger OnBeforePassVariable()
+                //     begin
+                //         MaxLotsizeLbl := 'Max Lot size';
+                //     end;
+                // }
+
+
+                textelement(StartDateLbl)
+                {
+                    trigger OnBeforePassVariable()
+                    begin
+                        StartDateLbl := 'StartDate';
+                    end;
+                }
+                textelement(EndDateLbl)
+                {
+                    trigger OnBeforePassVariable()
+                    begin
+                        EndDateLbl := 'EndDate';
+                    end;
+                }
+                textelement(OEELbl)
+                {
+                    trigger OnBeforePassVariable()
+                    begin
+                        OEELbl := 'OEE';
+                    end;
+                }
+                textelement(OperationSequenceLbl)
+                {
+                    trigger OnBeforePassVariable()
+                    begin
+                        OperationSequenceLbl := 'OperationSequence';
+                    end;
+                }
+                textelement(NumberOfActiveResourcesLbl)
+                {
+                    trigger OnBeforePassVariable()
+                    begin
+                        NumberOfActiveResourcesLbl := 'NumberOfActiveResources';
+                    end;
+                }
+
+
+
+            }
+            tableelement(Item; Item)
+            {
+                XmlName = 'ItemDim';
+                // SourceTableView = sorting("No.") WHERE("KVSTEX Item Type" = filter("Finished Product" | "yarn"));
+                RequestFilterFields = "No.";
+                tableelement(RtgLine; "Routing Line")
+                {
+                    // LinkFields ="No." = field("No.");
+                    // LinkTable = Item;
+                    // XmlName = 'RtgLine';
+
+                    fieldelement(Material; item."No.")
+                    {
+                    }
+                    fieldelement(MaterialDesc; item.Description)
+                    {
+                    }
+                    textelement(Quality)
+                    {
+                        trigger OnBeforePassVariable()
+                        begin
+                            Quality := 'Standard';
+                        end;
+                    }
+                    textelement(LocationCode)
+                    {
+                        trigger OnBeforePassVariable()
+                        var
+                            myInt: Integer;
+                        begin
+                            companyInfo.get();
+                            case CompanyInfo."Country/Region Code" of
+                                'DE':
+                                    LocationCode := 'IVMK';
+                                'MX':
+                                    LocationCode := 'IVMP';
+
+                            end;
+                        end;
+                    }
+
+                    textelement(ResourceCode)
+                    {
+                        trigger OnBeforePassVariable()
+                        var
+                            myInt: Integer;
+                        begin
+                            ResourceCode := RtgLine."No.";
+
+                        end;
+                    }
+
+                    textelement(RoutingID)
+                    {
+                        trigger OnBeforePassVariable()
+                        var
+                            myInt: Integer;
+                        begin
+                            RoutingID := RtgLine."Routing No.";
+
+                        end;
+                    }
+                    textelement(BomVersion)
+                    {
+                        trigger OnBeforePassVariable()
+                        var
+                            myInt: Integer;
+                        begin
+                            BomVersion := BomActiveVersionCode;
+                            if BomVersion = '' then
+                                BomVersion := '99'
+
+                        end;
+                    }
+                    textelement(BoMID)
+                    {
+                        trigger OnBeforePassVariable()
+                        var
+                            myInt: Integer;
+                        begin
+                            BoMID := ProdBOMHeader."No.";
+
+                        end;
+                    }
+
+                    textelement(ProdRateperDay)
+                    {
+                        trigger OnBeforePassVariable()
+                        var
+                            myInt: Integer;
+                        begin
+                            //if itemLoc.get(RtgLine."No.") then
+                            ProdRateperDay := 'N/A';
+
+                        end;
+                    }
+                    textelement(Priority)
+                    {
+                        trigger OnBeforePassVariable()
+                        var
+                            myInt: Integer;
+                        begin
+                            //if itemLoc.get(RtgLine."No.") then
+                            Priority := '1';
+
+                        end;
+                    }
+                    textelement(MinOrderQty)
+                    {
+                        trigger OnBeforePassVariable()
+                        var
+                            myInt: Integer;
+                        begin
+                            //if itemLoc.get(RtgLine."No.") then
+                            MinOrderQty := 'N/A';
+
+                        end;
+                    }
+                    textelement(UOMMinOrderQty)
+                    {
+                        trigger OnBeforePassVariable()
+                        begin
+                            UOMMinOrderQty := 'N/A';
+                        end;
+                    }
+                    textelement(LotSize)
+                    {
+                        trigger OnBeforePassVariable()
+                        var
+                            myInt: Integer;
+                        begin
+                            //if itemLoc.get(RtgLine."No.") then
+                            LotSize := format(RtgLine."Lot Size");
+
+                        end;
+                    }
+                    // textelement(MaxLotsize)
+                    // {
+                    //     trigger OnBeforePassVariable()
+                    //     var
+                    //         myInt: Integer;
+                    //     begin
+                    //         //if itemLoc.get(RtgLine."No.") then
+                    //         MaxLotsize := format(RtgLine."Lot Size");
+
+                    //     end;
+                    // }
+                    textelement(StartDate)
+                    {
+                        trigger OnBeforePassVariable()
+                        var
+                            myInt: Integer;
+                        begin
+                            //if itemLoc.get(RtgLine."No.") then
+                            StartDate := format(Today, 0, '<year4>/<month,2>/<day,2>');
+                            ;
+
+                        end;
+                    }
+                    textelement(EndDate)
+                    {
+                        trigger OnBeforePassVariable()
+                        var
+                            myInt: Integer;
+                        begin
+                            //if itemLoc.get(RtgLine."No.") then
+                            EndDate := format(DMY2DATE(31, 12, 9999), 0, '<year4>/<month,2>/<day,2>');
+
+                        end;
+                    }
+                    textelement(OEE)
+                    {
+                        trigger OnBeforePassVariable()
+                        var
+                            myInt: Integer;
+                        begin
+                            //if itemLoc.get(RtgLine."No.") then
+                            OEE := 'N/A';
+
+                        end;
+                    }
+                    textelement(OperationSequence)
+                    {
+                        trigger OnBeforePassVariable()
+                        var
+                            myInt: Integer;
+                        begin
+                            //if itemLoc.get(RtgLine."No.") then
+                            OperationSequence := RtgLine."Operation No.";
+                        end;
+                    }
+                    textelement(NumberOfActiveResources)
+                    {
+                        trigger OnBeforePassVariable()
+                        begin
+                            NumberOfActiveResources := '';
+                        end;
+                    }
+
+                    trigger OnPreXmlItem()
+                    begin
+
+                        RtgLine.SetRange("Routing No.", RtgHeader."No.");
+                        RtgLine.SETRANGE("Version Code", RtgActiveVersionCode);
+                        //RtgLine.setfilter("No.",'<>%1','')
+                        
+
+                    end;
+
+                }
+                trigger OnAfterGetRecord()
+                var
+                    ItemledEntry: Record "Item Ledger Entry";
+                begin
+                    // ItemledEntry.SetCurrentKey("Item No.");
+                    // ItemledEntry.SetRange("Item No.", item."No.");
+                    // ItemledEntry.SetRange("Posting Date", CalcDate('<-3Y>', WorkDate), WorkDate);
+                    // if ItemledEntry.IsEmpty then
+                    //     currXMLport.skip;
+
+                    if item.Description = '' then
+                        currXMLport.skip();
+
+                    if not RtgHeader.GET(item."Routing No.") then
+                        currXMLport.skip();
+
+                    ProdBOMHeader.Init();
+                    if not ProdBOMHeader.GET(item."Production BOM No.") then
+                        currXMLport.skip();
+
+                    clear(BomActiveVersionCode);
+                    BomActiveVersionCode := VersionMgt.GetBOMVersion(ProdBOMHeader."No.", WORKDATE, true);
+
+
+                    if not RtgHeader.GET(item."Routing No.") then
+                        currXMLport.skip();
+                    if not ProdBOMHeader.GET(item."Production BOM No.") then
+                        currXMLport.skip();
+
+                    RtgActiveVersionCode := VersionMgt.GetRtngVersion(RtgHeader."No.", WORKDATE, true);
+
+                    companyInfo.get();
+
+                end;
+
+
+
+                trigger OnPreXmlItem()
+                var
+
+
+                begin
+
+                    //item.SetRange("No.", '38565');
+                    //Item.Setfilter("KVSTEX Item Type", '%1|%2|%3|%4|%5', item."KVSTEX Item Type"::"Finished Product", item."KVSTEX Item Type"::Yarn, item."KVSTEX Item Type"::"KVS Cutset", item."KVSTEX Item Type"::"KVS Colour Ribbon", item."KVSTEX Item Type"::"Raw Commodity", item."KVSTEX Item Type"::Warp);
+                    item.Setfilter("KVSTEX Item Status", '%1|%2|%3', item."KVSTEX Item Status"::Certified, item."KVSTEX Item Status"::"Under Development",item."KVSTEX Item Status"::Closed);
+                    item.setfilter("Production BOM No.", '<>%1', '');
+                    item.setfilter("Routing No.", '<>%1', '');
+                    item.SetFilter(Description, '<>%1', '');
+
+
+                end;
+
+            }
+
+
+        }
+
+
+
+
+    }
+    var
+        companyInfo: Record "Company Information";
+        RtgActiveVersionCode: Text;
+        BomActiveVersionCode: Text;
+        RtgHeader: Record "Routing Header";
+        VersionMgt: Codeunit VersionManagement;
+        ProdBOMHeader: Record "Production BOM Header";
+
+}

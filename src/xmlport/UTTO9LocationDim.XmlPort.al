@@ -1,0 +1,234 @@
+xmlport 67000 "UTT O9LocationDim"
+{
+    Caption = 'UTT O9LocationDim';
+    Format = VariableText;
+    Direction = Export;
+    TextEncoding = UTF8;
+    UseRequestPage = false;
+    FileName = 'IVMK_LocationDim.dsv';
+    TableSeparator = '<NewLine>';
+    FieldSeparator = '|';
+    schema
+    {
+        //Location Code	Location Description	Legal Entity Code	Legal Entity Description	Segment	Segment Description	Country	Region
+        textelement(Root)
+        {
+
+            tableelement(Integer; Integer)
+            {
+                XmlName = 'Header';
+                SourceTableView = SORTING(Number) WHERE(Number = CONST(1));
+                textelement(LocationLabel)
+                {
+                    trigger OnBeforePassVariable()
+                    begin
+                        LocationLabel := 'LocationCode';
+                    end;
+                }
+                textelement(LocationDescLabel)
+                {
+                    trigger OnBeforePassVariable()
+                    begin
+                        LocationDescLabel := 'LocationDescription';
+                    end;
+                }
+                textelement(LegalEntityLabel)
+                {
+                    trigger OnBeforePassVariable()
+                    begin
+                        LegalEntityLabel := 'LegalEntityCode';
+                    end;
+                }
+                textelement(LegalEntityDescLabel)
+                {
+                    trigger OnBeforePassVariable()
+                    begin
+                        LegalEntityDescLabel := 'LegalEntityDescription';
+                    end;
+                }
+
+
+                textelement(SegmentLabel)
+                {
+                    trigger OnBeforePassVariable()
+                    begin
+                        SegmentLabel := 'Segment';
+                    end;
+                }
+                textelement(SegmentDescLabel)
+                {
+                    trigger OnBeforePassVariable()
+                    begin
+                        SegmentDescLabel := 'SegmentDescription';
+                    end;
+                }
+                textelement(ContryLabel)
+                {
+                    trigger OnBeforePassVariable()
+                    begin
+                        ContryLabel := 'Country';
+
+                    end;
+                }
+
+                textelement(CountryDescLbl)
+                {
+                    trigger OnBeforePassVariable()
+                    begin
+                        CountryDescLbl := 'CountryDescription';
+                    end;
+                }
+
+                textelement(RegionLabel)
+                {
+                    trigger OnBeforePassVariable()
+                    begin
+                        RegionLabel := 'Region';
+                    end;
+                }
+                textelement(RegioDescLbl)
+                {
+                    trigger OnBeforePassVariable()
+                    var
+                        myInt: Integer;
+                    begin
+                        RegioDescLbl := 'RegionDescription'
+                    end;
+                }
+
+
+            }
+            tableelement(Location; Integer)
+            {
+                XmlName = 'Location';
+                SourceTableView = SORTING(Number) WHERE(Number = CONST(1));
+
+                textelement(Locationcode)
+                {
+                    trigger OnBeforePassVariable()
+
+                    begin
+                         case CompanyInfo."Country/Region Code" of
+                            'DE':
+                                Locationcode := 'IVMK';
+                            'MX':
+                                Locationcode := 'IVMP';
+                        end;
+                    end;
+                }
+                textelement(Description)
+                {
+                    trigger OnBeforePassVariable()
+                    var
+                        myInt: Integer;
+                    begin
+
+                         case CompanyInfo."Country/Region Code" of
+                            'DE':
+                                Description := 'IVMK';
+                            'MX':
+                                Description := 'IVMP';
+                        end;;
+
+                    end;
+                }
+                textelement(LegalEntity)
+                {
+                    trigger OnBeforePassVariable()
+                    begin
+                        case CompanyInfo."Country/Region Code" of
+                            'DE':
+                                LegalEntity := 'IVMK';
+                            'MX':
+                                LegalEntity := 'IVMP';
+                        end;
+                    end;
+                }
+                textelement(LegalEntityDesc)
+                {
+                    trigger OnBeforePassVariable()
+                    begin
+
+                        LegalEntityDesc := CompanyInfo.Name;
+
+                    end;
+                }
+
+
+
+                textelement(Segment)
+                {
+                    trigger OnBeforePassVariable()
+                    begin
+                        Segment := 'Fibers';
+                    end;
+                }
+                textelement(SegmentDesc)
+                {
+                    trigger OnBeforePassVariable()
+                    begin
+                        SegmentDesc := 'Fibers';
+                    end;
+                }
+
+                textelement(Country)
+                {
+                    trigger OnBeforePassVariable()
+                    
+                    begin
+                        Country := CompanyInfo."Country/Region Code";
+                        if Country = '' then begin
+                            Country := CompanyInfo."Country/Region Code"
+                        end;
+
+                    end;
+                }
+
+                textelement(CountryDesc)
+                {
+                    trigger OnBeforePassVariable()
+                    var
+                        myInt: Integer;
+                    begin
+                        CountryDesc := 'N/A';
+
+                    end;
+                }
+
+                textelement(Region)
+                {
+                    trigger OnBeforePassVariable()
+                    var
+                        myInt: Integer;
+                    begin
+                        Region := 'N/A';
+
+                    end;
+                }
+                textelement(RegionDesc)
+                {
+                    trigger OnBeforePassVariable()
+                    var
+                        myInt: Integer;
+                    begin
+                        RegionDesc := 'N/A';
+
+                    end;
+                }
+                trigger OnPreXmlItem()
+                var
+                    myInt: Integer;
+                begin
+                    CompanyInfo.get();
+
+                end;
+            }
+
+        }
+
+
+    }
+    var
+        CompanyInfo: record "Company Information";
+
+}

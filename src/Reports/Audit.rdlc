@@ -1,0 +1,245 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="ReportTitle">
+          <DataField>ReportTitle</DataField>
+        </Field>
+        <Field Name="CompanyName">
+          <DataField>CompanyName</DataField>
+        </Field>
+        <Field Name="PrintedDateTime">
+          <DataField>PrintedDateTime</DataField>
+        </Field>
+        <Field Name="FilterText">
+          <DataField>FilterText</DataField>
+        </Field>
+        <Field Name="DocNo">
+          <DataField>DocNo</DataField>
+        </Field>
+        <Field Name="OrderDate">
+          <DataField>OrderDate</DataField>
+        </Field>
+        <Field Name="VendorNo">
+          <DataField>VendorNo</DataField>
+        </Field>
+        <Field Name="VendorName">
+          <DataField>VendorName</DataField>
+        </Field>
+        <Field Name="PurchaserCode">
+          <DataField>PurchaserCode</DataField>
+        </Field>
+        <Field Name="Status">
+          <DataField>Status</DataField>
+        </Field>
+        <Field Name="CurrencyCode">
+          <DataField>CurrencyCode</DataField>
+        </Field>
+        <Field Name="LineNo">
+          <DataField>LineNo</DataField>
+        </Field>
+        <Field Name="ItemNo">
+          <DataField>ItemNo</DataField>
+        </Field>
+        <Field Name="Description">
+          <DataField>Description</DataField>
+        </Field>
+        <Field Name="UnitOfMeasure">
+          <DataField>UnitOfMeasure</DataField>
+        </Field>
+        <Field Name="QtyOrdered">
+          <DataField>QtyOrdered</DataField>
+        </Field>
+        <Field Name="QtyOrderedFormat">
+          <DataField>QtyOrderedFormat</DataField>
+        </Field>
+        <Field Name="QtyReceived">
+          <DataField>QtyReceived</DataField>
+        </Field>
+        <Field Name="QtyReceivedFormat">
+          <DataField>QtyReceivedFormat</DataField>
+        </Field>
+        <Field Name="QtyInvoiced">
+          <DataField>QtyInvoiced</DataField>
+        </Field>
+        <Field Name="QtyInvoicedFormat">
+          <DataField>QtyInvoicedFormat</DataField>
+        </Field>
+        <Field Name="QtyOutstanding">
+          <DataField>QtyOutstanding</DataField>
+        </Field>
+        <Field Name="QtyOutstandingFormat">
+          <DataField>QtyOutstandingFormat</DataField>
+        </Field>
+        <Field Name="QtyRecvNotInv">
+          <DataField>QtyRecvNotInv</DataField>
+        </Field>
+        <Field Name="QtyRecvNotInvFormat">
+          <DataField>QtyRecvNotInvFormat</DataField>
+        </Field>
+        <Field Name="DirectUnitCost">
+          <DataField>DirectUnitCost</DataField>
+        </Field>
+        <Field Name="DirectUnitCostFormat">
+          <DataField>DirectUnitCostFormat</DataField>
+        </Field>
+        <Field Name="LineAmount">
+          <DataField>LineAmount</DataField>
+        </Field>
+        <Field Name="LineAmountFormat">
+          <DataField>LineAmountFormat</DataField>
+        </Field>
+        <Field Name="AmtRecvNotInv">
+          <DataField>AmtRecvNotInv</DataField>
+        </Field>
+        <Field Name="AmtRecvNotInvFormat">
+          <DataField>AmtRecvNotInvFormat</DataField>
+        </Field>
+        <Field Name="DeliveryStatus">
+          <DataField>DeliveryStatus</DataField>
+        </Field>
+        <Field Name="InvoiceStatus">
+          <DataField>InvoiceStatus</DataField>
+        </Field>
+        <Field Name="PctReceived">
+          <DataField>PctReceived</DataField>
+        </Field>
+        <Field Name="PctReceivedFormat">
+          <DataField>PctReceivedFormat</DataField>
+        </Field>
+        <Field Name="PctInvoiced">
+          <DataField>PctInvoiced</DataField>
+        </Field>
+        <Field Name="PctInvoicedFormat">
+          <DataField>PctInvoicedFormat</DataField>
+        </Field>
+        <Field Name="TotalQtyOrdered">
+          <DataField>TotalQtyOrdered</DataField>
+        </Field>
+        <Field Name="TotalQtyOrderedFormat">
+          <DataField>TotalQtyOrderedFormat</DataField>
+        </Field>
+        <Field Name="TotalQtyReceived">
+          <DataField>TotalQtyReceived</DataField>
+        </Field>
+        <Field Name="TotalQtyReceivedFormat">
+          <DataField>TotalQtyReceivedFormat</DataField>
+        </Field>
+        <Field Name="TotalQtyInvoiced">
+          <DataField>TotalQtyInvoiced</DataField>
+        </Field>
+        <Field Name="TotalQtyInvoicedFormat">
+          <DataField>TotalQtyInvoicedFormat</DataField>
+        </Field>
+        <Field Name="TotalQtyRNI">
+          <DataField>TotalQtyRNI</DataField>
+        </Field>
+        <Field Name="TotalQtyRNIFormat">
+          <DataField>TotalQtyRNIFormat</DataField>
+        </Field>
+        <Field Name="TotalLineAmount">
+          <DataField>TotalLineAmount</DataField>
+        </Field>
+        <Field Name="TotalLineAmountFormat">
+          <DataField>TotalLineAmountFormat</DataField>
+        </Field>
+        <Field Name="GrandTotalQtyOrdered">
+          <DataField>GrandTotalQtyOrdered</DataField>
+        </Field>
+        <Field Name="GrandTotalQtyOrderedFormat">
+          <DataField>GrandTotalQtyOrderedFormat</DataField>
+        </Field>
+        <Field Name="GrandTotalQtyReceived">
+          <DataField>GrandTotalQtyReceived</DataField>
+        </Field>
+        <Field Name="GrandTotalQtyReceivedFormat">
+          <DataField>GrandTotalQtyReceivedFormat</DataField>
+        </Field>
+        <Field Name="GrandTotalQtyInvoiced">
+          <DataField>GrandTotalQtyInvoiced</DataField>
+        </Field>
+        <Field Name="GrandTotalQtyInvoicedFormat">
+          <DataField>GrandTotalQtyInvoicedFormat</DataField>
+        </Field>
+        <Field Name="GrandTotalQtyRNI">
+          <DataField>GrandTotalQtyRNI</DataField>
+        </Field>
+        <Field Name="GrandTotalQtyRNIFormat">
+          <DataField>GrandTotalQtyRNIFormat</DataField>
+        </Field>
+        <Field Name="GrandTotalLineAmount">
+          <DataField>GrandTotalLineAmount</DataField>
+        </Field>
+        <Field Name="GrandTotalLineAmountFormat">
+          <DataField>GrandTotalLineAmountFormat</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

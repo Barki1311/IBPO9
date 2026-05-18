@@ -1,0 +1,147 @@
+table 67026 "UTT IBPO9 Buffer"
+{
+    DataClassification = ToBeClassified;
+
+    fields
+    {
+        field(1; "Entry No."; Integer)
+        {
+            DataClassification = ToBeClassified;
+        }
+        field(2; "Field 1"; Text[100])
+        {
+            DataClassification = ToBeClassified;
+        }
+        field(3; "Field 2"; Text[100])
+        {
+            DataClassification = ToBeClassified;
+        }
+        field(4; "Field 3"; Text[100])
+        {
+            DataClassification = ToBeClassified;
+        }
+        field(5; "Field 4"; Text[100])
+        {
+            DataClassification = ToBeClassified;
+        }
+        field(6; "Field 5"; Text[100])
+        {
+            DataClassification = ToBeClassified;
+        }
+        field(7; "Field 6"; Text[100])
+        {
+            DataClassification = ToBeClassified;
+        }
+        field(8; "Field 7"; Text[100])
+        {
+            DataClassification = ToBeClassified;
+        }
+        field(9; "Field 8"; Text[100])
+        {
+            DataClassification = ToBeClassified;
+        }
+        field(10; "Field 9"; Text[100])
+        {
+            DataClassification = ToBeClassified;
+        }
+        field(11; "Field 10"; Text[100])
+        {
+            DataClassification = ToBeClassified;
+        }
+        field(12; "Field 11"; Text[100])
+        {
+            DataClassification = ToBeClassified;
+        }
+        field(13; "Field 12"; Text[100])
+        {
+            DataClassification = ToBeClassified;
+        }
+        field(14; "Field 13"; Text[100])
+        {
+            DataClassification = ToBeClassified;
+        }
+        field(15; "Field 14"; Text[100])
+        {
+            DataClassification = ToBeClassified;
+        }
+        field(16; "Field 15"; Text[100])
+        {
+            DataClassification = ToBeClassified;
+        }
+        field(17; "Field 16"; Text[100])
+        {
+            DataClassification = ToBeClassified;
+        }
+        field(18; "Field 17"; Text[100])
+        {
+            DataClassification = ToBeClassified;
+        }
+        field(19; "Field 18"; Text[100])
+        {
+            DataClassification = ToBeClassified;
+        }
+        field(20; "Field 19"; Text[100])
+        {
+            DataClassification = ToBeClassified;
+        }
+        field(21; "Field 20"; Text[100])
+        {
+            DataClassification = ToBeClassified;
+        }
+        field(22; "Field 21"; Text[100])
+        {
+            DataClassification = ToBeClassified;
+        }
+        field(23; "Field 22"; Text[100])
+        {
+            DataClassification = ToBeClassified;
+        }
+        field(24; "Field 23"; Text[100])
+        {
+            DataClassification = ToBeClassified;
+        }
+        field(25; "Field 24"; Text[100])
+        {
+            DataClassification = ToBeClassified;
+        }
+        field(26; "Field 25"; Text[100])
+        {
+            DataClassification = ToBeClassified;
+        }
+        field(27; "Field 26"; Text[100])
+        {
+            DataClassification = ToBeClassified;
+        }
+        field(28; "Field 27"; Text[100])
+        {
+            DataClassification = ToBeClassified;
+        }
+        field(29; "Field 28"; Text[100])
+        {
+            DataClassification = ToBeClassified;
+        }
+        field(30; "Field 29"; Text[100])
+        {
+            DataClassification = ToBeClassified;
+        }
+           field(31; "Export Date"; DateTime)
+        {
+            Caption = 'Export Date';
+            DataClassification = CustomerContent;
+        }
+        field(32; "Export Batch ID"; Code[50])
+        {
+            Caption = 'Export Batch ID';
+            DataClassification = CustomerContent;
+        }
+    }
+
+    keys
+    {
+        key(PK; "Entry No.")
+        {
+            Clustered = true;
+        }
+        
+    }
+}

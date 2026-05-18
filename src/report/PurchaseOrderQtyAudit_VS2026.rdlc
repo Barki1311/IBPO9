@@ -1,0 +1,743 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ns0:Report xmlns:ns0="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:ns1="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+
+  <ns0:AutoRefresh>0</ns0:AutoRefresh>
+
+  <ns0:DataSources>
+    <ns0:DataSource Name="DataSetDataSource">
+      <ns0:ConnectionProperties>
+        <ns0:DataProvider>System.Data.DataSet</ns0:DataProvider>
+        <ns0:ConnectString />
+      </ns0:ConnectionProperties>
+      <ns1:DataSourceID>87620860-cac6-48d6-a377-a9400c5d4097</ns1:DataSourceID>
+    </ns0:DataSource>
+  </ns0:DataSources>
+
+  <ns0:DataSets>
+    <ns0:DataSet Name="DataSet_Result">
+      <ns0:Fields>
+        <ns0:Field Name="ReportTitle">            <ns0:DataField>ReportTitle</ns0:DataField>            </ns0:Field>
+        <ns0:Field Name="CompanyName">            <ns0:DataField>CompanyName</ns0:DataField>            </ns0:Field>
+        <ns0:Field Name="FilterText">             <ns0:DataField>FilterText</ns0:DataField>             </ns0:Field>
+        <ns0:Field Name="DocNo">                  <ns0:DataField>DocNo</ns0:DataField>                  </ns0:Field>
+        <ns0:Field Name="OrderDate">              <ns0:DataField>OrderDate</ns0:DataField>              </ns0:Field>
+        <ns0:Field Name="VendorNo">               <ns0:DataField>VendorNo</ns0:DataField>               </ns0:Field>
+        <ns0:Field Name="VendorName">             <ns0:DataField>VendorName</ns0:DataField>             </ns0:Field>
+        <ns0:Field Name="Status">                 <ns0:DataField>Status</ns0:DataField>                 </ns0:Field>
+        <ns0:Field Name="CurrencyCode">           <ns0:DataField>CurrencyCode</ns0:DataField>           </ns0:Field>
+        <ns0:Field Name="ItemNo">                 <ns0:DataField>ItemNo</ns0:DataField>                 </ns0:Field>
+        <ns0:Field Name="Description">            <ns0:DataField>Description</ns0:DataField>            </ns0:Field>
+        <ns0:Field Name="UnitOfMeasure">          <ns0:DataField>UnitOfMeasure</ns0:DataField>          </ns0:Field>
+        <ns0:Field Name="QtyOrdered">             <ns0:DataField>QtyOrdered</ns0:DataField>             </ns0:Field>
+        <ns0:Field Name="QtyReceived">            <ns0:DataField>QtyReceived</ns0:DataField>            </ns0:Field>
+        <ns0:Field Name="QtyInvoiced">            <ns0:DataField>QtyInvoiced</ns0:DataField>            </ns0:Field>
+        <ns0:Field Name="QtyOutstanding">         <ns0:DataField>QtyOutstanding</ns0:DataField>         </ns0:Field>
+        <ns0:Field Name="QtyRecvNotInv">          <ns0:DataField>QtyRecvNotInv</ns0:DataField>          </ns0:Field>
+        <ns0:Field Name="LineAmount">             <ns0:DataField>LineAmount</ns0:DataField>             </ns0:Field>
+        <ns0:Field Name="DeliveryStatus">         <ns0:DataField>DeliveryStatus</ns0:DataField>         </ns0:Field>
+        <ns0:Field Name="InvoiceStatus">          <ns0:DataField>InvoiceStatus</ns0:DataField>          </ns0:Field>
+        <ns0:Field Name="PctReceived">            <ns0:DataField>PctReceived</ns0:DataField>            </ns0:Field>
+        <ns0:Field Name="PctInvoiced">            <ns0:DataField>PctInvoiced</ns0:DataField>            </ns0:Field>
+        <ns0:Field Name="GrandTotalQtyOrdered">   <ns0:DataField>GrandTotalQtyOrdered</ns0:DataField>   </ns0:Field>
+        <ns0:Field Name="GrandTotalQtyReceived">  <ns0:DataField>GrandTotalQtyReceived</ns0:DataField>  </ns0:Field>
+        <ns0:Field Name="GrandTotalQtyInvoiced">  <ns0:DataField>GrandTotalQtyInvoiced</ns0:DataField>  </ns0:Field>
+        <ns0:Field Name="GrandTotalQtyRNI">       <ns0:DataField>GrandTotalQtyRNI</ns0:DataField>       </ns0:Field>
+        <ns0:Field Name="GrandTotalLineAmount">   <ns0:DataField>GrandTotalLineAmount</ns0:DataField>   </ns0:Field>
+      </ns0:Fields>
+      <ns0:Query>
+        <ns0:DataSourceName>DataSetDataSource</ns0:DataSourceName>
+        <ns0:CommandText />
+      </ns0:Query>
+    </ns0:DataSet>
+  </ns0:DataSets>
+
+  <ns0:ReportSections>
+    <ns0:ReportSection>
+      <ns0:Body>
+        <ns0:ReportItems>
+
+          
+          <ns0:Textbox Name="txtCompany">
+            <ns0:CanGrow>true</ns0:CanGrow>
+            <ns0:Paragraphs>
+              <ns0:Paragraph>
+                <ns0:TextRuns>
+                  <ns0:TextRun>
+                    <ns0:Value>=Fields!CompanyName.Value</ns0:Value>
+                    <ns0:Style>
+                      <ns0:FontSize>13pt</ns0:FontSize>
+                      <ns0:FontWeight>Bold</ns0:FontWeight>
+                      <ns0:Color>#003087</ns0:Color>
+                    </ns0:Style>
+                  </ns0:TextRun>
+                </ns0:TextRuns>
+              </ns0:Paragraph>
+            </ns0:Paragraphs>
+            <ns0:Top>0.2cm</ns0:Top>
+            <ns0:Left>0.5cm</ns0:Left>
+            <ns0:Width>16cm</ns0:Width>
+            <ns0:Height>0.7cm</ns0:Height>
+          </ns0:Textbox>
+
+          <ns0:Textbox Name="txtTitle">
+            <ns0:CanGrow>true</ns0:CanGrow>
+            <ns0:Paragraphs>
+              <ns0:Paragraph>
+                <ns0:TextRuns>
+                  <ns0:TextRun>
+                    <ns0:Value>=Fields!ReportTitle.Value</ns0:Value>
+                    <ns0:Style>
+                      <ns0:FontSize>10pt</ns0:FontSize>
+                      <ns0:FontWeight>Bold</ns0:FontWeight>
+                      <ns0:Color>#0063B1</ns0:Color>
+                    </ns0:Style>
+                  </ns0:TextRun>
+                </ns0:TextRuns>
+              </ns0:Paragraph>
+            </ns0:Paragraphs>
+            <ns0:Top>1.0cm</ns0:Top>
+            <ns0:Left>0.5cm</ns0:Left>
+            <ns0:Width>22cm</ns0:Width>
+            <ns0:Height>0.6cm</ns0:Height>
+          </ns0:Textbox>
+
+          <ns0:Textbox Name="txtPrinted">
+            <ns0:CanGrow>true</ns0:CanGrow>
+            <ns0:Paragraphs>
+              <ns0:Paragraph>
+                <ns0:Style><ns0:TextAlign>Right</ns0:TextAlign></ns0:Style>
+                <ns0:TextRuns>
+                  <ns0:TextRun>
+                    <ns0:Value>="Gedruckt: " &amp; Format(Now(),"dd.MM.yyyy HH:mm")</ns0:Value>
+                    <ns0:Style>
+                      <ns0:FontSize>7pt</ns0:FontSize>
+                      <ns0:Color>Gray</ns0:Color>
+                    </ns0:Style>
+                  </ns0:TextRun>
+                </ns0:TextRuns>
+              </ns0:Paragraph>
+            </ns0:Paragraphs>
+            <ns0:Top>0.2cm</ns0:Top>
+            <ns0:Left>19cm</ns0:Left>
+            <ns0:Width>8.4cm</ns0:Width>
+            <ns0:Height>0.5cm</ns0:Height>
+          </ns0:Textbox>
+
+          <ns0:Textbox Name="txtFilter">
+            <ns0:CanGrow>true</ns0:CanGrow>
+            <ns0:Paragraphs>
+              <ns0:Paragraph>
+                <ns0:TextRuns>
+                  <ns0:TextRun>
+                    <ns0:Value>="Filter: " &amp; Fields!FilterText.Value</ns0:Value>
+                    <ns0:Style>
+                      <ns0:FontSize>7pt</ns0:FontSize>
+                      <ns0:Color>Gray</ns0:Color>
+                      <ns0:FontStyle>Italic</ns0:FontStyle>
+                    </ns0:Style>
+                  </ns0:TextRun>
+                </ns0:TextRuns>
+              </ns0:Paragraph>
+            </ns0:Paragraphs>
+            <ns0:Top>1.7cm</ns0:Top>
+            <ns0:Left>0.5cm</ns0:Left>
+            <ns0:Width>26cm</ns0:Width>
+            <ns0:Height>0.4cm</ns0:Height>
+          </ns0:Textbox>
+
+          <ns0:Textbox Name="txtLegend">
+            <ns0:CanGrow>true</ns0:CanGrow>
+            <ns0:Paragraphs>
+              <ns0:Paragraph>
+                <ns0:TextRuns>
+                  <ns0:TextRun>
+                    <ns0:Value>Legende:  Grün = 100% erledigt  |  Gelb = teilweise  |  Rot = 0% / ausstehend  |  Spalte "Empf./Nicht Fakt." = Audit-relevante Differenz (WE gebucht, Rechnung fehlt)</ns0:Value>
+                    <ns0:Style>
+                      <ns0:FontSize>6.5pt</ns0:FontSize>
+                      <ns0:Color>#605e5c</ns0:Color>
+                      <ns0:FontStyle>Italic</ns0:FontStyle>
+                    </ns0:Style>
+                  </ns0:TextRun>
+                </ns0:TextRuns>
+              </ns0:Paragraph>
+            </ns0:Paragraphs>
+            <ns0:Top>2.2cm</ns0:Top>
+            <ns0:Left>0.5cm</ns0:Left>
+            <ns0:Width>26cm</ns0:Width>
+            <ns0:Height>0.35cm</ns0:Height>
+          </ns0:Textbox>
+
+          
+          <ns0:Tablix Name="TablixMain">
+
+            <ns0:TablixBody>
+              <ns0:TablixColumns>
+                <ns0:TablixColumn><ns0:Width>1.6cm</ns0:Width></ns0:TablixColumn>
+                <ns0:TablixColumn><ns0:Width>4.4cm</ns0:Width></ns0:TablixColumn>
+                <ns0:TablixColumn><ns0:Width>1.0cm</ns0:Width></ns0:TablixColumn>
+                <ns0:TablixColumn><ns0:Width>2.1cm</ns0:Width></ns0:TablixColumn>
+                <ns0:TablixColumn><ns0:Width>2.1cm</ns0:Width></ns0:TablixColumn>
+                <ns0:TablixColumn><ns0:Width>1.4cm</ns0:Width></ns0:TablixColumn>
+                <ns0:TablixColumn><ns0:Width>2.1cm</ns0:Width></ns0:TablixColumn>
+                <ns0:TablixColumn><ns0:Width>1.4cm</ns0:Width></ns0:TablixColumn>
+                <ns0:TablixColumn><ns0:Width>2.1cm</ns0:Width></ns0:TablixColumn>
+                <ns0:TablixColumn><ns0:Width>2.1cm</ns0:Width></ns0:TablixColumn>
+                <ns0:TablixColumn><ns0:Width>2.8cm</ns0:Width></ns0:TablixColumn>
+                <ns0:TablixColumn><ns0:Width>2.8cm</ns0:Width></ns0:TablixColumn>
+              </ns0:TablixColumns>
+
+              <ns0:TablixRows>
+
+                
+                <ns0:TablixRow>
+                  <ns0:Height>0.65cm</ns0:Height>
+                  <ns0:TablixCells>
+
+                    <ns0:TablixCell><ns0:CellContents>
+                      <ns0:Textbox Name="hdrItem">
+                        <ns0:Paragraphs><ns0:Paragraph><ns0:Style><ns0:TextAlign>Left</ns0:TextAlign></ns0:Style><ns0:TextRuns><ns0:TextRun>
+                          <ns0:Value>Artikelnr.</ns0:Value>
+                          <ns0:Style><ns0:FontWeight>Bold</ns0:FontWeight><ns0:FontSize>7pt</ns0:FontSize><ns0:Color>White</ns0:Color></ns0:Style>
+                        </ns0:TextRun></ns0:TextRuns></ns0:Paragraph></ns0:Paragraphs>
+                        <ns0:Style><ns0:BackgroundColor>#003087</ns0:BackgroundColor><ns0:VerticalAlign>Middle</ns0:VerticalAlign><ns0:PaddingLeft>3pt</ns0:PaddingLeft>
+                          <ns0:Border><ns0:Color>White</ns0:Color><ns0:Style>Solid</ns0:Style><ns0:Width>0.5pt</ns0:Width></ns0:Border>
+                        </ns0:Style>
+                      </ns0:Textbox>
+                    </ns0:CellContents></ns0:TablixCell>
+
+                    <ns0:TablixCell><ns0:CellContents>
+                      <ns0:Textbox Name="hdrDesc">
+                        <ns0:Paragraphs><ns0:Paragraph><ns0:Style><ns0:TextAlign>Left</ns0:TextAlign></ns0:Style><ns0:TextRuns><ns0:TextRun>
+                          <ns0:Value>Beschreibung</ns0:Value>
+                          <ns0:Style><ns0:FontWeight>Bold</ns0:FontWeight><ns0:FontSize>7pt</ns0:FontSize><ns0:Color>White</ns0:Color></ns0:Style>
+                        </ns0:TextRun></ns0:TextRuns></ns0:Paragraph></ns0:Paragraphs>
+                        <ns0:Style><ns0:BackgroundColor>#003087</ns0:BackgroundColor><ns0:VerticalAlign>Middle</ns0:VerticalAlign><ns0:PaddingLeft>3pt</ns0:PaddingLeft>
+                          <ns0:Border><ns0:Color>White</ns0:Color><ns0:Style>Solid</ns0:Style><ns0:Width>0.5pt</ns0:Width></ns0:Border>
+                        </ns0:Style>
+                      </ns0:Textbox>
+                    </ns0:CellContents></ns0:TablixCell>
+
+                    <ns0:TablixCell><ns0:CellContents>
+                      <ns0:Textbox Name="hdrUOM">
+                        <ns0:Paragraphs><ns0:Paragraph><ns0:Style><ns0:TextAlign>Center</ns0:TextAlign></ns0:Style><ns0:TextRuns><ns0:TextRun>
+                          <ns0:Value>ME</ns0:Value>
+                          <ns0:Style><ns0:FontWeight>Bold</ns0:FontWeight><ns0:FontSize>7pt</ns0:FontSize><ns0:Color>White</ns0:Color></ns0:Style>
+                        </ns0:TextRun></ns0:TextRuns></ns0:Paragraph></ns0:Paragraphs>
+                        <ns0:Style><ns0:BackgroundColor>#003087</ns0:BackgroundColor><ns0:VerticalAlign>Middle</ns0:VerticalAlign>
+                          <ns0:Border><ns0:Color>White</ns0:Color><ns0:Style>Solid</ns0:Style><ns0:Width>0.5pt</ns0:Width></ns0:Border>
+                        </ns0:Style>
+                      </ns0:Textbox>
+                    </ns0:CellContents></ns0:TablixCell>
+
+                    <ns0:TablixCell><ns0:CellContents>
+                      <ns0:Textbox Name="hdrOrd">
+                        <ns0:Paragraphs><ns0:Paragraph><ns0:Style><ns0:TextAlign>Right</ns0:TextAlign></ns0:Style><ns0:TextRuns><ns0:TextRun>
+                          <ns0:Value>Menge bestellt</ns0:Value>
+                          <ns0:Style><ns0:FontWeight>Bold</ns0:FontWeight><ns0:FontSize>7pt</ns0:FontSize><ns0:Color>White</ns0:Color></ns0:Style>
+                        </ns0:TextRun></ns0:TextRuns></ns0:Paragraph></ns0:Paragraphs>
+                        <ns0:Style><ns0:BackgroundColor>#0063B1</ns0:BackgroundColor><ns0:VerticalAlign>Middle</ns0:VerticalAlign><ns0:PaddingRight>3pt</ns0:PaddingRight>
+                          <ns0:Border><ns0:Color>White</ns0:Color><ns0:Style>Solid</ns0:Style><ns0:Width>0.5pt</ns0:Width></ns0:Border>
+                        </ns0:Style>
+                      </ns0:Textbox>
+                    </ns0:CellContents></ns0:TablixCell>
+
+                    <ns0:TablixCell><ns0:CellContents>
+                      <ns0:Textbox Name="hdrRecv">
+                        <ns0:Paragraphs><ns0:Paragraph><ns0:Style><ns0:TextAlign>Right</ns0:TextAlign></ns0:Style><ns0:TextRuns><ns0:TextRun>
+                          <ns0:Value>Menge empfangen (WE)</ns0:Value>
+                          <ns0:Style><ns0:FontWeight>Bold</ns0:FontWeight><ns0:FontSize>7pt</ns0:FontSize><ns0:Color>White</ns0:Color></ns0:Style>
+                        </ns0:TextRun></ns0:TextRuns></ns0:Paragraph></ns0:Paragraphs>
+                        <ns0:Style><ns0:BackgroundColor>#107C10</ns0:BackgroundColor><ns0:VerticalAlign>Middle</ns0:VerticalAlign><ns0:PaddingRight>3pt</ns0:PaddingRight>
+                          <ns0:Border><ns0:Color>White</ns0:Color><ns0:Style>Solid</ns0:Style><ns0:Width>0.5pt</ns0:Width></ns0:Border>
+                        </ns0:Style>
+                      </ns0:Textbox>
+                    </ns0:CellContents></ns0:TablixCell>
+
+                    <ns0:TablixCell><ns0:CellContents>
+                      <ns0:Textbox Name="hdrPctRecv">
+                        <ns0:Paragraphs><ns0:Paragraph><ns0:Style><ns0:TextAlign>Center</ns0:TextAlign></ns0:Style><ns0:TextRuns><ns0:TextRun>
+                          <ns0:Value>% Empf.</ns0:Value>
+                          <ns0:Style><ns0:FontWeight>Bold</ns0:FontWeight><ns0:FontSize>7pt</ns0:FontSize><ns0:Color>White</ns0:Color></ns0:Style>
+                        </ns0:TextRun></ns0:TextRuns></ns0:Paragraph></ns0:Paragraphs>
+                        <ns0:Style><ns0:BackgroundColor>#107C10</ns0:BackgroundColor><ns0:VerticalAlign>Middle</ns0:VerticalAlign>
+                          <ns0:Border><ns0:Color>White</ns0:Color><ns0:Style>Solid</ns0:Style><ns0:Width>0.5pt</ns0:Width></ns0:Border>
+                        </ns0:Style>
+                      </ns0:Textbox>
+                    </ns0:CellContents></ns0:TablixCell>
+
+                    <ns0:TablixCell><ns0:CellContents>
+                      <ns0:Textbox Name="hdrInv">
+                        <ns0:Paragraphs><ns0:Paragraph><ns0:Style><ns0:TextAlign>Right</ns0:TextAlign></ns0:Style><ns0:TextRuns><ns0:TextRun>
+                          <ns0:Value>Menge fakturiert</ns0:Value>
+                          <ns0:Style><ns0:FontWeight>Bold</ns0:FontWeight><ns0:FontSize>7pt</ns0:FontSize><ns0:Color>White</ns0:Color></ns0:Style>
+                        </ns0:TextRun></ns0:TextRuns></ns0:Paragraph></ns0:Paragraphs>
+                        <ns0:Style><ns0:BackgroundColor>#D83B01</ns0:BackgroundColor><ns0:VerticalAlign>Middle</ns0:VerticalAlign><ns0:PaddingRight>3pt</ns0:PaddingRight>
+                          <ns0:Border><ns0:Color>White</ns0:Color><ns0:Style>Solid</ns0:Style><ns0:Width>0.5pt</ns0:Width></ns0:Border>
+                        </ns0:Style>
+                      </ns0:Textbox>
+                    </ns0:CellContents></ns0:TablixCell>
+
+                    <ns0:TablixCell><ns0:CellContents>
+                      <ns0:Textbox Name="hdrPctInv">
+                        <ns0:Paragraphs><ns0:Paragraph><ns0:Style><ns0:TextAlign>Center</ns0:TextAlign></ns0:Style><ns0:TextRuns><ns0:TextRun>
+                          <ns0:Value>% Fakt.</ns0:Value>
+                          <ns0:Style><ns0:FontWeight>Bold</ns0:FontWeight><ns0:FontSize>7pt</ns0:FontSize><ns0:Color>White</ns0:Color></ns0:Style>
+                        </ns0:TextRun></ns0:TextRuns></ns0:Paragraph></ns0:Paragraphs>
+                        <ns0:Style><ns0:BackgroundColor>#D83B01</ns0:BackgroundColor><ns0:VerticalAlign>Middle</ns0:VerticalAlign>
+                          <ns0:Border><ns0:Color>White</ns0:Color><ns0:Style>Solid</ns0:Style><ns0:Width>0.5pt</ns0:Width></ns0:Border>
+                        </ns0:Style>
+                      </ns0:Textbox>
+                    </ns0:CellContents></ns0:TablixCell>
+
+                    <ns0:TablixCell><ns0:CellContents>
+                      <ns0:Textbox Name="hdrRNI">
+                        <ns0:Paragraphs><ns0:Paragraph><ns0:Style><ns0:TextAlign>Right</ns0:TextAlign></ns0:Style><ns0:TextRuns><ns0:TextRun>
+                          <ns0:Value>Empf./Nicht Fakt.</ns0:Value>
+                          <ns0:Style><ns0:FontWeight>Bold</ns0:FontWeight><ns0:FontSize>7pt</ns0:FontSize><ns0:Color>White</ns0:Color></ns0:Style>
+                        </ns0:TextRun></ns0:TextRuns></ns0:Paragraph></ns0:Paragraphs>
+                        <ns0:Style><ns0:BackgroundColor>#FFB900</ns0:BackgroundColor><ns0:VerticalAlign>Middle</ns0:VerticalAlign><ns0:PaddingRight>3pt</ns0:PaddingRight>
+                          <ns0:Border><ns0:Color>White</ns0:Color><ns0:Style>Solid</ns0:Style><ns0:Width>0.5pt</ns0:Width></ns0:Border>
+                        </ns0:Style>
+                      </ns0:Textbox>
+                    </ns0:CellContents></ns0:TablixCell>
+
+                    <ns0:TablixCell><ns0:CellContents>
+                      <ns0:Textbox Name="hdrAmt">
+                        <ns0:Paragraphs><ns0:Paragraph><ns0:Style><ns0:TextAlign>Right</ns0:TextAlign></ns0:Style><ns0:TextRuns><ns0:TextRun>
+                          <ns0:Value>Zeilenbetrag</ns0:Value>
+                          <ns0:Style><ns0:FontWeight>Bold</ns0:FontWeight><ns0:FontSize>7pt</ns0:FontSize><ns0:Color>White</ns0:Color></ns0:Style>
+                        </ns0:TextRun></ns0:TextRuns></ns0:Paragraph></ns0:Paragraphs>
+                        <ns0:Style><ns0:BackgroundColor>#003087</ns0:BackgroundColor><ns0:VerticalAlign>Middle</ns0:VerticalAlign><ns0:PaddingRight>3pt</ns0:PaddingRight>
+                          <ns0:Border><ns0:Color>White</ns0:Color><ns0:Style>Solid</ns0:Style><ns0:Width>0.5pt</ns0:Width></ns0:Border>
+                        </ns0:Style>
+                      </ns0:Textbox>
+                    </ns0:CellContents></ns0:TablixCell>
+
+                    <ns0:TablixCell><ns0:CellContents>
+                      <ns0:Textbox Name="hdrDS">
+                        <ns0:Paragraphs><ns0:Paragraph><ns0:Style><ns0:TextAlign>Center</ns0:TextAlign></ns0:Style><ns0:TextRuns><ns0:TextRun>
+                          <ns0:Value>Lieferstatus</ns0:Value>
+                          <ns0:Style><ns0:FontWeight>Bold</ns0:FontWeight><ns0:FontSize>7pt</ns0:FontSize><ns0:Color>White</ns0:Color></ns0:Style>
+                        </ns0:TextRun></ns0:TextRuns></ns0:Paragraph></ns0:Paragraphs>
+                        <ns0:Style><ns0:BackgroundColor>#003087</ns0:BackgroundColor><ns0:VerticalAlign>Middle</ns0:VerticalAlign>
+                          <ns0:Border><ns0:Color>White</ns0:Color><ns0:Style>Solid</ns0:Style><ns0:Width>0.5pt</ns0:Width></ns0:Border>
+                        </ns0:Style>
+                      </ns0:Textbox>
+                    </ns0:CellContents></ns0:TablixCell>
+
+                    <ns0:TablixCell><ns0:CellContents>
+                      <ns0:Textbox Name="hdrIS">
+                        <ns0:Paragraphs><ns0:Paragraph><ns0:Style><ns0:TextAlign>Center</ns0:TextAlign></ns0:Style><ns0:TextRuns><ns0:TextRun>
+                          <ns0:Value>Fakturastatus</ns0:Value>
+                          <ns0:Style><ns0:FontWeight>Bold</ns0:FontWeight><ns0:FontSize>7pt</ns0:FontSize><ns0:Color>White</ns0:Color></ns0:Style>
+                        </ns0:TextRun></ns0:TextRuns></ns0:Paragraph></ns0:Paragraphs>
+                        <ns0:Style><ns0:BackgroundColor>#003087</ns0:BackgroundColor><ns0:VerticalAlign>Middle</ns0:VerticalAlign>
+                          <ns0:Border><ns0:Color>White</ns0:Color><ns0:Style>Solid</ns0:Style><ns0:Width>0.5pt</ns0:Width></ns0:Border>
+                        </ns0:Style>
+                      </ns0:Textbox>
+                    </ns0:CellContents></ns0:TablixCell>
+
+                  </ns0:TablixCells>
+                </ns0:TablixRow>
+
+                
+                <ns0:TablixRow>
+                  <ns0:Height>0.5cm</ns0:Height>
+                  <ns0:TablixCells>
+
+                    <ns0:TablixCell><ns0:CellContents>
+                      <ns0:Textbox Name="fldItem">
+                        <ns0:Paragraphs><ns0:Paragraph><ns0:Style><ns0:TextAlign>Left</ns0:TextAlign></ns0:Style><ns0:TextRuns><ns0:TextRun>
+                          <ns0:Value>=Fields!ItemNo.Value</ns0:Value>
+                          <ns0:Style><ns0:FontSize>7pt</ns0:FontSize></ns0:Style>
+                        </ns0:TextRun></ns0:TextRuns></ns0:Paragraph></ns0:Paragraphs>
+                        <ns0:Style><ns0:VerticalAlign>Middle</ns0:VerticalAlign><ns0:PaddingLeft>3pt</ns0:PaddingLeft>
+                          <ns0:BottomBorder><ns0:Color>#CCCCCC</ns0:Color><ns0:Style>Solid</ns0:Style><ns0:Width>0.25pt</ns0:Width></ns0:BottomBorder>
+                        </ns0:Style>
+                      </ns0:Textbox>
+                    </ns0:CellContents></ns0:TablixCell>
+
+                    <ns0:TablixCell><ns0:CellContents>
+                      <ns0:Textbox Name="fldDesc">
+                        <ns0:CanGrow>true</ns0:CanGrow>
+                        <ns0:Paragraphs><ns0:Paragraph><ns0:Style><ns0:TextAlign>Left</ns0:TextAlign></ns0:Style><ns0:TextRuns><ns0:TextRun>
+                          <ns0:Value>=Fields!Description.Value</ns0:Value>
+                          <ns0:Style><ns0:FontSize>7pt</ns0:FontSize></ns0:Style>
+                        </ns0:TextRun></ns0:TextRuns></ns0:Paragraph></ns0:Paragraphs>
+                        <ns0:Style><ns0:VerticalAlign>Middle</ns0:VerticalAlign><ns0:PaddingLeft>3pt</ns0:PaddingLeft>
+                          <ns0:BottomBorder><ns0:Color>#CCCCCC</ns0:Color><ns0:Style>Solid</ns0:Style><ns0:Width>0.25pt</ns0:Width></ns0:BottomBorder>
+                        </ns0:Style>
+                      </ns0:Textbox>
+                    </ns0:CellContents></ns0:TablixCell>
+
+                    <ns0:TablixCell><ns0:CellContents>
+                      <ns0:Textbox Name="fldUOM">
+                        <ns0:Paragraphs><ns0:Paragraph><ns0:Style><ns0:TextAlign>Center</ns0:TextAlign></ns0:Style><ns0:TextRuns><ns0:TextRun>
+                          <ns0:Value>=Fields!UnitOfMeasure.Value</ns0:Value>
+                          <ns0:Style><ns0:FontSize>7pt</ns0:FontSize></ns0:Style>
+                        </ns0:TextRun></ns0:TextRuns></ns0:Paragraph></ns0:Paragraphs>
+                        <ns0:Style><ns0:VerticalAlign>Middle</ns0:VerticalAlign>
+                          <ns0:BottomBorder><ns0:Color>#CCCCCC</ns0:Color><ns0:Style>Solid</ns0:Style><ns0:Width>0.25pt</ns0:Width></ns0:BottomBorder>
+                        </ns0:Style>
+                      </ns0:Textbox>
+                    </ns0:CellContents></ns0:TablixCell>
+
+                    <ns0:TablixCell><ns0:CellContents>
+                      <ns0:Textbox Name="fldOrd">
+                        <ns0:Paragraphs><ns0:Paragraph><ns0:Style><ns0:TextAlign>Right</ns0:TextAlign></ns0:Style><ns0:TextRuns><ns0:TextRun>
+                          <ns0:Value>=Fields!QtyOrdered.Value</ns0:Value>
+                          <ns0:Style><ns0:FontSize>7pt</ns0:FontSize><ns0:FontWeight>Bold</ns0:FontWeight><ns0:Format>#,##0.##</ns0:Format></ns0:Style>
+                        </ns0:TextRun></ns0:TextRuns></ns0:Paragraph></ns0:Paragraphs>
+                        <ns0:Style><ns0:VerticalAlign>Middle</ns0:VerticalAlign><ns0:PaddingRight>3pt</ns0:PaddingRight>
+                          <ns0:BottomBorder><ns0:Color>#CCCCCC</ns0:Color><ns0:Style>Solid</ns0:Style><ns0:Width>0.25pt</ns0:Width></ns0:BottomBorder>
+                        </ns0:Style>
+                      </ns0:Textbox>
+                    </ns0:CellContents></ns0:TablixCell>
+
+                    <ns0:TablixCell><ns0:CellContents>
+                      <ns0:Textbox Name="fldRecv">
+                        <ns0:Paragraphs><ns0:Paragraph><ns0:Style><ns0:TextAlign>Right</ns0:TextAlign></ns0:Style><ns0:TextRuns><ns0:TextRun>
+                          <ns0:Value>=Fields!QtyReceived.Value</ns0:Value>
+                          <ns0:Style><ns0:FontSize>7pt</ns0:FontSize><ns0:Format>#,##0.##</ns0:Format>
+                            <ns0:Color>=IIF(Fields!QtyReceived.Value = 0, "#D83B01", "#107C10")</ns0:Color>
+                          </ns0:Style>
+                        </ns0:TextRun></ns0:TextRuns></ns0:Paragraph></ns0:Paragraphs>
+                        <ns0:Style><ns0:VerticalAlign>Middle</ns0:VerticalAlign><ns0:PaddingRight>3pt</ns0:PaddingRight>
+                          <ns0:BottomBorder><ns0:Color>#CCCCCC</ns0:Color><ns0:Style>Solid</ns0:Style><ns0:Width>0.25pt</ns0:Width></ns0:BottomBorder>
+                        </ns0:Style>
+                      </ns0:Textbox>
+                    </ns0:CellContents></ns0:TablixCell>
+
+                    <ns0:TablixCell><ns0:CellContents>
+                      <ns0:Textbox Name="fldPctR">
+                        <ns0:Paragraphs><ns0:Paragraph><ns0:Style><ns0:TextAlign>Center</ns0:TextAlign></ns0:Style><ns0:TextRuns><ns0:TextRun>
+                          <ns0:Value>=Fields!PctReceived.Value &amp; "%"</ns0:Value>
+                          <ns0:Style><ns0:FontSize>7pt</ns0:FontSize><ns0:FontWeight>Bold</ns0:FontWeight></ns0:Style>
+                        </ns0:TextRun></ns0:TextRuns></ns0:Paragraph></ns0:Paragraphs>
+                        <ns0:Style><ns0:VerticalAlign>Middle</ns0:VerticalAlign>
+                          <ns0:BackgroundColor>=IIF(Fields!PctReceived.Value &gt;= 100, "#DFF6DD", IIF(Fields!PctReceived.Value &gt; 0, "#FFF4CE", "#FDE7E9"))</ns0:BackgroundColor>
+                          <ns0:BottomBorder><ns0:Color>#CCCCCC</ns0:Color><ns0:Style>Solid</ns0:Style><ns0:Width>0.25pt</ns0:Width></ns0:BottomBorder>
+                        </ns0:Style>
+                      </ns0:Textbox>
+                    </ns0:CellContents></ns0:TablixCell>
+
+                    <ns0:TablixCell><ns0:CellContents>
+                      <ns0:Textbox Name="fldInv">
+                        <ns0:Paragraphs><ns0:Paragraph><ns0:Style><ns0:TextAlign>Right</ns0:TextAlign></ns0:Style><ns0:TextRuns><ns0:TextRun>
+                          <ns0:Value>=Fields!QtyInvoiced.Value</ns0:Value>
+                          <ns0:Style><ns0:FontSize>7pt</ns0:FontSize><ns0:Format>#,##0.##</ns0:Format>
+                            <ns0:Color>=IIF(Fields!QtyInvoiced.Value = 0, "#D83B01", "#107C10")</ns0:Color>
+                          </ns0:Style>
+                        </ns0:TextRun></ns0:TextRuns></ns0:Paragraph></ns0:Paragraphs>
+                        <ns0:Style><ns0:VerticalAlign>Middle</ns0:VerticalAlign><ns0:PaddingRight>3pt</ns0:PaddingRight>
+                          <ns0:BottomBorder><ns0:Color>#CCCCCC</ns0:Color><ns0:Style>Solid</ns0:Style><ns0:Width>0.25pt</ns0:Width></ns0:BottomBorder>
+                        </ns0:Style>
+                      </ns0:Textbox>
+                    </ns0:CellContents></ns0:TablixCell>
+
+                    <ns0:TablixCell><ns0:CellContents>
+                      <ns0:Textbox Name="fldPctI">
+                        <ns0:Paragraphs><ns0:Paragraph><ns0:Style><ns0:TextAlign>Center</ns0:TextAlign></ns0:Style><ns0:TextRuns><ns0:TextRun>
+                          <ns0:Value>=Fields!PctInvoiced.Value &amp; "%"</ns0:Value>
+                          <ns0:Style><ns0:FontSize>7pt</ns0:FontSize><ns0:FontWeight>Bold</ns0:FontWeight></ns0:Style>
+                        </ns0:TextRun></ns0:TextRuns></ns0:Paragraph></ns0:Paragraphs>
+                        <ns0:Style><ns0:VerticalAlign>Middle</ns0:VerticalAlign>
+                          <ns0:BackgroundColor>=IIF(Fields!PctInvoiced.Value &gt;= 100, "#DFF6DD", IIF(Fields!PctInvoiced.Value &gt; 0, "#FFF4CE", "#FDE7E9"))</ns0:BackgroundColor>
+                          <ns0:BottomBorder><ns0:Color>#CCCCCC</ns0:Color><ns0:Style>Solid</ns0:Style><ns0:Width>0.25pt</ns0:Width></ns0:BottomBorder>
+                        </ns0:Style>
+                      </ns0:Textbox>
+                    </ns0:CellContents></ns0:TablixCell>
+
+                    <ns0:TablixCell><ns0:CellContents>
+                      <ns0:Textbox Name="fldRNI">
+                        <ns0:Paragraphs><ns0:Paragraph><ns0:Style><ns0:TextAlign>Right</ns0:TextAlign></ns0:Style><ns0:TextRuns><ns0:TextRun>
+                          <ns0:Value>=Fields!QtyRecvNotInv.Value</ns0:Value>
+                          <ns0:Style><ns0:FontSize>7pt</ns0:FontSize><ns0:Format>#,##0.##</ns0:Format>
+                            <ns0:FontWeight>=IIF(Fields!QtyRecvNotInv.Value &gt; 0, "Bold", "Normal")</ns0:FontWeight>
+                            <ns0:Color>=IIF(Fields!QtyRecvNotInv.Value &gt; 0, "#D83B01", "Black")</ns0:Color>
+                          </ns0:Style>
+                        </ns0:TextRun></ns0:TextRuns></ns0:Paragraph></ns0:Paragraphs>
+                        <ns0:Style><ns0:VerticalAlign>Middle</ns0:VerticalAlign><ns0:PaddingRight>3pt</ns0:PaddingRight>
+                          <ns0:BackgroundColor>=IIF(Fields!QtyRecvNotInv.Value &gt; 0, "#FFF4CE", "Transparent")</ns0:BackgroundColor>
+                          <ns0:BottomBorder><ns0:Color>#CCCCCC</ns0:Color><ns0:Style>Solid</ns0:Style><ns0:Width>0.25pt</ns0:Width></ns0:BottomBorder>
+                        </ns0:Style>
+                      </ns0:Textbox>
+                    </ns0:CellContents></ns0:TablixCell>
+
+                    <ns0:TablixCell><ns0:CellContents>
+                      <ns0:Textbox Name="fldAmt">
+                        <ns0:Paragraphs><ns0:Paragraph><ns0:Style><ns0:TextAlign>Right</ns0:TextAlign></ns0:Style><ns0:TextRuns><ns0:TextRun>
+                          <ns0:Value>=Fields!LineAmount.Value</ns0:Value>
+                          <ns0:Style><ns0:FontSize>7pt</ns0:FontSize><ns0:Format>#,##0.00</ns0:Format></ns0:Style>
+                        </ns0:TextRun></ns0:TextRuns></ns0:Paragraph></ns0:Paragraphs>
+                        <ns0:Style><ns0:VerticalAlign>Middle</ns0:VerticalAlign><ns0:PaddingRight>3pt</ns0:PaddingRight>
+                          <ns0:BottomBorder><ns0:Color>#CCCCCC</ns0:Color><ns0:Style>Solid</ns0:Style><ns0:Width>0.25pt</ns0:Width></ns0:BottomBorder>
+                        </ns0:Style>
+                      </ns0:Textbox>
+                    </ns0:CellContents></ns0:TablixCell>
+
+                    <ns0:TablixCell><ns0:CellContents>
+                      <ns0:Textbox Name="fldDS">
+                        <ns0:Paragraphs><ns0:Paragraph><ns0:Style><ns0:TextAlign>Center</ns0:TextAlign></ns0:Style><ns0:TextRuns><ns0:TextRun>
+                          <ns0:Value>=Fields!DeliveryStatus.Value</ns0:Value>
+                          <ns0:Style><ns0:FontSize>6.5pt</ns0:FontSize></ns0:Style>
+                        </ns0:TextRun></ns0:TextRuns></ns0:Paragraph></ns0:Paragraphs>
+                        <ns0:Style><ns0:VerticalAlign>Middle</ns0:VerticalAlign>
+                          <ns0:BottomBorder><ns0:Color>#CCCCCC</ns0:Color><ns0:Style>Solid</ns0:Style><ns0:Width>0.25pt</ns0:Width></ns0:BottomBorder>
+                        </ns0:Style>
+                      </ns0:Textbox>
+                    </ns0:CellContents></ns0:TablixCell>
+
+                    <ns0:TablixCell><ns0:CellContents>
+                      <ns0:Textbox Name="fldIS">
+                        <ns0:Paragraphs><ns0:Paragraph><ns0:Style><ns0:TextAlign>Center</ns0:TextAlign></ns0:Style><ns0:TextRuns><ns0:TextRun>
+                          <ns0:Value>=Fields!InvoiceStatus.Value</ns0:Value>
+                          <ns0:Style><ns0:FontSize>6.5pt</ns0:FontSize></ns0:Style>
+                        </ns0:TextRun></ns0:TextRuns></ns0:Paragraph></ns0:Paragraphs>
+                        <ns0:Style><ns0:VerticalAlign>Middle</ns0:VerticalAlign>
+                          <ns0:BottomBorder><ns0:Color>#CCCCCC</ns0:Color><ns0:Style>Solid</ns0:Style><ns0:Width>0.25pt</ns0:Width></ns0:BottomBorder>
+                        </ns0:Style>
+                      </ns0:Textbox>
+                    </ns0:CellContents></ns0:TablixCell>
+
+                  </ns0:TablixCells>
+                </ns0:TablixRow>
+
+              </ns0:TablixRows>
+            </ns0:TablixBody>
+
+            
+            <ns0:TablixRowHierarchy>
+              <ns0:TablixMembers>
+                <ns0:TablixMember>
+                  <ns0:Group Name="GroupDocNo">
+                    <ns0:GroupExpressions>
+                      <ns0:GroupExpression>=Fields!DocNo.Value</ns0:GroupExpression>
+                    </ns0:GroupExpressions>
+                  </ns0:Group>
+                  <ns0:SortExpressions>
+                    <ns0:SortExpression>
+                      <ns0:Value>=Fields!DocNo.Value</ns0:Value>
+                      <ns0:Direction>Ascending</ns0:Direction>
+                    </ns0:SortExpression>
+                  </ns0:SortExpressions>
+
+                  
+                  <TablixMember>
+                    <ns0:TablixHeader>
+                      <ns0:Size>0.65cm</ns0:Size>
+                      <ns0:CellContents>
+                        <ns0:Textbox Name="grpHeaderDocNo">
+                          <ns0:CanGrow>true</ns0:CanGrow>
+                          <ns0:Paragraphs>
+                            <ns0:Paragraph>
+                              <ns0:TextRuns>
+                                <ns0:TextRun>
+                                  <ns0:Value>="Bestellung: " &amp; Fields!DocNo.Value &amp; "     Lieferant: " &amp; Fields!VendorNo.Value &amp; " – " &amp; Fields!VendorName.Value &amp; "     Datum: " &amp; Format(CDate(Fields!OrderDate.Value),"dd.MM.yyyy") &amp; "     Status: " &amp; Fields!Status.Value</ns0:Value>
+                                  <ns0:Style>
+                                    <ns0:FontSize>8pt</ns0:FontSize>
+                                    <ns0:FontWeight>Bold</ns0:FontWeight>
+                                    <ns0:Color>White</ns0:Color>
+                                  </ns0:Style>
+                                </ns0:TextRun>
+                              </ns0:TextRuns>
+                            </ns0:Paragraph>
+                          </ns0:Paragraphs>
+                          <ns0:Style>
+                            <ns0:BackgroundColor>#0063B1</ns0:BackgroundColor>
+                            <ns0:VerticalAlign>Middle</ns0:VerticalAlign>
+                            <ns0:PaddingLeft>6pt</ns0:PaddingLeft>
+                            <ns0:PaddingTop>2pt</ns0:PaddingTop>
+                            <ns0:PaddingBottom>2pt</ns0:PaddingBottom>
+                          </ns0:Style>
+                        </ns0:Textbox>
+                      </ns0:CellContents>
+                    </ns0:TablixHeader>
+                  </TablixMember>
+
+                  
+                  <ns0:Footer>
+                    <ns0:TablixHeader>
+                      <ns0:Size>0.55cm</ns0:Size>
+                      <ns0:CellContents>
+                        <ns0:Textbox Name="grpFooterDocNo">
+                          <ns0:CanGrow>true</ns0:CanGrow>
+                          <ns0:Paragraphs>
+                            <ns0:Paragraph>
+                              <ns0:TextRuns>
+                                <ns0:TextRun>
+                                  <ns0:Value>="Summe " &amp; Fields!DocNo.Value &amp; ":   Bestellt: " &amp; Format(Sum(Fields!QtyOrdered.Value),"#,##0.##") &amp; "   |   Empfangen (WE): " &amp; Format(Sum(Fields!QtyReceived.Value),"#,##0.##") &amp; "   |   Fakturiert: " &amp; Format(Sum(Fields!QtyInvoiced.Value),"#,##0.##") &amp; "   |   Empf./Nicht Fakt.: " &amp; Format(Sum(Fields!QtyRecvNotInv.Value),"#,##0.##") &amp; "   |   Betrag: " &amp; Format(Sum(Fields!LineAmount.Value),"#,##0.00")</ns0:Value>
+                                  <ns0:Style>
+                                    <ns0:FontSize>7pt</ns0:FontSize>
+                                    <ns0:FontWeight>Bold</ns0:FontWeight>
+                                    <ns0:Color>#003087</ns0:Color>
+                                  </ns0:Style>
+                                </ns0:TextRun>
+                              </ns0:TextRuns>
+                            </ns0:Paragraph>
+                          </ns0:Paragraphs>
+                          <ns0:Style>
+                            <ns0:BackgroundColor>#DEECF9</ns0:BackgroundColor>
+                            <ns0:VerticalAlign>Middle</ns0:VerticalAlign>
+                            <ns0:PaddingLeft>6pt</ns0:PaddingLeft>
+                            <ns0:TopBorder>
+                              <ns0:Color>#0063B1</ns0:Color>
+                              <ns0:Style>Solid</ns0:Style>
+                              <ns0:Width>1pt</ns0:Width>
+                            </ns0:TopBorder>
+                            <ns0:BottomBorder>
+                              <ns0:Color>#0063B1</ns0:Color>
+                              <ns0:Style>Solid</ns0:Style>
+                              <ns0:Width>0.5pt</ns0:Width>
+                            </ns0:BottomBorder>
+                          </ns0:Style>
+                        </ns0:Textbox>
+                      </ns0:CellContents>
+                    </ns0:TablixHeader>
+                  </ns0:Footer>
+
+                  <ns0:TablixMembers>
+                    <ns0:TablixMember>
+                      <ns0:KeepWithGroup>After</ns0:KeepWithGroup>
+                      <ns0:RepeatOnNewPage>true</ns0:RepeatOnNewPage>
+                    </ns0:TablixMember>
+                    <ns0:TablixMember>
+                      <ns0:TablixMembers>
+                        <ns0:TablixMember />
+                      </ns0:TablixMembers>
+                    </ns0:TablixMember>
+                  </ns0:TablixMembers>
+
+                </ns0:TablixMember>
+              </ns0:TablixMembers>
+            </ns0:TablixRowHierarchy>
+
+            <ns0:TablixColumnHierarchy>
+              <ns0:TablixMembers>
+                <ns0:TablixMember /><ns0:TablixMember /><ns0:TablixMember />
+                <ns0:TablixMember /><ns0:TablixMember /><ns0:TablixMember />
+                <ns0:TablixMember /><ns0:TablixMember /><ns0:TablixMember />
+                <ns0:TablixMember /><ns0:TablixMember /><ns0:TablixMember />
+              </ns0:TablixMembers>
+            </ns0:TablixColumnHierarchy>
+
+            <ns0:DataSetName>DataSet_Result</ns0:DataSetName>
+            <ns0:Top>2.7cm</ns0:Top>
+            <ns0:Left>0.5cm</ns0:Left>
+            <ns0:Width>26.9cm</ns0:Width>
+            <ns0:Style>
+              <ns0:Border>
+                <ns0:Color>#CCCCCC</ns0:Color>
+                <ns0:Style>Solid</ns0:Style>
+                <ns0:Width>0.25pt</ns0:Width>
+              </ns0:Border>
+            </ns0:Style>
+          </ns0:Tablix>
+
+          
+          <ns0:Textbox Name="txtGrandLabel">
+            <ns0:CanGrow>true</ns0:CanGrow>
+            <ns0:Paragraphs><ns0:Paragraph><ns0:Style><ns0:TextAlign>Left</ns0:TextAlign></ns0:Style><ns0:TextRuns><ns0:TextRun>
+              <ns0:Value>Gesamttotal (alle Bestellungen)</ns0:Value>
+              <ns0:Style><ns0:FontSize>8pt</ns0:FontSize><ns0:FontWeight>Bold</ns0:FontWeight><ns0:Color>White</ns0:Color></ns0:Style>
+            </ns0:TextRun></ns0:TextRuns></ns0:Paragraph></ns0:Paragraphs>
+            <ns0:Top>0.5cm</ns0:Top><ns0:Left>0.5cm</ns0:Left><ns0:Width>7.1cm</ns0:Width><ns0:Height>0.55cm</ns0:Height>
+            <ns0:Style>
+              <ns0:BackgroundColor>#003087</ns0:BackgroundColor>
+              <ns0:VerticalAlign>Middle</ns0:VerticalAlign>
+              <ns0:PaddingLeft>6pt</ns0:PaddingLeft>
+            </ns0:Style>
+          </ns0:Textbox>
+
+          <ns0:Textbox Name="txtGrandOrd">
+            <ns0:CanGrow>true</ns0:CanGrow>
+            <ns0:Paragraphs><ns0:Paragraph><ns0:Style><ns0:TextAlign>Right</ns0:TextAlign></ns0:Style><ns0:TextRuns><ns0:TextRun>
+              <ns0:Value>=Fields!GrandTotalQtyOrdered.Value</ns0:Value>
+              <ns0:Style><ns0:FontSize>8pt</ns0:FontSize><ns0:FontWeight>Bold</ns0:FontWeight><ns0:Color>White</ns0:Color><ns0:Format>#,##0.##</ns0:Format></ns0:Style>
+            </ns0:TextRun></ns0:TextRuns></ns0:Paragraph></ns0:Paragraphs>
+            <ns0:Top>0.5cm</ns0:Top><ns0:Left>7.6cm</ns0:Left><ns0:Width>2.1cm</ns0:Width><ns0:Height>0.55cm</ns0:Height>
+            <ns0:Style>
+              <ns0:BackgroundColor>#0063B1</ns0:BackgroundColor>
+              <ns0:VerticalAlign>Middle</ns0:VerticalAlign>
+              <ns0:PaddingRight>3pt</ns0:PaddingRight>
+            </ns0:Style>
+          </ns0:Textbox>
+
+          <ns0:Textbox Name="txtGrandRecv">
+            <ns0:CanGrow>true</ns0:CanGrow>
+            <ns0:Paragraphs><ns0:Paragraph><ns0:Style><ns0:TextAlign>Right</ns0:TextAlign></ns0:Style><ns0:TextRuns><ns0:TextRun>
+              <ns0:Value>=Fields!GrandTotalQtyReceived.Value</ns0:Value>
+              <ns0:Style><ns0:FontSize>8pt</ns0:FontSize><ns0:FontWeight>Bold</ns0:FontWeight><ns0:Color>White</ns0:Color><ns0:Format>#,##0.##</ns0:Format></ns0:Style>
+            </ns0:TextRun></ns0:TextRuns></ns0:Paragraph></ns0:Paragraphs>
+            <ns0:Top>0.5cm</ns0:Top><ns0:Left>9.7cm</ns0:Left><ns0:Width>2.1cm</ns0:Width><ns0:Height>0.55cm</ns0:Height>
+            <ns0:Style>
+              <ns0:BackgroundColor>#107C10</ns0:BackgroundColor>
+              <ns0:VerticalAlign>Middle</ns0:VerticalAlign>
+              <ns0:PaddingRight>3pt</ns0:PaddingRight>
+            </ns0:Style>
+          </ns0:Textbox>
+
+          <ns0:Textbox Name="txtGrandInv">
+            <ns0:CanGrow>true</ns0:CanGrow>
+            <ns0:Paragraphs><ns0:Paragraph><ns0:Style><ns0:TextAlign>Right</ns0:TextAlign></ns0:Style><ns0:TextRuns><ns0:TextRun>
+              <ns0:Value>=Fields!GrandTotalQtyInvoiced.Value</ns0:Value>
+              <ns0:Style><ns0:FontSize>8pt</ns0:FontSize><ns0:FontWeight>Bold</ns0:FontWeight><ns0:Color>White</ns0:Color><ns0:Format>#,##0.##</ns0:Format></ns0:Style>
+            </ns0:TextRun></ns0:TextRuns></ns0:Paragraph></ns0:Paragraphs>
+            <ns0:Top>0.5cm</ns0:Top><ns0:Left>13.2cm</ns0:Left><ns0:Width>2.1cm</ns0:Width><ns0:Height>0.55cm</ns0:Height>
+            <ns0:Style>
+              <ns0:BackgroundColor>#D83B01</ns0:BackgroundColor>
+              <ns0:VerticalAlign>Middle</ns0:VerticalAlign>
+              <ns0:PaddingRight>3pt</ns0:PaddingRight>
+            </ns0:Style>
+          </ns0:Textbox>
+
+          <ns0:Textbox Name="txtGrandRNI">
+            <ns0:CanGrow>true</ns0:CanGrow>
+            <ns0:Paragraphs><ns0:Paragraph><ns0:Style><ns0:TextAlign>Right</ns0:TextAlign></ns0:Style><ns0:TextRuns><ns0:TextRun>
+              <ns0:Value>=Fields!GrandTotalQtyRNI.Value</ns0:Value>
+              <ns0:Style><ns0:FontSize>8pt</ns0:FontSize><ns0:FontWeight>Bold</ns0:FontWeight><ns0:Color>White</ns0:Color><ns0:Format>#,##0.##</ns0:Format></ns0:Style>
+            </ns0:TextRun></ns0:TextRuns></ns0:Paragraph></ns0:Paragraphs>
+            <ns0:Top>0.5cm</ns0:Top><ns0:Left>16.7cm</ns0:Left><ns0:Width>2.1cm</ns0:Width><ns0:Height>0.55cm</ns0:Height>
+            <ns0:Style>
+              <ns0:BackgroundColor>#FFB900</ns0:BackgroundColor>
+              <ns0:VerticalAlign>Middle</ns0:VerticalAlign>
+              <ns0:PaddingRight>3pt</ns0:PaddingRight>
+            </ns0:Style>
+          </ns0:Textbox>
+
+          <ns0:Textbox Name="txtGrandAmt">
+            <ns0:CanGrow>true</ns0:CanGrow>
+            <ns0:Paragraphs><ns0:Paragraph><ns0:Style><ns0:TextAlign>Right</ns0:TextAlign></ns0:Style><ns0:TextRuns><ns0:TextRun>
+              <ns0:Value>=Fields!GrandTotalLineAmount.Value</ns0:Value>
+              <ns0:Style><ns0:FontSize>8pt</ns0:FontSize><ns0:FontWeight>Bold</ns0:FontWeight><ns0:Color>White</ns0:Color><ns0:Format>#,##0.00</ns0:Format></ns0:Style>
+            </ns0:TextRun></ns0:TextRuns></ns0:Paragraph></ns0:Paragraphs>
+            <ns0:Top>0.5cm</ns0:Top><ns0:Left>18.8cm</ns0:Left><ns0:Width>2.1cm</ns0:Width><ns0:Height>0.55cm</ns0:Height>
+            <ns0:Style>
+              <ns0:BackgroundColor>#003087</ns0:BackgroundColor>
+              <ns0:VerticalAlign>Middle</ns0:VerticalAlign>
+              <ns0:PaddingRight>3pt</ns0:PaddingRight>
+            </ns0:Style>
+          </ns0:Textbox>
+
+        </ns0:ReportItems>
+        <ns0:Height>30cm</ns0:Height>
+      </ns0:Body>
+
+      <ns0:Page>
+        <ns0:PageHeight>21cm</ns0:PageHeight>
+        <ns0:PageWidth>29.7cm</ns0:PageWidth>
+        <ns0:LeftMargin>0.5cm</ns0:LeftMargin>
+        <ns0:RightMargin>0.5cm</ns0:RightMargin>
+        <ns0:TopMargin>1.0cm</ns0:TopMargin>
+        <ns0:BottomMargin>1.0cm</ns0:BottomMargin>
+        <ns0:Style />
+      </ns0:Page>
+
+    </ns0:ReportSection>
+  </ns0:ReportSections>
+
+  <ns0:Language>de-DE</ns0:Language>
+  <ns0:ConsumeContainerWhitespace>true</ns0:ConsumeContainerWhitespace>
+  <ns1:ReportUnitType>Cm</ns1:ReportUnitType>
+
+</ns0:Report>

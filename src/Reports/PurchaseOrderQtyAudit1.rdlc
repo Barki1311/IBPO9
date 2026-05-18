@@ -1,0 +1,2769 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:DataSourceID>e90fb175-8cfe-49b9-9ec8-44accf2d653f</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <ReportItems>
+          <!-- ══════════════════════════════════════════
+               BERICHTS-KOPF
+               ══════════════════════════════════════════ -->
+          <Textbox Name="txtCompany">
+            <CanGrow>true</CanGrow>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=Fields!CompanyName.Value</Value>
+                    <Style>
+                      <FontSize>13pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                      <Color>#003087</Color>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+              </Paragraph>
+            </Paragraphs>
+            <Top>0.2cm</Top>
+            <Left>0.5cm</Left>
+            <Width>16cm</Width>
+            <Height>0.7cm</Height>
+          </Textbox>
+          <Textbox Name="txtTitle">
+            <CanGrow>true</CanGrow>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=Fields!ReportTitle.Value</Value>
+                    <Style>
+                      <FontSize>10pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                      <Color>#0063B1</Color>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+              </Paragraph>
+            </Paragraphs>
+            <Top>1.0cm</Top>
+            <Left>0.5cm</Left>
+            <Width>22cm</Width>
+            <Height>0.6cm</Height>
+          </Textbox>
+          <Textbox Name="txtPrinted">
+            <CanGrow>true</CanGrow>
+            <Paragraphs>
+              <Paragraph>
+                <Style>
+                  <TextAlign>Right</TextAlign>
+                </Style>
+                <TextRuns>
+                  <TextRun>
+                    <Value>="Gedruckt: " &amp; Format(Now(),"dd.MM.yyyy HH:mm")</Value>
+                    <Style>
+                      <FontSize>7pt</FontSize>
+                      <Color>Gray</Color>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+              </Paragraph>
+            </Paragraphs>
+            <Top>0.2cm</Top>
+            <Left>19cm</Left>
+            <Width>8.4cm</Width>
+            <Height>0.5cm</Height>
+          </Textbox>
+          <Textbox Name="txtFilter">
+            <CanGrow>true</CanGrow>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>="Filter: " &amp; Fields!FilterText.Value</Value>
+                    <Style>
+                      <FontSize>7pt</FontSize>
+                      <Color>Gray</Color>
+                      <FontStyle>Italic</FontStyle>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+              </Paragraph>
+            </Paragraphs>
+            <Top>1.7cm</Top>
+            <Left>0.5cm</Left>
+            <Width>26cm</Width>
+            <Height>0.4cm</Height>
+          </Textbox>
+          <Textbox Name="txtLegend">
+            <CanGrow>true</CanGrow>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Legende:  Grün = 100% erledigt  |  Gelb = teilweise  |  Rot = 0% / ausstehend  |  Spalte "Empf./Nicht Fakt." = Audit-relevante Differenz (WE gebucht, Rechnung fehlt)</Value>
+                    <Style>
+                      <FontSize>6.5pt</FontSize>
+                      <Color>#605e5c</Color>
+                      <FontStyle>Italic</FontStyle>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+              </Paragraph>
+            </Paragraphs>
+            <Top>2.2cm</Top>
+            <Left>0.5cm</Left>
+            <Width>26cm</Width>
+            <Height>0.35cm</Height>
+          </Textbox>
+          <!-- ══════════════════════════════════════════
+               TABLIX – HAUPTTABELLE
+               ══════════════════════════════════════════ -->
+          <Tablix Name="TablixMain">
+            <TablixBody>
+              <TablixColumns>
+                <TablixColumn>
+                  <Width>1.6cm</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>4.4cm</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>1.0cm</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>2.1cm</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>2.1cm</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>1.4cm</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>2.1cm</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>1.4cm</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>2.1cm</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>2.1cm</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>2.8cm</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>2.8cm</Width>
+                </TablixColumn>
+              </TablixColumns>
+              <TablixRows>
+                <!-- ── Zeile 1: Spaltenköpfe ── -->
+                <TablixRow>
+                  <Height>0.65cm</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="hdrItem">
+                          <Paragraphs>
+                            <Paragraph>
+                              <Style>
+                                <TextAlign>Left</TextAlign>
+                              </Style>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Artikelnr.</Value>
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                    <FontSize>7pt</FontSize>
+                                    <Color>White</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <BackgroundColor>#003087</BackgroundColor>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>3pt</PaddingLeft>
+                            <Border>
+                              <Color>White</Color>
+                              <Style>Solid</Style>
+                              <Width>0.5pt</Width>
+                            </Border>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="hdrDesc">
+                          <Paragraphs>
+                            <Paragraph>
+                              <Style>
+                                <TextAlign>Left</TextAlign>
+                              </Style>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Beschreibung</Value>
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                    <FontSize>7pt</FontSize>
+                                    <Color>White</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <BackgroundColor>#003087</BackgroundColor>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>3pt</PaddingLeft>
+                            <Border>
+                              <Color>White</Color>
+                              <Style>Solid</Style>
+                              <Width>0.5pt</Width>
+                            </Border>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="hdrUOM">
+                          <Paragraphs>
+                            <Paragraph>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>ME</Value>
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                    <FontSize>7pt</FontSize>
+                                    <Color>White</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <BackgroundColor>#003087</BackgroundColor>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <Border>
+                              <Color>White</Color>
+                              <Style>Solid</Style>
+                              <Width>0.5pt</Width>
+                            </Border>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="hdrOrd">
+                          <Paragraphs>
+                            <Paragraph>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Menge bestellt</Value>
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                    <FontSize>7pt</FontSize>
+                                    <Color>White</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <BackgroundColor>#0063B1</BackgroundColor>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingRight>3pt</PaddingRight>
+                            <Border>
+                              <Color>White</Color>
+                              <Style>Solid</Style>
+                              <Width>0.5pt</Width>
+                            </Border>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="hdrRecv">
+                          <Paragraphs>
+                            <Paragraph>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Menge empfangen (WE)</Value>
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                    <FontSize>7pt</FontSize>
+                                    <Color>White</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <BackgroundColor>#107C10</BackgroundColor>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingRight>3pt</PaddingRight>
+                            <Border>
+                              <Color>White</Color>
+                              <Style>Solid</Style>
+                              <Width>0.5pt</Width>
+                            </Border>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="hdrPctRecv">
+                          <Paragraphs>
+                            <Paragraph>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>% Empf.</Value>
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                    <FontSize>7pt</FontSize>
+                                    <Color>White</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <BackgroundColor>#107C10</BackgroundColor>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <Border>
+                              <Color>White</Color>
+                              <Style>Solid</Style>
+                              <Width>0.5pt</Width>
+                            </Border>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="hdrInv">
+                          <Paragraphs>
+                            <Paragraph>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Menge fakturiert</Value>
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                    <FontSize>7pt</FontSize>
+                                    <Color>White</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <BackgroundColor>#D83B01</BackgroundColor>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingRight>3pt</PaddingRight>
+                            <Border>
+                              <Color>White</Color>
+                              <Style>Solid</Style>
+                              <Width>0.5pt</Width>
+                            </Border>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="hdrPctInv">
+                          <Paragraphs>
+                            <Paragraph>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>% Fakt.</Value>
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                    <FontSize>7pt</FontSize>
+                                    <Color>White</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <BackgroundColor>#D83B01</BackgroundColor>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <Border>
+                              <Color>White</Color>
+                              <Style>Solid</Style>
+                              <Width>0.5pt</Width>
+                            </Border>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="hdrRNI">
+                          <Paragraphs>
+                            <Paragraph>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Empf./Nicht Fakt.</Value>
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                    <FontSize>7pt</FontSize>
+                                    <Color>White</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <BackgroundColor>#FFB900</BackgroundColor>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingRight>3pt</PaddingRight>
+                            <Border>
+                              <Color>White</Color>
+                              <Style>Solid</Style>
+                              <Width>0.5pt</Width>
+                            </Border>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="hdrAmt">
+                          <Paragraphs>
+                            <Paragraph>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Zeilenbetrag</Value>
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                    <FontSize>7pt</FontSize>
+                                    <Color>White</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <BackgroundColor>#003087</BackgroundColor>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingRight>3pt</PaddingRight>
+                            <Border>
+                              <Color>White</Color>
+                              <Style>Solid</Style>
+                              <Width>0.5pt</Width>
+                            </Border>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="hdrDS">
+                          <Paragraphs>
+                            <Paragraph>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Lieferstatus</Value>
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                    <FontSize>7pt</FontSize>
+                                    <Color>White</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <BackgroundColor>#003087</BackgroundColor>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <Border>
+                              <Color>White</Color>
+                              <Style>Solid</Style>
+                              <Width>0.5pt</Width>
+                            </Border>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="hdrIS">
+                          <Paragraphs>
+                            <Paragraph>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Fakturastatus</Value>
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                    <FontSize>7pt</FontSize>
+                                    <Color>White</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <BackgroundColor>#003087</BackgroundColor>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <Border>
+                              <Color>White</Color>
+                              <Style>Solid</Style>
+                              <Width>0.5pt</Width>
+                            </Border>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+                <!-- ── Zeile 2: Datenzeilen ── -->
+                <TablixRow>
+                  <Height>0.5cm</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="fldItem">
+                          <Paragraphs>
+                            <Paragraph>
+                              <Style>
+                                <TextAlign>Left</TextAlign>
+                              </Style>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!ItemNo.Value</Value>
+                                  <Style>
+                                    <FontSize>7pt</FontSize>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>3pt</PaddingLeft>
+                            <BottomBorder>
+                              <Color>#CCCCCC</Color>
+                              <Style>Solid</Style>
+                              <Width>0.25pt</Width>
+                            </BottomBorder>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="fldDesc">
+                          <CanGrow>true</CanGrow>
+                          <Paragraphs>
+                            <Paragraph>
+                              <Style>
+                                <TextAlign>Left</TextAlign>
+                              </Style>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!Description.Value</Value>
+                                  <Style>
+                                    <FontSize>7pt</FontSize>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>3pt</PaddingLeft>
+                            <BottomBorder>
+                              <Color>#CCCCCC</Color>
+                              <Style>Solid</Style>
+                              <Width>0.25pt</Width>
+                            </BottomBorder>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="fldUOM">
+                          <Paragraphs>
+                            <Paragraph>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!UnitOfMeasure.Value</Value>
+                                  <Style>
+                                    <FontSize>7pt</FontSize>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <BottomBorder>
+                              <Color>#CCCCCC</Color>
+                              <Style>Solid</Style>
+                              <Width>0.25pt</Width>
+                            </BottomBorder>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="fldOrd">
+                          <Paragraphs>
+                            <Paragraph>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!QtyOrdered.Value</Value>
+                                  <Style>
+                                    <FontSize>7pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                    <Format>#,##0.##</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingRight>3pt</PaddingRight>
+                            <BottomBorder>
+                              <Color>#CCCCCC</Color>
+                              <Style>Solid</Style>
+                              <Width>0.25pt</Width>
+                            </BottomBorder>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="fldRecv">
+                          <Paragraphs>
+                            <Paragraph>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!QtyReceived.Value</Value>
+                                  <Style>
+                                    <FontSize>7pt</FontSize>
+                                    <Format>#,##0.##</Format>
+                                    <Color>=IIF(Fields!QtyReceived.Value = 0, "#D83B01", "#107C10")</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingRight>3pt</PaddingRight>
+                            <BottomBorder>
+                              <Color>#CCCCCC</Color>
+                              <Style>Solid</Style>
+                              <Width>0.25pt</Width>
+                            </BottomBorder>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="fldPctR">
+                          <Paragraphs>
+                            <Paragraph>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!PctReceived.Value &amp; "%"</Value>
+                                  <Style>
+                                    <FontSize>7pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <BackgroundColor>=IIF(Fields!PctReceived.Value &gt;= 100, "#DFF6DD", IIF(Fields!PctReceived.Value &gt; 0, "#FFF4CE", "#FDE7E9"))</BackgroundColor>
+                            <BottomBorder>
+                              <Color>#CCCCCC</Color>
+                              <Style>Solid</Style>
+                              <Width>0.25pt</Width>
+                            </BottomBorder>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="fldInv">
+                          <Paragraphs>
+                            <Paragraph>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!QtyInvoiced.Value</Value>
+                                  <Style>
+                                    <FontSize>7pt</FontSize>
+                                    <Format>#,##0.##</Format>
+                                    <Color>=IIF(Fields!QtyInvoiced.Value = 0, "#D83B01", "#107C10")</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingRight>3pt</PaddingRight>
+                            <BottomBorder>
+                              <Color>#CCCCCC</Color>
+                              <Style>Solid</Style>
+                              <Width>0.25pt</Width>
+                            </BottomBorder>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="fldPctI">
+                          <Paragraphs>
+                            <Paragraph>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!PctInvoiced.Value &amp; "%"</Value>
+                                  <Style>
+                                    <FontSize>7pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <BackgroundColor>=IIF(Fields!PctInvoiced.Value &gt;= 100, "#DFF6DD", IIF(Fields!PctInvoiced.Value &gt; 0, "#FFF4CE", "#FDE7E9"))</BackgroundColor>
+                            <BottomBorder>
+                              <Color>#CCCCCC</Color>
+                              <Style>Solid</Style>
+                              <Width>0.25pt</Width>
+                            </BottomBorder>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="fldRNI">
+                          <Paragraphs>
+                            <Paragraph>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!QtyRecvNotInv.Value</Value>
+                                  <Style>
+                                    <FontSize>7pt</FontSize>
+                                    <Format>#,##0.##</Format>
+                                    <FontWeight>=IIF(Fields!QtyRecvNotInv.Value &gt; 0, "Bold", "Normal")</FontWeight>
+                                    <Color>=IIF(Fields!QtyRecvNotInv.Value &gt; 0, "#D83B01", "Black")</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingRight>3pt</PaddingRight>
+                            <BackgroundColor>=IIF(Fields!QtyRecvNotInv.Value &gt; 0, "#FFF4CE", "Transparent")</BackgroundColor>
+                            <BottomBorder>
+                              <Color>#CCCCCC</Color>
+                              <Style>Solid</Style>
+                              <Width>0.25pt</Width>
+                            </BottomBorder>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="fldAmt">
+                          <Paragraphs>
+                            <Paragraph>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!LineAmount.Value</Value>
+                                  <Style>
+                                    <FontSize>7pt</FontSize>
+                                    <Format>#,##0.00</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingRight>3pt</PaddingRight>
+                            <BottomBorder>
+                              <Color>#CCCCCC</Color>
+                              <Style>Solid</Style>
+                              <Width>0.25pt</Width>
+                            </BottomBorder>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="fldDS">
+                          <Paragraphs>
+                            <Paragraph>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!DeliveryStatus.Value</Value>
+                                  <Style>
+                                    <FontSize>6.5pt</FontSize>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <BottomBorder>
+                              <Color>#CCCCCC</Color>
+                              <Style>Solid</Style>
+                              <Width>0.25pt</Width>
+                            </BottomBorder>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="fldIS">
+                          <Paragraphs>
+                            <Paragraph>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!InvoiceStatus.Value</Value>
+                                  <Style>
+                                    <FontSize>6.5pt</FontSize>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <BottomBorder>
+                              <Color>#CCCCCC</Color>
+                              <Style>Solid</Style>
+                              <Width>0.25pt</Width>
+                            </BottomBorder>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+              </TablixRows>
+            </TablixBody>
+            <!-- ══════════════════════════════════════════
+                 ZEILENHIERARCHIE – Gruppe pro Bestellung
+                 ══════════════════════════════════════════ -->
+            <TablixRowHierarchy>
+              <TablixMembers>
+                <!-- Gruppe nach DocNo: Header-Member -->
+                <TablixMember>
+                  <Group Name="GroupDocNo">
+                    <GroupExpressions>
+                      <GroupExpression>=Fields!DocNo.Value</GroupExpression>
+                    </GroupExpressions>
+                  </Group>
+                  <SortExpressions>
+                    <SortExpression>
+                      <Value>=Fields!DocNo.Value</Value>
+                      <Direction>Ascending</Direction>
+                    </SortExpression>
+                  </SortExpressions>
+                  <TablixHeader>
+                    <Size>0.65cm</Size>
+                    <CellContents>
+                      <Textbox Name="grpHeaderDocNo">
+                        <CanGrow>true</CanGrow>
+                        <Paragraphs>
+                          <Paragraph>
+                            <TextRuns>
+                              <TextRun>
+                                <Value>="Bestellung: " &amp; Fields!DocNo.Value &amp; "     Lieferant: " &amp; Fields!VendorNo.Value &amp; " - " &amp; Fields!VendorName.Value &amp; "     Datum: " &amp; Format(CDate(Fields!OrderDate.Value),"dd.MM.yyyy") &amp; "     Status: " &amp; Fields!Status.Value</Value>
+                                <Style>
+                                  <FontSize>8pt</FontSize>
+                                  <FontWeight>Bold</FontWeight>
+                                  <Color>White</Color>
+                                </Style>
+                              </TextRun>
+                            </TextRuns>
+                          </Paragraph>
+                        </Paragraphs>
+                        <Style>
+                          <BackgroundColor>#0063B1</BackgroundColor>
+                          <VerticalAlign>Middle</VerticalAlign>
+                          <PaddingLeft>6pt</PaddingLeft>
+                          <PaddingTop>2pt</PaddingTop>
+                          <PaddingBottom>2pt</PaddingBottom>
+                        </Style>
+                      </Textbox>
+                    </CellContents>
+                  </TablixHeader>
+                  <TablixMembers>
+                    <!-- Spaltenüberschriften (Body-Zeile 1) -->
+                    <TablixMember>
+                      <KeepWithGroup>After</KeepWithGroup>
+                      <RepeatOnNewPage>true</RepeatOnNewPage>
+                    </TablixMember>
+                    <!-- Detailzeilen -->
+                    <TablixMember>
+                      <TablixMembers>
+                        <TablixMember />
+                      </TablixMembers>
+                    </TablixMember>
+                  </TablixMembers>
+                </TablixMember>
+                <!-- Gruppe nach DocNo: Footer-Member (separater TablixMember fuer Summenzeile) -->
+                <TablixMember>
+                  <Group Name="GroupDocNoFooter">
+                    <GroupExpressions>
+                      <GroupExpression>=Fields!DocNo.Value</GroupExpression>
+                    </GroupExpressions>
+                  </Group>
+                  <TablixHeader>
+                    <Size>0.55cm</Size>
+                    <CellContents>
+                      <Textbox Name="grpFooterDocNo">
+                        <CanGrow>true</CanGrow>
+                        <Paragraphs>
+                          <Paragraph>
+                            <TextRuns>
+                              <TextRun>
+                                <Value>="Summe " &amp; Fields!DocNo.Value &amp; ":   Bestellt: " &amp; Format(Sum(Fields!QtyOrdered.Value),"#,##0.##") &amp; "   |   Empfangen: " &amp; Format(Sum(Fields!QtyReceived.Value),"#,##0.##") &amp; "   |   Fakturiert: " &amp; Format(Sum(Fields!QtyInvoiced.Value),"#,##0.##") &amp; "   |   Empf./Nicht Fakt.: " &amp; Format(Sum(Fields!QtyRecvNotInv.Value),"#,##0.##") &amp; "   |   Betrag: " &amp; Format(Sum(Fields!LineAmount.Value),"#,##0.00")</Value>
+                                <Style>
+                                  <FontSize>7pt</FontSize>
+                                  <FontWeight>Bold</FontWeight>
+                                  <Color>#003087</Color>
+                                </Style>
+                              </TextRun>
+                            </TextRuns>
+                          </Paragraph>
+                        </Paragraphs>
+                        <Style>
+                          <BackgroundColor>#DEECF9</BackgroundColor>
+                          <VerticalAlign>Middle</VerticalAlign>
+                          <PaddingLeft>6pt</PaddingLeft>
+                          <TopBorder>
+                            <Color>#0063B1</Color>
+                            <Style>Solid</Style>
+                            <Width>1pt</Width>
+                          </TopBorder>
+                          <BottomBorder>
+                            <Color>#0063B1</Color>
+                            <Style>Solid</Style>
+                            <Width>0.5pt</Width>
+                          </BottomBorder>
+                        </Style>
+                      </Textbox>
+                    </CellContents>
+                  </TablixHeader>
+                  <KeepWithGroup>Before</KeepWithGroup>
+                </TablixMember>
+              </TablixMembers>
+            </TablixRowHierarchy>
+            <TablixColumnHierarchy>
+              <TablixMembers>
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+              </TablixMembers>
+            </TablixColumnHierarchy>
+            <DataSetName>DataSet_Result</DataSetName>
+            <Top>2.7cm</Top>
+            <Left>0.5cm</Left>
+            <Width>26.9cm</Width>
+            <Style>
+              <Border>
+                <Color>#CCCCCC</Color>
+                <Style>Solid</Style>
+                <Width>0.25pt</Width>
+              </Border>
+            </Style>
+          </Tablix>
+          <!-- ══════════════════════════════════════════
+               GESAMTTOTAL (statische Textboxen)
+               Positioniert unterhalb des Tablix
+               ══════════════════════════════════════════ -->
+          <Textbox Name="txtGrandLabel">
+            <CanGrow>true</CanGrow>
+            <Paragraphs>
+              <Paragraph>
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Gesamttotal (alle Bestellungen)</Value>
+                    <Style>
+                      <FontSize>8pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                      <Color>White</Color>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+              </Paragraph>
+            </Paragraphs>
+            <Top>0.5cm</Top>
+            <Left>0.5cm</Left>
+            <Width>7.1cm</Width>
+            <Height>0.55cm</Height>
+            <Style>
+              <BackgroundColor>#003087</BackgroundColor>
+              <VerticalAlign>Middle</VerticalAlign>
+              <PaddingLeft>6pt</PaddingLeft>
+            </Style>
+          </Textbox>
+          <Textbox Name="txtGrandOrd">
+            <CanGrow>true</CanGrow>
+            <Paragraphs>
+              <Paragraph>
+                <Style>
+                  <TextAlign>Right</TextAlign>
+                </Style>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=Fields!GrandTotalQtyOrdered.Value</Value>
+                    <Style>
+                      <FontSize>8pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                      <Color>White</Color>
+                      <Format>#,##0.##</Format>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+              </Paragraph>
+            </Paragraphs>
+            <Top>0.5cm</Top>
+            <Left>7.6cm</Left>
+            <Width>2.1cm</Width>
+            <Height>0.55cm</Height>
+            <Style>
+              <BackgroundColor>#0063B1</BackgroundColor>
+              <VerticalAlign>Middle</VerticalAlign>
+              <PaddingRight>3pt</PaddingRight>
+            </Style>
+          </Textbox>
+          <Textbox Name="txtGrandRecv">
+            <CanGrow>true</CanGrow>
+            <Paragraphs>
+              <Paragraph>
+                <Style>
+                  <TextAlign>Right</TextAlign>
+                </Style>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=Fields!GrandTotalQtyReceived.Value</Value>
+                    <Style>
+                      <FontSize>8pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                      <Color>White</Color>
+                      <Format>#,##0.##</Format>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+              </Paragraph>
+            </Paragraphs>
+            <Top>0.5cm</Top>
+            <Left>9.7cm</Left>
+            <Width>2.1cm</Width>
+            <Height>0.55cm</Height>
+            <Style>
+              <BackgroundColor>#107C10</BackgroundColor>
+              <VerticalAlign>Middle</VerticalAlign>
+              <PaddingRight>3pt</PaddingRight>
+            </Style>
+          </Textbox>
+          <Textbox Name="txtGrandInv">
+            <CanGrow>true</CanGrow>
+            <Paragraphs>
+              <Paragraph>
+                <Style>
+                  <TextAlign>Right</TextAlign>
+                </Style>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=Fields!GrandTotalQtyInvoiced.Value</Value>
+                    <Style>
+                      <FontSize>8pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                      <Color>White</Color>
+                      <Format>#,##0.##</Format>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+              </Paragraph>
+            </Paragraphs>
+            <Top>0.5cm</Top>
+            <Left>13.2cm</Left>
+            <Width>2.1cm</Width>
+            <Height>0.55cm</Height>
+            <Style>
+              <BackgroundColor>#D83B01</BackgroundColor>
+              <VerticalAlign>Middle</VerticalAlign>
+              <PaddingRight>3pt</PaddingRight>
+            </Style>
+          </Textbox>
+          <Textbox Name="txtGrandRNI">
+            <CanGrow>true</CanGrow>
+            <Paragraphs>
+              <Paragraph>
+                <Style>
+                  <TextAlign>Right</TextAlign>
+                </Style>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=Fields!GrandTotalQtyRNI.Value</Value>
+                    <Style>
+                      <FontSize>8pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                      <Color>White</Color>
+                      <Format>#,##0.##</Format>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+              </Paragraph>
+            </Paragraphs>
+            <Top>0.5cm</Top>
+            <Left>16.7cm</Left>
+            <Width>2.1cm</Width>
+            <Height>0.55cm</Height>
+            <Style>
+              <BackgroundColor>#FFB900</BackgroundColor>
+              <VerticalAlign>Middle</VerticalAlign>
+              <PaddingRight>3pt</PaddingRight>
+            </Style>
+          </Textbox>
+          <Textbox Name="txtGrandAmt">
+            <CanGrow>true</CanGrow>
+            <Paragraphs>
+              <Paragraph>
+                <Style>
+                  <TextAlign>Right</TextAlign>
+                </Style>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=Fields!GrandTotalLineAmount.Value</Value>
+                    <Style>
+                      <FontSize>8pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                      <Color>White</Color>
+                      <Format>#,##0.00</Format>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+              </Paragraph>
+            </Paragraphs>
+            <Top>0.5cm</Top>
+            <Left>18.8cm</Left>
+            <Width>2.1cm</Width>
+            <Height>0.55cm</Height>
+            <Style>
+              <BackgroundColor>#003087</BackgroundColor>
+              <VerticalAlign>Middle</VerticalAlign>
+              <PaddingRight>3pt</PaddingRight>
+            </Style>
+          </Textbox>
+        </ReportItems>
+        <Height>30cm</Height>
+      </Body>
+      <Page>
+        <PageHeight>21cm</PageHeight>
+        <PageWidth>29.7cm</PageWidth>
+        <LeftMargin>0.5cm</LeftMargin>
+        <RightMargin>0.5cm</RightMargin>
+        <TopMargin>1.0cm</TopMargin>
+        <BottomMargin>1.0cm</BottomMargin>
+        <Style />
+      </Page>
+    </ReportSection>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+        <ReportItems>
+          <!-- ══════════════════════════════════════════
+               BERICHTS-KOPF
+               ══════════════════════════════════════════ -->
+          <Textbox Name="txtCompany">
+            <CanGrow>true</CanGrow>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=Fields!CompanyName.Value</Value>
+                    <Style>
+                      <FontSize>13pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                      <Color>#003087</Color>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+              </Paragraph>
+            </Paragraphs>
+            <Top>0.2cm</Top>
+            <Left>0.5cm</Left>
+            <Width>16cm</Width>
+            <Height>0.7cm</Height>
+          </Textbox>
+          <Textbox Name="txtTitle">
+            <CanGrow>true</CanGrow>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=Fields!ReportTitle.Value</Value>
+                    <Style>
+                      <FontSize>10pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                      <Color>#0063B1</Color>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+              </Paragraph>
+            </Paragraphs>
+            <Top>1.0cm</Top>
+            <Left>0.5cm</Left>
+            <Width>22cm</Width>
+            <Height>0.6cm</Height>
+          </Textbox>
+          <Textbox Name="txtPrinted">
+            <CanGrow>true</CanGrow>
+            <Paragraphs>
+              <Paragraph>
+                <Style>
+                  <TextAlign>Right</TextAlign>
+                </Style>
+                <TextRuns>
+                  <TextRun>
+                    <Value>="Gedruckt: " &amp; Format(Now(),"dd.MM.yyyy HH:mm")</Value>
+                    <Style>
+                      <FontSize>7pt</FontSize>
+                      <Color>Gray</Color>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+              </Paragraph>
+            </Paragraphs>
+            <Top>0.2cm</Top>
+            <Left>19cm</Left>
+            <Width>8.4cm</Width>
+            <Height>0.5cm</Height>
+          </Textbox>
+          <Textbox Name="txtFilter">
+            <CanGrow>true</CanGrow>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>="Filter: " &amp; Fields!FilterText.Value</Value>
+                    <Style>
+                      <FontSize>7pt</FontSize>
+                      <Color>Gray</Color>
+                      <FontStyle>Italic</FontStyle>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+              </Paragraph>
+            </Paragraphs>
+            <Top>1.7cm</Top>
+            <Left>0.5cm</Left>
+            <Width>26cm</Width>
+            <Height>0.4cm</Height>
+          </Textbox>
+          <Textbox Name="txtLegend">
+            <CanGrow>true</CanGrow>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Legende:  Grün = 100% erledigt  |  Gelb = teilweise  |  Rot = 0% / ausstehend  |  Spalte "Empf./Nicht Fakt." = Audit-relevante Differenz (WE gebucht, Rechnung fehlt)</Value>
+                    <Style>
+                      <FontSize>6.5pt</FontSize>
+                      <Color>#605e5c</Color>
+                      <FontStyle>Italic</FontStyle>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+              </Paragraph>
+            </Paragraphs>
+            <Top>2.2cm</Top>
+            <Left>0.5cm</Left>
+            <Width>26cm</Width>
+            <Height>0.35cm</Height>
+          </Textbox>
+          <!-- ══════════════════════════════════════════
+               TABLIX – HAUPTTABELLE
+               ══════════════════════════════════════════ -->
+          <Tablix Name="TablixMain">
+            <TablixBody>
+              <TablixColumns>
+                <TablixColumn>
+                  <Width>1.6cm</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>4.4cm</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>1.0cm</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>2.1cm</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>2.1cm</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>1.4cm</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>2.1cm</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>1.4cm</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>2.1cm</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>2.1cm</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>2.8cm</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>2.8cm</Width>
+                </TablixColumn>
+              </TablixColumns>
+              <TablixRows>
+                <!-- ── Zeile 1: Spaltenköpfe ── -->
+                <TablixRow>
+                  <Height>0.65cm</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="hdrItem">
+                          <Paragraphs>
+                            <Paragraph>
+                              <Style>
+                                <TextAlign>Left</TextAlign>
+                              </Style>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Artikelnr.</Value>
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                    <FontSize>7pt</FontSize>
+                                    <Color>White</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <BackgroundColor>#003087</BackgroundColor>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>3pt</PaddingLeft>
+                            <Border>
+                              <Color>White</Color>
+                              <Style>Solid</Style>
+                              <Width>0.5pt</Width>
+                            </Border>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="hdrDesc">
+                          <Paragraphs>
+                            <Paragraph>
+                              <Style>
+                                <TextAlign>Left</TextAlign>
+                              </Style>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Beschreibung</Value>
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                    <FontSize>7pt</FontSize>
+                                    <Color>White</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <BackgroundColor>#003087</BackgroundColor>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>3pt</PaddingLeft>
+                            <Border>
+                              <Color>White</Color>
+                              <Style>Solid</Style>
+                              <Width>0.5pt</Width>
+                            </Border>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="hdrUOM">
+                          <Paragraphs>
+                            <Paragraph>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>ME</Value>
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                    <FontSize>7pt</FontSize>
+                                    <Color>White</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <BackgroundColor>#003087</BackgroundColor>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <Border>
+                              <Color>White</Color>
+                              <Style>Solid</Style>
+                              <Width>0.5pt</Width>
+                            </Border>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="hdrOrd">
+                          <Paragraphs>
+                            <Paragraph>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Menge bestellt</Value>
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                    <FontSize>7pt</FontSize>
+                                    <Color>White</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <BackgroundColor>#0063B1</BackgroundColor>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingRight>3pt</PaddingRight>
+                            <Border>
+                              <Color>White</Color>
+                              <Style>Solid</Style>
+                              <Width>0.5pt</Width>
+                            </Border>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="hdrRecv">
+                          <Paragraphs>
+                            <Paragraph>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Menge empfangen (WE)</Value>
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                    <FontSize>7pt</FontSize>
+                                    <Color>White</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <BackgroundColor>#107C10</BackgroundColor>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingRight>3pt</PaddingRight>
+                            <Border>
+                              <Color>White</Color>
+                              <Style>Solid</Style>
+                              <Width>0.5pt</Width>
+                            </Border>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="hdrPctRecv">
+                          <Paragraphs>
+                            <Paragraph>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>% Empf.</Value>
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                    <FontSize>7pt</FontSize>
+                                    <Color>White</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <BackgroundColor>#107C10</BackgroundColor>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <Border>
+                              <Color>White</Color>
+                              <Style>Solid</Style>
+                              <Width>0.5pt</Width>
+                            </Border>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="hdrInv">
+                          <Paragraphs>
+                            <Paragraph>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Menge fakturiert</Value>
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                    <FontSize>7pt</FontSize>
+                                    <Color>White</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <BackgroundColor>#D83B01</BackgroundColor>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingRight>3pt</PaddingRight>
+                            <Border>
+                              <Color>White</Color>
+                              <Style>Solid</Style>
+                              <Width>0.5pt</Width>
+                            </Border>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="hdrPctInv">
+                          <Paragraphs>
+                            <Paragraph>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>% Fakt.</Value>
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                    <FontSize>7pt</FontSize>
+                                    <Color>White</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <BackgroundColor>#D83B01</BackgroundColor>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <Border>
+                              <Color>White</Color>
+                              <Style>Solid</Style>
+                              <Width>0.5pt</Width>
+                            </Border>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="hdrRNI">
+                          <Paragraphs>
+                            <Paragraph>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Empf./Nicht Fakt.</Value>
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                    <FontSize>7pt</FontSize>
+                                    <Color>White</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <BackgroundColor>#FFB900</BackgroundColor>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingRight>3pt</PaddingRight>
+                            <Border>
+                              <Color>White</Color>
+                              <Style>Solid</Style>
+                              <Width>0.5pt</Width>
+                            </Border>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="hdrAmt">
+                          <Paragraphs>
+                            <Paragraph>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Zeilenbetrag</Value>
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                    <FontSize>7pt</FontSize>
+                                    <Color>White</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <BackgroundColor>#003087</BackgroundColor>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingRight>3pt</PaddingRight>
+                            <Border>
+                              <Color>White</Color>
+                              <Style>Solid</Style>
+                              <Width>0.5pt</Width>
+                            </Border>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="hdrDS">
+                          <Paragraphs>
+                            <Paragraph>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Lieferstatus</Value>
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                    <FontSize>7pt</FontSize>
+                                    <Color>White</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <BackgroundColor>#003087</BackgroundColor>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <Border>
+                              <Color>White</Color>
+                              <Style>Solid</Style>
+                              <Width>0.5pt</Width>
+                            </Border>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="hdrIS">
+                          <Paragraphs>
+                            <Paragraph>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Fakturastatus</Value>
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                    <FontSize>7pt</FontSize>
+                                    <Color>White</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <BackgroundColor>#003087</BackgroundColor>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <Border>
+                              <Color>White</Color>
+                              <Style>Solid</Style>
+                              <Width>0.5pt</Width>
+                            </Border>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+                <!-- ── Zeile 2: Datenzeilen ── -->
+                <TablixRow>
+                  <Height>0.5cm</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="fldItem">
+                          <Paragraphs>
+                            <Paragraph>
+                              <Style>
+                                <TextAlign>Left</TextAlign>
+                              </Style>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!ItemNo.Value</Value>
+                                  <Style>
+                                    <FontSize>7pt</FontSize>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>3pt</PaddingLeft>
+                            <BottomBorder>
+                              <Color>#CCCCCC</Color>
+                              <Style>Solid</Style>
+                              <Width>0.25pt</Width>
+                            </BottomBorder>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="fldDesc">
+                          <CanGrow>true</CanGrow>
+                          <Paragraphs>
+                            <Paragraph>
+                              <Style>
+                                <TextAlign>Left</TextAlign>
+                              </Style>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!Description.Value</Value>
+                                  <Style>
+                                    <FontSize>7pt</FontSize>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>3pt</PaddingLeft>
+                            <BottomBorder>
+                              <Color>#CCCCCC</Color>
+                              <Style>Solid</Style>
+                              <Width>0.25pt</Width>
+                            </BottomBorder>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="fldUOM">
+                          <Paragraphs>
+                            <Paragraph>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!UnitOfMeasure.Value</Value>
+                                  <Style>
+                                    <FontSize>7pt</FontSize>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <BottomBorder>
+                              <Color>#CCCCCC</Color>
+                              <Style>Solid</Style>
+                              <Width>0.25pt</Width>
+                            </BottomBorder>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="fldOrd">
+                          <Paragraphs>
+                            <Paragraph>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!QtyOrdered.Value</Value>
+                                  <Style>
+                                    <FontSize>7pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                    <Format>#,##0.##</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingRight>3pt</PaddingRight>
+                            <BottomBorder>
+                              <Color>#CCCCCC</Color>
+                              <Style>Solid</Style>
+                              <Width>0.25pt</Width>
+                            </BottomBorder>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="fldRecv">
+                          <Paragraphs>
+                            <Paragraph>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!QtyReceived.Value</Value>
+                                  <Style>
+                                    <FontSize>7pt</FontSize>
+                                    <Format>#,##0.##</Format>
+                                    <Color>=IIF(Fields!QtyReceived.Value = 0, "#D83B01", "#107C10")</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingRight>3pt</PaddingRight>
+                            <BottomBorder>
+                              <Color>#CCCCCC</Color>
+                              <Style>Solid</Style>
+                              <Width>0.25pt</Width>
+                            </BottomBorder>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="fldPctR">
+                          <Paragraphs>
+                            <Paragraph>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!PctReceived.Value &amp; "%"</Value>
+                                  <Style>
+                                    <FontSize>7pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <BackgroundColor>=IIF(Fields!PctReceived.Value &gt;= 100, "#DFF6DD", IIF(Fields!PctReceived.Value &gt; 0, "#FFF4CE", "#FDE7E9"))</BackgroundColor>
+                            <BottomBorder>
+                              <Color>#CCCCCC</Color>
+                              <Style>Solid</Style>
+                              <Width>0.25pt</Width>
+                            </BottomBorder>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="fldInv">
+                          <Paragraphs>
+                            <Paragraph>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!QtyInvoiced.Value</Value>
+                                  <Style>
+                                    <FontSize>7pt</FontSize>
+                                    <Format>#,##0.##</Format>
+                                    <Color>=IIF(Fields!QtyInvoiced.Value = 0, "#D83B01", "#107C10")</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingRight>3pt</PaddingRight>
+                            <BottomBorder>
+                              <Color>#CCCCCC</Color>
+                              <Style>Solid</Style>
+                              <Width>0.25pt</Width>
+                            </BottomBorder>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="fldPctI">
+                          <Paragraphs>
+                            <Paragraph>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!PctInvoiced.Value &amp; "%"</Value>
+                                  <Style>
+                                    <FontSize>7pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <BackgroundColor>=IIF(Fields!PctInvoiced.Value &gt;= 100, "#DFF6DD", IIF(Fields!PctInvoiced.Value &gt; 0, "#FFF4CE", "#FDE7E9"))</BackgroundColor>
+                            <BottomBorder>
+                              <Color>#CCCCCC</Color>
+                              <Style>Solid</Style>
+                              <Width>0.25pt</Width>
+                            </BottomBorder>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="fldRNI">
+                          <Paragraphs>
+                            <Paragraph>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!QtyRecvNotInv.Value</Value>
+                                  <Style>
+                                    <FontSize>7pt</FontSize>
+                                    <Format>#,##0.##</Format>
+                                    <FontWeight>=IIF(Fields!QtyRecvNotInv.Value &gt; 0, "Bold", "Normal")</FontWeight>
+                                    <Color>=IIF(Fields!QtyRecvNotInv.Value &gt; 0, "#D83B01", "Black")</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingRight>3pt</PaddingRight>
+                            <BackgroundColor>=IIF(Fields!QtyRecvNotInv.Value &gt; 0, "#FFF4CE", "Transparent")</BackgroundColor>
+                            <BottomBorder>
+                              <Color>#CCCCCC</Color>
+                              <Style>Solid</Style>
+                              <Width>0.25pt</Width>
+                            </BottomBorder>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="fldAmt">
+                          <Paragraphs>
+                            <Paragraph>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!LineAmount.Value</Value>
+                                  <Style>
+                                    <FontSize>7pt</FontSize>
+                                    <Format>#,##0.00</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingRight>3pt</PaddingRight>
+                            <BottomBorder>
+                              <Color>#CCCCCC</Color>
+                              <Style>Solid</Style>
+                              <Width>0.25pt</Width>
+                            </BottomBorder>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="fldDS">
+                          <Paragraphs>
+                            <Paragraph>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!DeliveryStatus.Value</Value>
+                                  <Style>
+                                    <FontSize>6.5pt</FontSize>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <BottomBorder>
+                              <Color>#CCCCCC</Color>
+                              <Style>Solid</Style>
+                              <Width>0.25pt</Width>
+                            </BottomBorder>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="fldIS">
+                          <Paragraphs>
+                            <Paragraph>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!InvoiceStatus.Value</Value>
+                                  <Style>
+                                    <FontSize>6.5pt</FontSize>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <BottomBorder>
+                              <Color>#CCCCCC</Color>
+                              <Style>Solid</Style>
+                              <Width>0.25pt</Width>
+                            </BottomBorder>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+              </TablixRows>
+            </TablixBody>
+            <!-- ══════════════════════════════════════════
+                 ZEILENHIERARCHIE – Gruppe pro Bestellung
+                 ══════════════════════════════════════════ -->
+            <TablixRowHierarchy>
+              <TablixMembers>
+                <!-- Gruppe nach DocNo: Header-Member -->
+                <TablixMember>
+                  <Group Name="GroupDocNo">
+                    <GroupExpressions>
+                      <GroupExpression>=Fields!DocNo.Value</GroupExpression>
+                    </GroupExpressions>
+                  </Group>
+                  <SortExpressions>
+                    <SortExpression>
+                      <Value>=Fields!DocNo.Value</Value>
+                      <Direction>Ascending</Direction>
+                    </SortExpression>
+                  </SortExpressions>
+                  <TablixHeader>
+                    <Size>0.65cm</Size>
+                    <CellContents>
+                      <Textbox Name="grpHeaderDocNo">
+                        <CanGrow>true</CanGrow>
+                        <Paragraphs>
+                          <Paragraph>
+                            <TextRuns>
+                              <TextRun>
+                                <Value>="Bestellung: " &amp; Fields!DocNo.Value &amp; "     Lieferant: " &amp; Fields!VendorNo.Value &amp; " - " &amp; Fields!VendorName.Value &amp; "     Datum: " &amp; Format(CDate(Fields!OrderDate.Value),"dd.MM.yyyy") &amp; "     Status: " &amp; Fields!Status.Value</Value>
+                                <Style>
+                                  <FontSize>8pt</FontSize>
+                                  <FontWeight>Bold</FontWeight>
+                                  <Color>White</Color>
+                                </Style>
+                              </TextRun>
+                            </TextRuns>
+                          </Paragraph>
+                        </Paragraphs>
+                        <Style>
+                          <BackgroundColor>#0063B1</BackgroundColor>
+                          <VerticalAlign>Middle</VerticalAlign>
+                          <PaddingLeft>6pt</PaddingLeft>
+                          <PaddingTop>2pt</PaddingTop>
+                          <PaddingBottom>2pt</PaddingBottom>
+                        </Style>
+                      </Textbox>
+                    </CellContents>
+                  </TablixHeader>
+                  <TablixMembers>
+                    <!-- Spaltenüberschriften (Body-Zeile 1) -->
+                    <TablixMember>
+                      <KeepWithGroup>After</KeepWithGroup>
+                      <RepeatOnNewPage>true</RepeatOnNewPage>
+                    </TablixMember>
+                    <!-- Detailzeilen -->
+                    <TablixMember>
+                      <TablixMembers>
+                        <TablixMember />
+                      </TablixMembers>
+                    </TablixMember>
+                  </TablixMembers>
+                </TablixMember>
+                <!-- Gruppe nach DocNo: Footer-Member (separater TablixMember fuer Summenzeile) -->
+                <TablixMember>
+                  <Group Name="GroupDocNoFooter">
+                    <GroupExpressions>
+                      <GroupExpression>=Fields!DocNo.Value</GroupExpression>
+                    </GroupExpressions>
+                  </Group>
+                  <TablixHeader>
+                    <Size>0.55cm</Size>
+                    <CellContents>
+                      <Textbox Name="grpFooterDocNo">
+                        <CanGrow>true</CanGrow>
+                        <Paragraphs>
+                          <Paragraph>
+                            <TextRuns>
+                              <TextRun>
+                                <Value>="Summe " &amp; Fields!DocNo.Value &amp; ":   Bestellt: " &amp; Format(Sum(Fields!QtyOrdered.Value),"#,##0.##") &amp; "   |   Empfangen: " &amp; Format(Sum(Fields!QtyReceived.Value),"#,##0.##") &amp; "   |   Fakturiert: " &amp; Format(Sum(Fields!QtyInvoiced.Value),"#,##0.##") &amp; "   |   Empf./Nicht Fakt.: " &amp; Format(Sum(Fields!QtyRecvNotInv.Value),"#,##0.##") &amp; "   |   Betrag: " &amp; Format(Sum(Fields!LineAmount.Value),"#,##0.00")</Value>
+                                <Style>
+                                  <FontSize>7pt</FontSize>
+                                  <FontWeight>Bold</FontWeight>
+                                  <Color>#003087</Color>
+                                </Style>
+                              </TextRun>
+                            </TextRuns>
+                          </Paragraph>
+                        </Paragraphs>
+                        <Style>
+                          <BackgroundColor>#DEECF9</BackgroundColor>
+                          <VerticalAlign>Middle</VerticalAlign>
+                          <PaddingLeft>6pt</PaddingLeft>
+                          <TopBorder>
+                            <Color>#0063B1</Color>
+                            <Style>Solid</Style>
+                            <Width>1pt</Width>
+                          </TopBorder>
+                          <BottomBorder>
+                            <Color>#0063B1</Color>
+                            <Style>Solid</Style>
+                            <Width>0.5pt</Width>
+                          </BottomBorder>
+                        </Style>
+                      </Textbox>
+                    </CellContents>
+                  </TablixHeader>
+                  <KeepWithGroup>Before</KeepWithGroup>
+                </TablixMember>
+              </TablixMembers>
+            </TablixRowHierarchy>
+            <TablixColumnHierarchy>
+              <TablixMembers>
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+              </TablixMembers>
+            </TablixColumnHierarchy>
+            <DataSetName>DataSet_Result</DataSetName>
+            <Top>2.7cm</Top>
+            <Left>0.5cm</Left>
+            <Width>26.9cm</Width>
+            <Style>
+              <Border>
+                <Color>#CCCCCC</Color>
+                <Style>Solid</Style>
+                <Width>0.25pt</Width>
+              </Border>
+            </Style>
+          </Tablix>
+          <!-- ══════════════════════════════════════════
+               GESAMTTOTAL (statische Textboxen)
+               Positioniert unterhalb des Tablix
+               ══════════════════════════════════════════ -->
+          <Textbox Name="txtGrandLabel">
+            <CanGrow>true</CanGrow>
+            <Paragraphs>
+              <Paragraph>
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Gesamttotal (alle Bestellungen)</Value>
+                    <Style>
+                      <FontSize>8pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                      <Color>White</Color>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+              </Paragraph>
+            </Paragraphs>
+            <Top>0.5cm</Top>
+            <Left>0.5cm</Left>
+            <Width>7.1cm</Width>
+            <Height>0.55cm</Height>
+            <Style>
+              <BackgroundColor>#003087</BackgroundColor>
+              <VerticalAlign>Middle</VerticalAlign>
+              <PaddingLeft>6pt</PaddingLeft>
+            </Style>
+          </Textbox>
+          <Textbox Name="txtGrandOrd">
+            <CanGrow>true</CanGrow>
+            <Paragraphs>
+              <Paragraph>
+                <Style>
+                  <TextAlign>Right</TextAlign>
+                </Style>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=Fields!GrandTotalQtyOrdered.Value</Value>
+                    <Style>
+                      <FontSize>8pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                      <Color>White</Color>
+                      <Format>#,##0.##</Format>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+              </Paragraph>
+            </Paragraphs>
+            <Top>0.5cm</Top>
+            <Left>7.6cm</Left>
+            <Width>2.1cm</Width>
+            <Height>0.55cm</Height>
+            <Style>
+              <BackgroundColor>#0063B1</BackgroundColor>
+              <VerticalAlign>Middle</VerticalAlign>
+              <PaddingRight>3pt</PaddingRight>
+            </Style>
+          </Textbox>
+          <Textbox Name="txtGrandRecv">
+            <CanGrow>true</CanGrow>
+            <Paragraphs>
+              <Paragraph>
+                <Style>
+                  <TextAlign>Right</TextAlign>
+                </Style>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=Fields!GrandTotalQtyReceived.Value</Value>
+                    <Style>
+                      <FontSize>8pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                      <Color>White</Color>
+                      <Format>#,##0.##</Format>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+              </Paragraph>
+            </Paragraphs>
+            <Top>0.5cm</Top>
+            <Left>9.7cm</Left>
+            <Width>2.1cm</Width>
+            <Height>0.55cm</Height>
+            <Style>
+              <BackgroundColor>#107C10</BackgroundColor>
+              <VerticalAlign>Middle</VerticalAlign>
+              <PaddingRight>3pt</PaddingRight>
+            </Style>
+          </Textbox>
+          <Textbox Name="txtGrandInv">
+            <CanGrow>true</CanGrow>
+            <Paragraphs>
+              <Paragraph>
+                <Style>
+                  <TextAlign>Right</TextAlign>
+                </Style>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=Fields!GrandTotalQtyInvoiced.Value</Value>
+                    <Style>
+                      <FontSize>8pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                      <Color>White</Color>
+                      <Format>#,##0.##</Format>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+              </Paragraph>
+            </Paragraphs>
+            <Top>0.5cm</Top>
+            <Left>13.2cm</Left>
+            <Width>2.1cm</Width>
+            <Height>0.55cm</Height>
+            <Style>
+              <BackgroundColor>#D83B01</BackgroundColor>
+              <VerticalAlign>Middle</VerticalAlign>
+              <PaddingRight>3pt</PaddingRight>
+            </Style>
+          </Textbox>
+          <Textbox Name="txtGrandRNI">
+            <CanGrow>true</CanGrow>
+            <Paragraphs>
+              <Paragraph>
+                <Style>
+                  <TextAlign>Right</TextAlign>
+                </Style>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=Fields!GrandTotalQtyRNI.Value</Value>
+                    <Style>
+                      <FontSize>8pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                      <Color>White</Color>
+                      <Format>#,##0.##</Format>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+              </Paragraph>
+            </Paragraphs>
+            <Top>0.5cm</Top>
+            <Left>16.7cm</Left>
+            <Width>2.1cm</Width>
+            <Height>0.55cm</Height>
+            <Style>
+              <BackgroundColor>#FFB900</BackgroundColor>
+              <VerticalAlign>Middle</VerticalAlign>
+              <PaddingRight>3pt</PaddingRight>
+            </Style>
+          </Textbox>
+          <Textbox Name="txtGrandAmt">
+            <CanGrow>true</CanGrow>
+            <Paragraphs>
+              <Paragraph>
+                <Style>
+                  <TextAlign>Right</TextAlign>
+                </Style>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=Fields!GrandTotalLineAmount.Value</Value>
+                    <Style>
+                      <FontSize>8pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                      <Color>White</Color>
+                      <Format>#,##0.00</Format>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+              </Paragraph>
+            </Paragraphs>
+            <Top>0.5cm</Top>
+            <Left>18.8cm</Left>
+            <Width>2.1cm</Width>
+            <Height>0.55cm</Height>
+            <Style>
+              <BackgroundColor>#003087</BackgroundColor>
+              <VerticalAlign>Middle</VerticalAlign>
+              <PaddingRight>3pt</PaddingRight>
+            </Style>
+          </Textbox>
+        </ReportItems>
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <PageHeight>21cm</PageHeight>
+        <PageWidth>29.7cm</PageWidth>
+        <LeftMargin>0.5cm</LeftMargin>
+        <RightMargin>0.5cm</RightMargin>
+        <TopMargin>1.0cm</TopMargin>
+        <BottomMargin>1.0cm</BottomMargin>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="ReportTitle">
+          <DataField>ReportTitle</DataField>
+        </Field>
+        <Field Name="CompanyName">
+          <DataField>CompanyName</DataField>
+        </Field>
+        <Field Name="PrintedDateTime">
+          <DataField>PrintedDateTime</DataField>
+        </Field>
+        <Field Name="FilterText">
+          <DataField>FilterText</DataField>
+        </Field>
+        <Field Name="DocNo">
+          <DataField>DocNo</DataField>
+        </Field>
+        <Field Name="OrderDate">
+          <DataField>OrderDate</DataField>
+        </Field>
+        <Field Name="VendorNo">
+          <DataField>VendorNo</DataField>
+        </Field>
+        <Field Name="VendorName">
+          <DataField>VendorName</DataField>
+        </Field>
+        <Field Name="PurchaserCode">
+          <DataField>PurchaserCode</DataField>
+        </Field>
+        <Field Name="Status">
+          <DataField>Status</DataField>
+        </Field>
+        <Field Name="CurrencyCode">
+          <DataField>CurrencyCode</DataField>
+        </Field>
+        <Field Name="LineNo">
+          <DataField>LineNo</DataField>
+        </Field>
+        <Field Name="ItemNo">
+          <DataField>ItemNo</DataField>
+        </Field>
+        <Field Name="Description">
+          <DataField>Description</DataField>
+        </Field>
+        <Field Name="UnitOfMeasure">
+          <DataField>UnitOfMeasure</DataField>
+        </Field>
+        <Field Name="QtyOrdered">
+          <DataField>QtyOrdered</DataField>
+        </Field>
+        <Field Name="QtyOrderedFormat">
+          <DataField>QtyOrderedFormat</DataField>
+        </Field>
+        <Field Name="QtyReceived">
+          <DataField>QtyReceived</DataField>
+        </Field>
+        <Field Name="QtyReceivedFormat">
+          <DataField>QtyReceivedFormat</DataField>
+        </Field>
+        <Field Name="QtyInvoiced">
+          <DataField>QtyInvoiced</DataField>
+        </Field>
+        <Field Name="QtyInvoicedFormat">
+          <DataField>QtyInvoicedFormat</DataField>
+        </Field>
+        <Field Name="QtyOutstanding">
+          <DataField>QtyOutstanding</DataField>
+        </Field>
+        <Field Name="QtyOutstandingFormat">
+          <DataField>QtyOutstandingFormat</DataField>
+        </Field>
+        <Field Name="QtyRecvNotInv">
+          <DataField>QtyRecvNotInv</DataField>
+        </Field>
+        <Field Name="QtyRecvNotInvFormat">
+          <DataField>QtyRecvNotInvFormat</DataField>
+        </Field>
+        <Field Name="DirectUnitCost">
+          <DataField>DirectUnitCost</DataField>
+        </Field>
+        <Field Name="DirectUnitCostFormat">
+          <DataField>DirectUnitCostFormat</DataField>
+        </Field>
+        <Field Name="LineAmount">
+          <DataField>LineAmount</DataField>
+        </Field>
+        <Field Name="LineAmountFormat">
+          <DataField>LineAmountFormat</DataField>
+        </Field>
+        <Field Name="AmtRecvNotInv">
+          <DataField>AmtRecvNotInv</DataField>
+        </Field>
+        <Field Name="AmtRecvNotInvFormat">
+          <DataField>AmtRecvNotInvFormat</DataField>
+        </Field>
+        <Field Name="DeliveryStatus">
+          <DataField>DeliveryStatus</DataField>
+        </Field>
+        <Field Name="InvoiceStatus">
+          <DataField>InvoiceStatus</DataField>
+        </Field>
+        <Field Name="PctReceived">
+          <DataField>PctReceived</DataField>
+        </Field>
+        <Field Name="PctReceivedFormat">
+          <DataField>PctReceivedFormat</DataField>
+        </Field>
+        <Field Name="PctInvoiced">
+          <DataField>PctInvoiced</DataField>
+        </Field>
+        <Field Name="PctInvoicedFormat">
+          <DataField>PctInvoicedFormat</DataField>
+        </Field>
+        <Field Name="TotalQtyOrdered">
+          <DataField>TotalQtyOrdered</DataField>
+        </Field>
+        <Field Name="TotalQtyOrderedFormat">
+          <DataField>TotalQtyOrderedFormat</DataField>
+        </Field>
+        <Field Name="TotalQtyReceived">
+          <DataField>TotalQtyReceived</DataField>
+        </Field>
+        <Field Name="TotalQtyReceivedFormat">
+          <DataField>TotalQtyReceivedFormat</DataField>
+        </Field>
+        <Field Name="TotalQtyInvoiced">
+          <DataField>TotalQtyInvoiced</DataField>
+        </Field>
+        <Field Name="TotalQtyInvoicedFormat">
+          <DataField>TotalQtyInvoicedFormat</DataField>
+        </Field>
+        <Field Name="TotalQtyRNI">
+          <DataField>TotalQtyRNI</DataField>
+        </Field>
+        <Field Name="TotalQtyRNIFormat">
+          <DataField>TotalQtyRNIFormat</DataField>
+        </Field>
+        <Field Name="TotalLineAmount">
+          <DataField>TotalLineAmount</DataField>
+        </Field>
+        <Field Name="TotalLineAmountFormat">
+          <DataField>TotalLineAmountFormat</DataField>
+        </Field>
+        <Field Name="GrandTotalQtyOrdered">
+          <DataField>GrandTotalQtyOrdered</DataField>
+        </Field>
+        <Field Name="GrandTotalQtyOrderedFormat">
+          <DataField>GrandTotalQtyOrderedFormat</DataField>
+        </Field>
+        <Field Name="GrandTotalQtyReceived">
+          <DataField>GrandTotalQtyReceived</DataField>
+        </Field>
+        <Field Name="GrandTotalQtyReceivedFormat">
+          <DataField>GrandTotalQtyReceivedFormat</DataField>
+        </Field>
+        <Field Name="GrandTotalQtyInvoiced">
+          <DataField>GrandTotalQtyInvoiced</DataField>
+        </Field>
+        <Field Name="GrandTotalQtyInvoicedFormat">
+          <DataField>GrandTotalQtyInvoicedFormat</DataField>
+        </Field>
+        <Field Name="GrandTotalQtyRNI">
+          <DataField>GrandTotalQtyRNI</DataField>
+        </Field>
+        <Field Name="GrandTotalQtyRNIFormat">
+          <DataField>GrandTotalQtyRNIFormat</DataField>
+        </Field>
+        <Field Name="GrandTotalLineAmount">
+          <DataField>GrandTotalLineAmount</DataField>
+        </Field>
+        <Field Name="GrandTotalLineAmountFormat">
+          <DataField>GrandTotalLineAmountFormat</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

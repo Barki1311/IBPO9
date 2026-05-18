@@ -1,0 +1,119 @@
+xmlport 67011 "UTT O9QualityDim"
+{
+    Caption = 'UTT O9QualityDim';
+    Format = VariableText;
+    Direction = Export;
+    TextEncoding = UTF8;
+    UseRequestPage = false;
+    FileName = 'IVMK_O9QualityDim.dsv';
+    TableSeparator = '<NewLine>';
+    FieldSeparator = '|';
+    schema
+    {
+
+        textelement(Root)
+        {
+
+            tableelement(Integer; Integer)
+            {
+
+                XmlName = 'Header';
+                SourceTableView = SORTING(Number) WHERE(Number = CONST(1));
+                textelement(QualityLbl)
+                {
+                    trigger OnBeforePassVariable()
+                    begin
+                        QualityLbl := 'Quality';
+                    end;
+                }
+                textelement(QualityDescLbl)
+                {
+                    trigger OnBeforePassVariable()
+                    begin
+                        QualityDescLbl := 'QualityDescription';
+                    end;
+                }
+                textelement(QualityGrpLbl)
+                {
+                    trigger OnBeforePassVariable()
+                    begin
+                        QualityGrpLbl := 'QualityGroup';
+                    end;
+                }
+                textelement(QualityGrpDescLbl)
+                {
+                    trigger OnBeforePassVariable()
+                    begin
+                        QualityGrpDescLbl := 'QualityGroupDescription';
+                    end;
+                }
+                textelement(SegmentLbl)
+                {
+                    trigger OnBeforePassVariable()
+                    begin
+                        SegmentLbl := 'Segment';
+                    end;
+                }
+                textelement(SegmentDescLbl)
+                {
+                    trigger OnBeforePassVariable()
+                    begin
+                        SegmentDescLbl := 'SegmentDescription';
+                    end;
+                }
+            }
+
+
+            tableelement(Data; Integer)
+            {
+                XmlName = 'Data';
+                SourceTableView = SORTING(Number) WHERE(Number = CONST(1));
+                textelement(Quality)
+                {
+                    trigger OnBeforePassVariable()
+                    begin
+                        Quality := 'STANDARD';
+                    end;
+                }
+                textelement(QualityDesc)
+                {
+                    trigger OnBeforePassVariable()
+                    begin
+                        QualityDesc := 'STANDARD';
+                    end;
+                }
+                textelement(QualityGrp)
+                {
+                    trigger OnBeforePassVariable()
+                    begin
+
+                        QualityGrp := 'First Grade';
+                    end;
+                }
+                textelement(QualityGrpDesc)
+                {
+                    trigger OnBeforePassVariable()
+                    begin
+                        QualityGrpDesc := 'First Grade'
+                    end;
+                }
+                textelement(Segment)
+                {
+                    trigger OnBeforePassVariable()
+                    begin
+                        Segment := 'Fibers';
+                    end;
+                }
+                textelement(SegmentDesc)
+                {
+                    trigger OnBeforePassVariable()
+                    begin
+                        SegmentDesc := 'Fibers';
+                    end;
+                }
+
+            }
+        }
+    }
+
+}

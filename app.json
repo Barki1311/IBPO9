@@ -1,0 +1,68 @@
+{
+  "id": "06529869-e6b6-42ba-936c-1c0152d8b8bc",
+  "name": "IBPO9",
+  "publisher": "Barki",
+  "version": "18.5.26.05181555",
+  "brief": "",
+  "description": "",
+  "privacyStatement": "",
+  "EULA": "",
+  "help": "",
+  "url": "",
+   
+  
+  "dependencies": [
+    {
+      "id": "0684bcad-e970-4a00-b2e3-baba4ae3d7b4",
+      "publisher": "Kumavision AG",
+      "name": "KUMAVISION textile",
+      "version": "18.5.0.0"
+    },
+    {
+      "id": "ff34b2a1-2c07-46fb-8e56-c911325244fa",
+      "publisher": "Kumavision AG",
+      "name": "KUMAVISION factory",
+      "version": "18.5.0.0"
+    },
+    {
+      "id": "2ad652af-3921-43ab-be20-57e893980dad",
+      "publisher": "Kumavision AG",
+      "name": "Quality Management Extension",
+      "version": "17.0.0.0"
+    },
+    {
+      "id": "134b5b11-d50e-47e2-a159-5477bfbc6aed",
+      "publisher": "Kumavision AG",
+      "name": "KVS Anpassungen",
+      "version": "18.5.0.0"
+    },
+    {
+      "id": "36569745-64bd-4de5-877a-a57fd834b34e",
+      "publisher": "Kumavision",
+      "name": "EDX",
+      "version": "18.5.0.2"
+    }
+   
+
+
+  ],
+    "screenshots": [],
+  "platform": "1.0.0.0",
+  "application": "18.5.0.0",
+  "target": "OnPrem",
+  "idRanges": [
+    {
+      "from": 67000,
+      "to": 67999
+    }
+  ],
+  "contextSensitiveHelpUrl": "https://ReportingApp.com/help/",
+  "showMyCode": false,
+  "runtime": "7.2",
+  
+  "features": [
+    "TranslationFile"
+  ]
+  
+
+}
