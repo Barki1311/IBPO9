@@ -1,4 +1,4 @@
-xmlport 67020 "UTT O9LocationDim_SP"
+﻿xmlport 67020 "UTT O9LocationDim_SP"
 {
     Caption = 'UTT O9LocationDim_SP';
     Format = VariableText;
@@ -160,13 +160,12 @@ xmlport 67020 "UTT O9LocationDim_SP"
                 // }
 
                 trigger OnAfterGetRecord()
+var
+    EntryNo: Integer;
                 begin
-                    IBPO9Buffer.Init();
-                    if not IBPO9Buffer.FindLast() then begin
-                        IBPO9Buffer."Entry No." := 1;
-                    end else begin
-                        IBPO9Buffer."Entry No." := IBPO9Buffer."Entry No." + 1;
-                    end;
+                     EntryNo:= IBPO9Buffer.getNextEntry();
+                    IBPO9Buffer.Init(); 
+                    IBPO9Buffer."Entry No.":= EntryNo;
                     IBPO9Buffer."Export Date" := CurrentDateTime();
                     IBPO9Buffer."Export Batch ID" := 'LOCATION_SP';
                     IBPO9Buffer.Insert();
@@ -364,13 +363,12 @@ xmlport 67020 "UTT O9LocationDim_SP"
                 // }
 
                 trigger OnAfterGetRecord()
+var
+    EntryNo: Integer;
                 begin
-                    IBPO9Buffer.Init();
-                    if not IBPO9Buffer.FindLast() then begin
-                        IBPO9Buffer."Entry No." := 1;
-                    end else begin
-                        IBPO9Buffer."Entry No." := IBPO9Buffer."Entry No." + 1;
-                    end;
+                     EntryNo:= IBPO9Buffer.getNextEntry();
+                    IBPO9Buffer.Init(); 
+                    IBPO9Buffer."Entry No.":= EntryNo;
                     IBPO9Buffer."Export Date" := CurrentDateTime();
                     IBPO9Buffer."Export Batch ID" := 'LOCATION_SP';
                     IBPO9Buffer.Insert();

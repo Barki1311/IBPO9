@@ -1,4 +1,4 @@
-xmlport 67003 "UTT O9MaterialDim"
+﻿xmlport 67003 "UTT O9MaterialDim"
 
 {
     Caption = 'UTT O9 MAterialDim';
@@ -790,6 +790,7 @@ xmlport 67003 "UTT O9MaterialDim"
 
                 trigger OnAfterGetRecord()
                 var
+    EntryNo: Integer;
                     myInt: Integer;
                     ItemledEntry: Record "Item Ledger Entry";
                     PolymerNA: Boolean;
@@ -816,12 +817,9 @@ xmlport 67003 "UTT O9MaterialDim"
                     // end;
 
                     //IBPO9Buffer."Field 1" := MaterialLbl;
-                    IBPO9Buffer.Init();
-                    if not IBPO9Buffer.FindLast() then begin
-                        IBPO9Buffer."Entry No." := 1;
-                    end else begin
-                        IBPO9Buffer."Entry No." := IBPO9Buffer."Entry No." + 1;
-                    end;
+                    EntryNo:= IBPO9Buffer.getNextEntry();
+                    IBPO9Buffer.Init(); 
+                    IBPO9Buffer."Entry No.":= EntryNo;
                     IBPO9Buffer."Export Date" := CurrentDateTime();
                     IBPO9Buffer."Export Batch ID" := 'MATERIAL_SP';
 

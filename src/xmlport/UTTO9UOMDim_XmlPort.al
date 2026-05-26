@@ -27,12 +27,12 @@ xmlport 67006 "UTT O9UOMDim"
                 }
 
                 trigger OnAfterGetRecord()
+                var
+                    EntryNo: Integer;
                 begin
+                    EntryNo := IBPO9Buffer.getNextEntry();
                     IBPO9Buffer.Init();
-                    if not IBPO9Buffer.FindLast() then
-                        IBPO9Buffer."Entry No." := 1
-                    else
-                        IBPO9Buffer."Entry No." := IBPO9Buffer."Entry No." + 1;
+                    IBPO9Buffer."Entry No." := EntryNo;
                     IBPO9Buffer."Export Date" := CurrentDateTime();
                     IBPO9Buffer."Export Batch ID" := 'UOMDIM';
                     IBPO9Buffer.Insert();
@@ -43,7 +43,7 @@ xmlport 67006 "UTT O9UOMDim"
             {
                 XmlName = 'UOM';
                 RequestFilterFields = Code;
-                textelement(Matl_Number) 
+                textelement(Matl_Number)
                 {
                     trigger OnBeforePassVariable()
                     begin
@@ -51,15 +51,15 @@ xmlport 67006 "UTT O9UOMDim"
                         IBPO9Buffer."Field 1" := Matl_Number;
                         IBPO9Buffer.Modify();
                     end;
-                 }
+                }
 
                 trigger OnAfterGetRecord()
+                var
+                    EntryNo: Integer;
                 begin
+                    EntryNo := IBPO9Buffer.getNextEntry();
                     IBPO9Buffer.Init();
-                    if not IBPO9Buffer.FindLast() then
-                        IBPO9Buffer."Entry No." := 1
-                    else
-                        IBPO9Buffer."Entry No." := IBPO9Buffer."Entry No." + 1;
+                    IBPO9Buffer."Entry No." := EntryNo;
                     IBPO9Buffer."Export Date" := CurrentDateTime();
                     IBPO9Buffer."Export Batch ID" := 'UOMDIM';
                     IBPO9Buffer.Insert();

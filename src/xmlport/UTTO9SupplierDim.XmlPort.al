@@ -81,14 +81,14 @@ xmlport 67002 "UTT O9SupplierDim"
                 }
 
                 trigger OnAfterGetRecord()
+                var
+                    EntryNo: Integer;
                 begin
+                    EntryNo := IBPO9Buffer.getNextEntry();
                     IBPO9Buffer.Init();
-                    if not IBPO9Buffer.FindLast() then
-                        IBPO9Buffer."Entry No." := 1
-                    else
-                        IBPO9Buffer."Entry No." := IBPO9Buffer."Entry No." + 1;
+                    IBPO9Buffer."Entry No." := EntryNo;
                     IBPO9Buffer."Export Date" := CurrentDateTime();
-                    IBPO9Buffer."Export Batch ID" := 'SUPPLIERDIM_SP';
+                    IBPO9Buffer."Export Batch ID" := 'UOMDIM';
                     IBPO9Buffer.Insert();
                 end;
             }
@@ -187,14 +187,14 @@ xmlport 67002 "UTT O9SupplierDim"
                 end;
 
                 trigger OnAfterGetRecord()
+                var
+                    EntryNo: Integer;
                 begin
+                    EntryNo := IBPO9Buffer.getNextEntry();
                     IBPO9Buffer.Init();
-                    if not IBPO9Buffer.FindLast() then
-                        IBPO9Buffer."Entry No." := 1
-                    else
-                        IBPO9Buffer."Entry No." := IBPO9Buffer."Entry No." + 1;
+                    IBPO9Buffer."Entry No." := EntryNo;
                     IBPO9Buffer."Export Date" := CurrentDateTime();
-                    IBPO9Buffer."Export Batch ID" := 'SUPPLIERDIM_SP';
+                    IBPO9Buffer."Export Batch ID" := 'UOMDIM';
                     IBPO9Buffer.Insert();
                 end;
             }

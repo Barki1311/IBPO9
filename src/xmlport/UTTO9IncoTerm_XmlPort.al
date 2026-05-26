@@ -1,4 +1,4 @@
-xmlport 67027 "UTT O9InCoTerm"
+﻿xmlport 67027 "UTT O9InCoTerm"
 {
     Caption = 'UTT O9IncoTerm';
     Format = VariableText;
@@ -156,12 +156,12 @@ xmlport 67027 "UTT O9InCoTerm"
                 }
 
                 trigger OnAfterGetRecord()
+var
+    EntryNo: Integer;
                 begin
-                    IBPO9Buffer.Init();
-                    if not IBPO9Buffer.FindLast() then
-                        IBPO9Buffer."Entry No." := 1
-                    else
-                        IBPO9Buffer."Entry No." := IBPO9Buffer."Entry No." + 1;
+                     EntryNo:= IBPO9Buffer.getNextEntry();
+                    IBPO9Buffer.Init(); 
+                    IBPO9Buffer."Entry No.":= EntryNo;
                     IBPO9Buffer."Export Date" := CurrentDateTime();
                     IBPO9Buffer."Export Batch ID" := 'INCOTERM';
                     IBPO9Buffer.Insert();
@@ -344,15 +344,14 @@ xmlport 67027 "UTT O9InCoTerm"
 
                 trigger OnAfterGetRecord()
                 var
+    EntryNo: Integer;
                     myInt: Integer;
                 begin
                     ItemRec.get(SIV."Artikelnr.");
 
-                    IBPO9Buffer.Init();
-                    if not IBPO9Buffer.FindLast() then
-                        IBPO9Buffer."Entry No." := 1
-                    else
-                        IBPO9Buffer."Entry No." := IBPO9Buffer."Entry No." + 1;
+                     EntryNo:= IBPO9Buffer.getNextEntry();
+                    IBPO9Buffer.Init(); 
+                    IBPO9Buffer."Entry No.":= EntryNo;
                     IBPO9Buffer."Export Date" := CurrentDateTime();
                     IBPO9Buffer."Export Batch ID" := 'INCOTERM';
                     IBPO9Buffer.Insert();

@@ -1,4 +1,4 @@
-xmlport 67030 "UTT O9OnHandInventory_SP"
+﻿xmlport 67030 "UTT O9OnHandInventory_SP"
 {
     Caption = 'UTT O9OnHandInventory_SP';
     Format = VariableText;
@@ -155,12 +155,12 @@ xmlport 67030 "UTT O9OnHandInventory_SP"
                 }
 
                 trigger OnAfterGetRecord()
+var
+    EntryNo: Integer;
                 begin
-                    IBPO9Buffer.Init();
-                    if not IBPO9Buffer.FindLast() then
-                        IBPO9Buffer."Entry No." := 1
-                    else
-                        IBPO9Buffer."Entry No." := IBPO9Buffer."Entry No." + 1;
+                    EntryNo:= IBPO9Buffer.getNextEntry();
+                    IBPO9Buffer.Init(); 
+                    IBPO9Buffer."Entry No.":= EntryNo;
                     IBPO9Buffer."Export Date" := CurrentDateTime();
                     IBPO9Buffer."Export Batch ID" := 'ONHANDINV_SP';
                     IBPO9Buffer.Insert();
@@ -343,6 +343,7 @@ xmlport 67030 "UTT O9OnHandInventory_SP"
 
                 trigger OnAfterGetRecord()
                 var
+    EntryNo: Integer;
                     myInt: Integer;
                 begin
                     Clear(Plant);
@@ -354,11 +355,9 @@ xmlport 67030 "UTT O9OnHandInventory_SP"
                             Plant := 'IVMP';
                     end;
 
-                    IBPO9Buffer.Init();
-                    if not IBPO9Buffer.FindLast() then
-                        IBPO9Buffer."Entry No." := 1
-                    else
-                        IBPO9Buffer."Entry No." := IBPO9Buffer."Entry No." + 1;
+                     EntryNo:= IBPO9Buffer.getNextEntry();
+                    IBPO9Buffer.Init(); 
+                    IBPO9Buffer."Entry No.":= EntryNo;
                     IBPO9Buffer."Export Date" := CurrentDateTime();
                     IBPO9Buffer."Export Batch ID" := 'ONHANDINV_SP';
                     IBPO9Buffer.Insert();

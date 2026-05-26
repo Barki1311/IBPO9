@@ -36,12 +36,12 @@ xmlport 67013 "UTT O9QualityAssociation"
                 }
 
                 trigger OnAfterGetRecord()
+                var
+                    EntryNo: Integer;
                 begin
+                    EntryNo := IBPO9Buffer.getNextEntry();
                     IBPO9Buffer.Init();
-                    if not IBPO9Buffer.FindLast() then
-                        IBPO9Buffer."Entry No." := 1
-                    else
-                        IBPO9Buffer."Entry No." := IBPO9Buffer."Entry No." + 1;
+                    IBPO9Buffer."Entry No." := EntryNo;
                     IBPO9Buffer."Export Date" := CurrentDateTime();
                     IBPO9Buffer."Export Batch ID" := 'QUALITYASSO';
                     IBPO9Buffer.Insert();
@@ -85,12 +85,13 @@ xmlport 67013 "UTT O9QualityAssociation"
                 end;
 
                 trigger OnAfterGetRecord()
+                var
+                    EntryNo: Integer;
                 begin
+                    EntryNo := IBPO9Buffer.getNextEntry();
                     IBPO9Buffer.Init();
-                    if not IBPO9Buffer.FindLast() then
-                        IBPO9Buffer."Entry No." := 1
-                    else
-                        IBPO9Buffer."Entry No." := IBPO9Buffer."Entry No." + 1;
+                    IBPO9Buffer."Entry No." := EntryNo;
+                    IBPO9Buffer."Export Date" := CurrentDateTime();
                     IBPO9Buffer."Export Date" := CurrentDateTime();
                     IBPO9Buffer."Export Batch ID" := 'QUALITYASSO';
                     IBPO9Buffer.Insert();

@@ -54,14 +54,14 @@ xmlport 67004 "UTT O9UOMConversion"
                 }
 
                 trigger OnAfterGetRecord()
+                var
+                    EntryNo: Integer;
                 begin
+                    EntryNo := IBPO9Buffer.getNextEntry();
                     IBPO9Buffer.Init();
-                    if not IBPO9Buffer.FindLast() then
-                        IBPO9Buffer."Entry No." := 1
-                    else
-                        IBPO9Buffer."Entry No." := IBPO9Buffer."Entry No." + 1;
+                    IBPO9Buffer."Entry No." := EntryNo;
                     IBPO9Buffer."Export Date" := CurrentDateTime();
-                    IBPO9Buffer."Export Batch ID" := 'UOMCONVERSION';
+                    IBPO9Buffer."Export Batch ID" := 'UOMDIM';
                     IBPO9Buffer.Insert();
                 end;
             }
@@ -116,6 +116,7 @@ xmlport 67004 "UTT O9UOMConversion"
                 var
                     ItemledEntry: Record "Item Ledger Entry";
                     PolymerNA: Boolean;
+                    EntryNo: Integer;
                 begin
                     if (item."KVSTEX Item Type" = item."KVSTEX Item Type"::Standard) then
                         if item."KVSTEX Composition Key Total" = '' then
@@ -136,13 +137,11 @@ xmlport 67004 "UTT O9UOMConversion"
                             Plant := 'IVMP';
                     end;
 
+                    EntryNo := IBPO9Buffer.getNextEntry();
                     IBPO9Buffer.Init();
-                    if not IBPO9Buffer.FindLast() then
-                        IBPO9Buffer."Entry No." := 1
-                    else
-                        IBPO9Buffer."Entry No." := IBPO9Buffer."Entry No." + 1;
+                    IBPO9Buffer."Entry No." := EntryNo;
                     IBPO9Buffer."Export Date" := CurrentDateTime();
-                    IBPO9Buffer."Export Batch ID" := 'UOMCONVERSION';
+                    IBPO9Buffer."Export Batch ID" := 'UOMDIM';
                     IBPO9Buffer.Insert();
                 end;
 

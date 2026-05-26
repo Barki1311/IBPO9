@@ -1,4 +1,4 @@
-xmlport 67015 "UTT O9BOMMaster"
+﻿xmlport 67015 "UTT O9BOMMaster"
 {
     Caption = 'UTT O9 Bom Master';
     Format = VariableText;
@@ -154,10 +154,12 @@ xmlport 67015 "UTT O9BOMMaster"
                 }
 
                 trigger OnAfterGetRecord()
+var
+    EntryNo: Integer;
                 begin
-                    EntryNo:= IBPO9Buffer.getNextEntry();
-                    IBPO9Buffer.Init();
-                    IBPO9Buffer."Entry No." := EntryNo; 
+                       EntryNo:= IBPO9Buffer.getNextEntry();
+                    IBPO9Buffer.Init(); 
+                    IBPO9Buffer."Entry No.":= EntryNo;
                     IBPO9Buffer."Export Date" := CurrentDateTime();
                     IBPO9Buffer."Export Batch ID" := 'BOMMASTER';
                     IBPO9Buffer.Insert();
@@ -354,14 +356,13 @@ xmlport 67015 "UTT O9BOMMaster"
 
                     trigger OnAfterGetRecord()
                     var
+    EntryNo: Integer;
                         myInt: Integer;
                     begin
-                        IBPO9Buffer.Init();
-                        if not IBPO9Buffer.FindLast() then
-                            IBPO9Buffer."Entry No." := 1
-                        else
-                            IBPO9Buffer."Entry No." := IBPO9Buffer."Entry No." + 1;
-                        IBPO9Buffer."Export Date" := CurrentDateTime();
+                       EntryNo:= IBPO9Buffer.getNextEntry();
+                    IBPO9Buffer.Init(); 
+                    IBPO9Buffer."Entry No.":= EntryNo;
+                    IBPO9Buffer."Export Date" := CurrentDateTime();
                         IBPO9Buffer."Export Batch ID" := 'BOMMASTER';
                         IBPO9Buffer.Insert();
                     end;

@@ -81,13 +81,12 @@ xmlport 67022 "UTT O9SupplierDim_SP"
                 }
 
                 trigger OnAfterGetRecord()
-                
+                var
+                    EntryNo: Integer;
                 begin
-                   
-                    
-                    EntryNo:= IBPO9Buffer.getNextEntry();
-                    IBPO9Buffer.Init(); 
-                    IBPO9Buffer."Entry No.":= EntryNo;
+                    EntryNo := IBPO9Buffer.getNextEntry();
+                    IBPO9Buffer.Init();
+                    IBPO9Buffer."Entry No." := EntryNo;
                     IBPO9Buffer."Export Date" := CurrentDateTime();
                     IBPO9Buffer."Export Batch ID" := 'SUPPLIERDIM_SP';
                     IBPO9Buffer.Insert();
@@ -188,12 +187,14 @@ xmlport 67022 "UTT O9SupplierDim_SP"
                 end;
 
                 trigger OnAfterGetRecord()
+                var
+                    EntryNo: Integer;
                 begin
-                    EntryNo:= IBPO9Buffer.getNextEntry();
-                    IBPO9Buffer.Init(); 
-                    IBPO9Buffer."Entry No.":= EntryNo;
+                    EntryNo := IBPO9Buffer.getNextEntry();
+                    IBPO9Buffer.Init();
+                    IBPO9Buffer."Entry No." := EntryNo;
                     IBPO9Buffer."Export Date" := CurrentDateTime();
-                    IBPO9Buffer."Export Batch ID" := 'SUPPLIERDIM_SP';
+                    IBPO9Buffer."Export Batch ID" := 'UOMDIM';
                     IBPO9Buffer.Insert();
                 end;
             }
@@ -202,5 +203,4 @@ xmlport 67022 "UTT O9SupplierDim_SP"
 
     var
         IBPO9Buffer: Record "UTT IBPO9 Buffer";
-        EntryNo: Integer;
 }

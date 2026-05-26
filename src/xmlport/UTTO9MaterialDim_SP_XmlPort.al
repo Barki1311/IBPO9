@@ -1,4 +1,4 @@
-xmlport 67019 "UTT O9MaterialDim_SP"
+﻿xmlport 67019 "UTT O9MaterialDim_SP"
 {
     Caption = 'UTT O9 MAterialDim_SP';
     Format = VariableText;
@@ -285,13 +285,12 @@ xmlport 67019 "UTT O9MaterialDim_SP"
                 // }
 
                 trigger OnAfterGetRecord()
+var
+    EntryNo: Integer;
                 begin
-                    IBPO9Buffer.Init();
-                    if not IBPO9Buffer.FindLast() then begin
-                        IBPO9Buffer."Entry No." := 1;
-                    end else begin
-                        IBPO9Buffer."Entry No." := IBPO9Buffer."Entry No." + 1;
-                    end;
+                   EntryNo:= IBPO9Buffer.getNextEntry();
+                    IBPO9Buffer.Init(); 
+                    IBPO9Buffer."Entry No.":= EntryNo;
                     IBPO9Buffer."Export Date" := CurrentDateTime();
                     IBPO9Buffer."Export Batch ID" := 'MATERIAL_SP';
                     IBPO9Buffer.Insert();
@@ -706,6 +705,7 @@ xmlport 67019 "UTT O9MaterialDim_SP"
 
                 trigger OnAfterGetRecord()
                 var
+    EntryNo: Integer;
                     myInt: Integer;
                     ItemledEntry: Record "Item Ledger Entry";
                     PolymerNA: Boolean;
@@ -729,12 +729,9 @@ xmlport 67019 "UTT O9MaterialDim_SP"
 
                     // end;
 
-                    IBPO9Buffer.Init();
-                    if not IBPO9Buffer.FindLast() then begin
-                        IBPO9Buffer."Entry No." := 1;
-                    end else begin
-                        IBPO9Buffer."Entry No." := IBPO9Buffer."Entry No." + 1;
-                    end;
+                      EntryNo:= IBPO9Buffer.getNextEntry();
+                    IBPO9Buffer.Init(); 
+                    IBPO9Buffer."Entry No.":= EntryNo;
                     IBPO9Buffer."Export Date" := CurrentDateTime();
                     IBPO9Buffer."Export Batch ID" := 'MATERIAL_SP';
                     IBPO9Buffer.Insert();

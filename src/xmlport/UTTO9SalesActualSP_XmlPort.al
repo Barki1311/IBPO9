@@ -389,15 +389,14 @@ xmlport 67028 "UTT O9SalesActual_SP"
                 }
 
                 trigger OnAfterGetRecord()
+                var
+                    EntryNo: Integer;
                 begin
+                    EntryNo := IBPO9Buffer.getNextEntry();
                     IBPO9Buffer.Init();
-                    if not IBPO9Buffer.FindLast() then begin
-                        IBPO9Buffer."Entry No." := 1;
-                    end else begin
-                        IBPO9Buffer."Entry No." := IBPO9Buffer."Entry No." + 1;
-                    end;
+                    IBPO9Buffer."Entry No." := EntryNo;
                     IBPO9Buffer."Export Date" := CurrentDateTime();
-                    IBPO9Buffer."Export Batch ID" := 'SALESACTUAL_SP';
+                    IBPO9Buffer."Export Batch ID" := 'UOMDIM';
                     IBPO9Buffer.Insert();
                 end;
 
@@ -666,7 +665,7 @@ xmlport 67028 "UTT O9SalesActual_SP"
                         IBPO9Buffer.Modify();
                     end;
                 }
-                textelement(UOM_DelivQty) 
+                textelement(UOM_DelivQty)
                 {
                     trigger OnBeforePassVariable()
                     var
@@ -676,7 +675,7 @@ xmlport 67028 "UTT O9SalesActual_SP"
                         IBPO9Buffer."Field 21" := UOM_DelivQty;
                         IBPO9Buffer.Modify();
                     end;
-                 }
+                }
                 textelement(OPEN_COMMIT_QTY)
                 {
                     trigger OnBeforePassVariable()
@@ -688,7 +687,7 @@ xmlport 67028 "UTT O9SalesActual_SP"
                         IBPO9Buffer.Modify();
                     end;
                 }
-                textelement(ORDER_STATUS) 
+                textelement(ORDER_STATUS)
                 {
                     trigger OnBeforePassVariable()
                     var
@@ -702,7 +701,7 @@ xmlport 67028 "UTT O9SalesActual_SP"
                         IBPO9Buffer."Field 23" := ORDER_STATUS;
                         IBPO9Buffer.Modify();
                     end;
-                 }
+                }
                 textelement(ORDER_RQST_QTY)
                 {
                     trigger OnBeforePassVariable()
@@ -714,7 +713,7 @@ xmlport 67028 "UTT O9SalesActual_SP"
                         IBPO9Buffer.Modify();
                     end;
                 }
-                textelement(UOM_OrderRequestedQty) 
+                textelement(UOM_OrderRequestedQty)
                 {
                     trigger OnBeforePassVariable()
                     var
@@ -724,7 +723,7 @@ xmlport 67028 "UTT O9SalesActual_SP"
                         IBPO9Buffer."Field 25" := UOM_OrderRequestedQty;
                         IBPO9Buffer.Modify();
                     end;
-                 }
+                }
                 textelement(ORDER_RQST_DT)
                 {
                     trigger OnBeforePassVariable()
@@ -759,7 +758,7 @@ xmlport 67028 "UTT O9SalesActual_SP"
                         IBPO9Buffer.Modify();
                     end;
                 }
-              textelement(Currency_OrderNetValue)
+                textelement(Currency_OrderNetValue)
                 {
                     trigger OnBeforePassVariable()
                     var
@@ -768,7 +767,7 @@ xmlport 67028 "UTT O9SalesActual_SP"
                         Currency_OrderNetValue := siv.Currency;
                         IBPO9Buffer."Field 29" := Currency_OrderNetValue;
                         IBPO9Buffer.Modify();
-                    end; 
+                    end;
                 }
                 textelement(SELLING_PRICE_UN)
                 {
@@ -803,9 +802,9 @@ xmlport 67028 "UTT O9SalesActual_SP"
                         Currency_InvoiceValue := siv.Currency;
                         IBPO9Buffer."Field 32" := Currency_InvoiceValue;
                         IBPO9Buffer.Modify();
-                    end; 
+                    end;
                 }
-                
+
                 textelement(PaymentTerms)
                 {
                     trigger OnBeforePassVariable()
@@ -861,6 +860,7 @@ xmlport 67028 "UTT O9SalesActual_SP"
                 trigger OnAfterGetRecord()
                 var
                     myInt: Integer;
+                    EntryNo: Integer;
                 begin
                     Clear(Plant);
                     CompanyInfo.get();
@@ -871,14 +871,11 @@ xmlport 67028 "UTT O9SalesActual_SP"
                             Plant := 'IVMP';
                     end;
 
+                    EntryNo := IBPO9Buffer.getNextEntry();
                     IBPO9Buffer.Init();
-                    if not IBPO9Buffer.FindLast() then begin
-                        IBPO9Buffer."Entry No." := 1;
-                    end else begin
-                        IBPO9Buffer."Entry No." := IBPO9Buffer."Entry No." + 1;
-                    end;
+                    IBPO9Buffer."Entry No." := EntryNo;
                     IBPO9Buffer."Export Date" := CurrentDateTime();
-                    IBPO9Buffer."Export Batch ID" := 'SALESACTUAL_SP';
+                    IBPO9Buffer."Export Batch ID" := 'UOMDIM';
                     IBPO9Buffer.Insert();
                 end;
             }

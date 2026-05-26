@@ -1,4 +1,4 @@
-xmlport 67018 "UTT O9CustomerAssoc"
+﻿xmlport 67018 "UTT O9CustomerAssoc"
 {
     Caption = 'UTT O9CustomerAssoc';
     Format = VariableText;
@@ -54,12 +54,12 @@ xmlport 67018 "UTT O9CustomerAssoc"
                 }
 
                 trigger OnAfterGetRecord()
+var
+    EntryNo: Integer;
                 begin
-                    IBPO9Buffer.Init();
-                    if not IBPO9Buffer.FindLast() then
-                        IBPO9Buffer."Entry No." := 1
-                    else
-                        IBPO9Buffer."Entry No." := IBPO9Buffer."Entry No." + 1;
+                     EntryNo:= IBPO9Buffer.getNextEntry();
+                    IBPO9Buffer.Init(); 
+                    IBPO9Buffer."Entry No.":= EntryNo;
                     IBPO9Buffer."Export Date" := CurrentDateTime();
                     IBPO9Buffer."Export Batch ID" := 'CUSTOMERASSOC';
                     IBPO9Buffer.Insert();
@@ -129,12 +129,12 @@ xmlport 67018 "UTT O9CustomerAssoc"
                 end;
 
                 trigger OnAfterGetRecord()
+var
+    EntryNo: Integer;
                 begin
-                    IBPO9Buffer.Init();
-                    if not IBPO9Buffer.FindLast() then
-                        IBPO9Buffer."Entry No." := 1
-                    else
-                        IBPO9Buffer."Entry No." := IBPO9Buffer."Entry No." + 1;
+                      EntryNo:= IBPO9Buffer.getNextEntry();
+                    IBPO9Buffer.Init(); 
+                    IBPO9Buffer."Entry No.":= EntryNo;
                     IBPO9Buffer."Export Date" := CurrentDateTime();
                     IBPO9Buffer."Export Batch ID" := 'CUSTOMERASSOC';
                     IBPO9Buffer.Insert();

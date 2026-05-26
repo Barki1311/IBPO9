@@ -1,4 +1,4 @@
-xmlport 67029 "UTT O9 Purchase Export_SP"
+﻿xmlport 67029 "UTT O9 Purchase Export_SP"
 {
     Caption = 'UTT O9 Purchase Export_SP';
     Format = VariableText;
@@ -199,12 +199,12 @@ xmlport 67029 "UTT O9 Purchase Export_SP"
                 }
 
                 trigger OnAfterGetRecord()
+var
+    EntryNo: Integer;
                 begin
-                    IBPO9Buffer.Init();
-                    if not IBPO9Buffer.FindLast() then
-                        IBPO9Buffer."Entry No." := 1
-                    else
-                        IBPO9Buffer."Entry No." := IBPO9Buffer."Entry No." + 1;
+                      EntryNo:= IBPO9Buffer.getNextEntry();
+                    IBPO9Buffer.Init(); 
+                    IBPO9Buffer."Entry No.":= EntryNo;
                     IBPO9Buffer."Export Date" := CurrentDateTime();
                     IBPO9Buffer."Export Batch ID" := 'POKPI_SP';
                     IBPO9Buffer.Insert();
@@ -485,13 +485,12 @@ xmlport 67029 "UTT O9 Purchase Export_SP"
 
                 trigger OnAfterGetRecord()
                 var
+    EntryNo: Integer;
                     Vendor: record Vendor;
                 begin
-                    IBPO9Buffer.Init();
-                    if not IBPO9Buffer.FindLast() then
-                        IBPO9Buffer."Entry No." := 1
-                    else
-                        IBPO9Buffer."Entry No." := IBPO9Buffer."Entry No." + 1;
+                     EntryNo:= IBPO9Buffer.getNextEntry();
+                    IBPO9Buffer.Init(); 
+                    IBPO9Buffer."Entry No.":= EntryNo;
                     IBPO9Buffer."Export Date" := CurrentDateTime();
                     IBPO9Buffer."Export Batch ID" := 'POKPI_SP';
                     IBPO9Buffer.Insert();
@@ -766,15 +765,15 @@ xmlport 67029 "UTT O9 Purchase Export_SP"
 
                 trigger OnAfterGetRecord()
                 var
+    EntryNo: Integer;
                     Vendor: record Vendor;
                 begin
                     Vendor.get(PurchLineRcpt."Buy-from Vendor No.");
 
-                    IBPO9Buffer.Init();
-                    if not IBPO9Buffer.FindLast() then
-                        IBPO9Buffer."Entry No." := 1
-                    else
-                        IBPO9Buffer."Entry No." := IBPO9Buffer."Entry No." + 1;
+                     EntryNo:= IBPO9Buffer.getNextEntry();
+                    IBPO9Buffer.Init(); 
+                    IBPO9Buffer."Entry No.":= EntryNo;
+                    IBPO9Buffer."Export Date" := CurrentDateTime();
                     IBPO9Buffer."Export Date" := CurrentDateTime();
                     IBPO9Buffer."Export Batch ID" := 'POKPI_SP';
                     IBPO9Buffer.Insert();
