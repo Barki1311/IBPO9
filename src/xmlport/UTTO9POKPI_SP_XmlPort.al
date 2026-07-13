@@ -197,16 +197,42 @@
                         IBPO9Buffer.Modify();
                     end;
                 }
-
+                textelement(POBookPricePerUnitLbl)
+                {
+                    trigger OnBeforePassVariable()
+                    begin
+                        POBookPricePerUnitLbl := 'POBookPricePerUnit';
+                        IBPO9Buffer."Field 21" := POBookPricePerUnitLbl;
+                        IBPO9Buffer.Modify();
+                    end;
+                }
+                textelement(NetPurchaseCostLbl)
+                {
+                    trigger OnBeforePassVariable()
+                    begin
+                        NetPurchaseCostLbl := 'NetPurchaseCost';
+                        IBPO9Buffer."Field 22" := NetPurchaseCostLbl;
+                        IBPO9Buffer.Modify();
+                    end;
+                }
+                textelement(PurchaseCostCurrencyLbl)
+                {
+                    trigger OnBeforePassVariable()
+                    begin
+                        PurchaseCostCurrencyLbl := 'PurchaseCostCurrency';
+                        IBPO9Buffer."Field 23" := PurchaseCostCurrencyLbl;
+                        IBPO9Buffer.Modify();
+                    end;
+                }
                 trigger OnAfterGetRecord()
-var
-    EntryNo: Integer;
+                var
+                    EntryNo: Integer;
                 begin
-                      EntryNo:= IBPO9Buffer.getNextEntry();
-                    IBPO9Buffer.Init(); 
-                    IBPO9Buffer."Entry No.":= EntryNo;
+                    EntryNo := IBPO9Buffer.getNextEntry();
+                    IBPO9Buffer.Init();
+                    IBPO9Buffer."Entry No." := EntryNo;
                     IBPO9Buffer."Export Date" := CurrentDateTime();
-                    IBPO9Buffer."Export Batch ID" := 'POKPI_SP';
+                    IBPO9Buffer."Export Batch ID" := o9ProjectLib.GetCurrentXMLPortName(67029);
                     IBPO9Buffer.Insert();
                 end;
             }
@@ -369,7 +395,7 @@ var
                         IBPO9Buffer.Modify();
                     end;
                 }
-                textelement(UOM_Receipt_Quantity) 
+                textelement(UOM_Receipt_Quantity)
                 {
                     trigger OnBeforePassVariable()
                     var
@@ -379,7 +405,7 @@ var
                         IBPO9Buffer."Field 13" := UOM_Receipt_Quantity;
                         IBPO9Buffer.Modify();
                     end;
-                 }
+                }
                 textelement(PO_releaseStatus)
                 {
                     trigger OnBeforePassVariable()
@@ -462,6 +488,39 @@ var
                         IBPO9Buffer.Modify();
                     end;
                 }
+                textelement(POBookPricePerUnit)
+                {
+                    trigger OnBeforePassVariable()
+                    begin
+                        POBookPricePerUnit := format(PurchLine."Unit Cost", 0, 9);
+                        IBPO9Buffer."Field 21" := POBookPricePerUnit;
+                        IBPO9Buffer.Modify();
+                    end;
+                }
+                textelement(NetPurchaseCost)
+                {
+                    trigger OnBeforePassVariable()
+                    begin
+                        NetPurchaseCost := format(PurchLine."Line Amount", 0, 9);
+                        IBPO9Buffer."Field 22" := NetPurchaseCost;
+                        IBPO9Buffer.Modify();
+                    end;
+                }
+                textelement(PurchaseCostCurrency)
+                {
+                    trigger OnBeforePassVariable()
+                    begin
+
+                        if PurchLine."Currency Code" = '' then
+                            purchaseCostCurrency := getLCYcurrency()
+                        else
+                            PurchaseCostCurrency := PurchLine."Currency Code";
+
+                        IBPO9Buffer."Field 23" := PurchaseCostCurrency;
+                        IBPO9Buffer.Modify();
+                    end;
+                }
+
 
                 trigger OnPreXmlItem()
                 var
@@ -485,14 +544,14 @@ var
 
                 trigger OnAfterGetRecord()
                 var
-    EntryNo: Integer;
+                    EntryNo: Integer;
                     Vendor: record Vendor;
                 begin
-                     EntryNo:= IBPO9Buffer.getNextEntry();
-                    IBPO9Buffer.Init(); 
-                    IBPO9Buffer."Entry No.":= EntryNo;
+                    EntryNo := IBPO9Buffer.getNextEntry();
+                    IBPO9Buffer.Init();
+                    IBPO9Buffer."Entry No." := EntryNo;
                     IBPO9Buffer."Export Date" := CurrentDateTime();
-                    IBPO9Buffer."Export Batch ID" := 'POKPI_SP';
+                    IBPO9Buffer."Export Batch ID" := o9ProjectLib.GetCurrentXMLPortName(67029);
                     IBPO9Buffer.Insert();
                 end;
             }
@@ -654,7 +713,7 @@ var
                         IBPO9Buffer.Modify();
                     end;
                 }
-                textelement(UOM_Receipt_QuantityRcpt) 
+                textelement(UOM_Receipt_QuantityRcpt)
                 {
                     trigger OnBeforePassVariable()
                     var
@@ -664,7 +723,7 @@ var
                         IBPO9Buffer."Field 13" := UOM_Receipt_QuantityRcpt;
                         IBPO9Buffer.Modify();
                     end;
-                 }
+                }
                 textelement(PO_releaseStatusRcpt)
                 {
                     trigger OnBeforePassVariable()
@@ -744,6 +803,37 @@ var
                         IBPO9Buffer.Modify();
                     end;
                 }
+                textelement(POBookPricePerUnitRcpt)
+                {
+                    trigger OnBeforePassVariable()
+                    begin
+                        POBookPricePerUnitRcpt := format(PurchLineRcpt."Unit Cost", 0, 9);
+                        IBPO9Buffer."Field 21" := POBookPricePerUnitRcpt;
+                        IBPO9Buffer.Modify();
+                    end;
+                }
+                textelement(NetPurchaseCostRcpt)
+                {
+                    trigger OnBeforePassVariable()
+                    begin
+                        NetPurchaseCostRcpt := format(PurchLineRcpt."Unit Cost" * PurchLineRcpt.Quantity, 0, 9);
+                        IBPO9Buffer."Field 22" := NetPurchaseCostRcpt;
+                        IBPO9Buffer.Modify();
+                    end;
+                }
+                textelement(PurchaseCostCurrencyRcpt)
+                {
+                    trigger OnBeforePassVariable()
+                    begin
+                        if PurchLineRcpt."Currency Code" = '' then
+                            purchaseCostCurrencyRcpt := getLCYcurrency()
+                        else
+                            PurchaseCostCurrencyRcpt := purchLineRcpt."Currency Code";
+
+                        IBPO9Buffer."Field 23" := PurchaseCostCurrencyRcpt;
+                        IBPO9Buffer.Modify();
+                    end;
+                }
 
                 trigger OnPreXmlItem()
                 var
@@ -765,22 +855,31 @@ var
 
                 trigger OnAfterGetRecord()
                 var
-    EntryNo: Integer;
+                    EntryNo: Integer;
                     Vendor: record Vendor;
                 begin
                     Vendor.get(PurchLineRcpt."Buy-from Vendor No.");
 
-                     EntryNo:= IBPO9Buffer.getNextEntry();
-                    IBPO9Buffer.Init(); 
-                    IBPO9Buffer."Entry No.":= EntryNo;
+                    EntryNo := IBPO9Buffer.getNextEntry();
+                    IBPO9Buffer.Init();
+                    IBPO9Buffer."Entry No." := EntryNo;
                     IBPO9Buffer."Export Date" := CurrentDateTime();
                     IBPO9Buffer."Export Date" := CurrentDateTime();
-                    IBPO9Buffer."Export Batch ID" := 'POKPI_SP';
+                    IBPO9Buffer."Export Batch ID" := o9ProjectLib.GetCurrentXMLPortName(67029);
                     IBPO9Buffer.Insert();
                 end;
             }
         }
     }
+    procedure getLCYcurrency(): Text
+    var
+
+        GLSetup: record "General Ledger Setup";
+    begin
+        GLSetup.Get();
+        exit(GLSetup."LCY Code");
+    end;
+
 
     procedure SetDataFilter(PStartDate: Date; PEndDate: Date)
     var
@@ -798,4 +897,5 @@ var
         EndDate: date;
         PLANT_CD: Text;
         IBPO9Buffer: Record "UTT IBPO9 Buffer";
+        o9ProjectLib: Codeunit "UTT O9 Project Lib";
 }

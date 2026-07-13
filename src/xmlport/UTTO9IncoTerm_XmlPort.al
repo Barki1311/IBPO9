@@ -163,7 +163,7 @@ var
                     IBPO9Buffer.Init(); 
                     IBPO9Buffer."Entry No.":= EntryNo;
                     IBPO9Buffer."Export Date" := CurrentDateTime();
-                    IBPO9Buffer."Export Batch ID" := 'INCOTERM';
+                    IBPO9Buffer."Export Batch ID" := o9ProjectLib.GetCurrentXMLPortName(67027);
                     IBPO9Buffer.Insert();
                 end;
             }
@@ -353,7 +353,7 @@ var
                     IBPO9Buffer.Init(); 
                     IBPO9Buffer."Entry No.":= EntryNo;
                     IBPO9Buffer."Export Date" := CurrentDateTime();
-                    IBPO9Buffer."Export Batch ID" := 'INCOTERM';
+                    IBPO9Buffer."Export Batch ID" := O9ProjectLib.GetCurrentXMLPortName(67027);
                     IBPO9Buffer.Insert();
                 end;
             }
@@ -369,4 +369,5 @@ var
         CompanyInfo: Record "Company Information";
         ItemRec: Record Item;
         IBPO9Buffer: Record "UTT IBPO9 Buffer";
+        O9ProjectLib: Codeunit "UTT O9 Project Lib";
 }

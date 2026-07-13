@@ -311,7 +311,7 @@
                         IBPO9Buffer."Entry No." := IBPO9Buffer."Entry No." + 1;
                     end;
                     IBPO9Buffer."Export Date" := CurrentDateTime();
-                    IBPO9Buffer."Export Batch ID" := 'MATERIAL_SP';
+                    IBPO9Buffer."Export Batch ID" := o9ProjectLib.GetCurrentXMLPortName(67003);
 
 
                     IBPO9Buffer.Insert();
@@ -821,7 +821,7 @@
                     IBPO9Buffer.Init(); 
                     IBPO9Buffer."Entry No.":= EntryNo;
                     IBPO9Buffer."Export Date" := CurrentDateTime();
-                    IBPO9Buffer."Export Batch ID" := 'MATERIAL_SP';
+                    IBPO9Buffer."Export Batch ID" := o9ProjectLib.GetCurrentXMLPortName(67003);
 
 
                     IBPO9Buffer.Insert();
@@ -869,6 +869,7 @@
 
     var
         IBPO9Buffer: Record "UTT IBPO9 Buffer";
+        o9ProjectLib: Codeunit "UTT O9 Project Lib";
 
 
 }

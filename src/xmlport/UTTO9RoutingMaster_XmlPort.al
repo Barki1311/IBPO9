@@ -187,7 +187,7 @@ xmlport 67016 "UTT O9RountingMaster"
                     IBPO9Buffer.Init(); 
                     IBPO9Buffer."Entry No.":= EntryNo;
                     IBPO9Buffer."Export Date" := CurrentDateTime();
-                    IBPO9Buffer."Export Batch ID" := 'ROUTINGMASTER';
+                    IBPO9Buffer."Export Batch ID" := o9ProjectLib.GetCurrentXMLPortName(67016);
                     IBPO9Buffer.Insert();
                 end;
             }
@@ -410,7 +410,7 @@ xmlport 67016 "UTT O9RountingMaster"
                     IBPO9Buffer.Init(); 
                     IBPO9Buffer."Entry No.":= EntryNo;
                     IBPO9Buffer."Export Date" := CurrentDateTime();
-                        IBPO9Buffer."Export Batch ID" := 'ROUTINGMASTER';
+                        IBPO9Buffer."Export Batch ID" := o9ProjectLib.GetCurrentXMLPortName(67016);
                         IBPO9Buffer.Insert();
                     end;
                 }
@@ -456,4 +456,5 @@ xmlport 67016 "UTT O9RountingMaster"
         VersionMgt: Codeunit VersionManagement;
         ProdBOMHeader: Record "Production BOM Header";
         IBPO9Buffer: Record "UTT IBPO9 Buffer";
+        o9ProjectLib: Codeunit "UTT O9 Project Lib";
 }

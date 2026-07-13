@@ -155,14 +155,14 @@
                 }
 
                 trigger OnAfterGetRecord()
-var
-    EntryNo: Integer;
+                var
+                    EntryNo: Integer;
                 begin
-                    EntryNo:= IBPO9Buffer.getNextEntry();
-                    IBPO9Buffer.Init(); 
-                    IBPO9Buffer."Entry No.":= EntryNo;
+                    EntryNo := IBPO9Buffer.getNextEntry();
+                    IBPO9Buffer.Init();
+                    IBPO9Buffer."Entry No." := EntryNo;
                     IBPO9Buffer."Export Date" := CurrentDateTime();
-                    IBPO9Buffer."Export Batch ID" := 'ONHANDINV_SP';
+                    IBPO9Buffer."Export Batch ID" := o9ProjectLib.GetCurrentXMLPortName(67030);
                     IBPO9Buffer.Insert();
                 end;
             }
@@ -343,7 +343,7 @@ var
 
                 trigger OnAfterGetRecord()
                 var
-    EntryNo: Integer;
+                    EntryNo: Integer;
                     myInt: Integer;
                 begin
                     Clear(Plant);
@@ -355,11 +355,11 @@ var
                             Plant := 'IVMP';
                     end;
 
-                     EntryNo:= IBPO9Buffer.getNextEntry();
-                    IBPO9Buffer.Init(); 
-                    IBPO9Buffer."Entry No.":= EntryNo;
+                    EntryNo := IBPO9Buffer.getNextEntry();
+                    IBPO9Buffer.Init();
+                    IBPO9Buffer."Entry No." := EntryNo;
                     IBPO9Buffer."Export Date" := CurrentDateTime();
-                    IBPO9Buffer."Export Batch ID" := 'ONHANDINV_SP';
+                    IBPO9Buffer."Export Batch ID" := o9ProjectLib.GetCurrentXMLPortName(67030);
                     IBPO9Buffer.Insert();
                 end;
             }
@@ -375,6 +375,8 @@ var
         UnrestrictedUOM: Text[10];
         RestrictedUOM: Text[10];
         isRestricted: Boolean;
+        BinRec: Record Bin;
+        LocationRec: Record Location;
         IBPO9Buffer: Record "UTT IBPO9 Buffer";
 
     trigger OnPreXmlPort()
@@ -392,7 +394,9 @@ var
         ItemLedgEntry.Reset();
         ItemLedgEntry.SetCurrentKey("Entry No.");
         ItemLedgEntry.SetFilter("Location Code", '<>%1&<>%2&<>%3&<>%4&<>%5', 'ERSATZTEIL', 'REFACCIONE', 'REVISTA', 'MAGAZIN', 'PRODUCION');
+        ItemLedgEntry.SetRange(Open, true);
         ItemLedgEntry.SetFilter("Remaining Quantity", '>%1', 0);
+
         if ItemLedgEntry.FindSet() then
             repeat
                 Clear(ItemLedgEntry."KVS Assigned Quantity");
@@ -401,7 +405,6 @@ var
                 TempItemLedgEntry.Reset();
                 TempItemLedgEntry.SetRange("Item No.", ItemLedgEntry."Item No.");
                 TempItemLedgEntry.SetRange("Lot No.", ItemLedgEntry."Lot No.");
-                // ItemLedgEntry.SetFilter("KVS Gen. Prod. Posting Group", '<>%1&<>%2&<>%3&<>%4&<>%5&<>%6', 'OPW LAMFOL', 'SILIKON', 'SON BETRST', 'YARN', 'EKA', 'HILO');
                 if not TempItemLedgEntry.FindFirst() then begin
                     Clear(TempItemLedgEntry);
                     TempItemLedgEntry.Init();
@@ -409,38 +412,55 @@ var
                     TempItemLedgEntry."KVS Assigned Quantity" := 0;
                     TempItemLedgEntry."Remaining Quantity" := 0;
                     TempItemLedgEntry."Invoiced Quantity" := 0;
-                    if not excludeItems(ItemLedgEntry."Item No.") then
+                    if not excludeEntry(ItemLedgEntry."Item No.", ItemLedgEntry."Location Code") then
                         TempItemLedgEntry.Insert();
                 end;
                 ItemLedgEntry.CalcFields("KVSTEX Bin Code");
-                case ItemLedgEntry."KVSTEX Bin Code" of
-                    'STANDARD', '':
-                        TempItemLedgEntry."Remaining Quantity" += Round(ItemLedgEntry."Remaining Quantity", 0.0001); // Unrestricted Qty
-                    else
-                        TempItemLedgEntry."Invoiced Quantity" += Round(ItemLedgEntry."Remaining Quantity", 0.0001); // blocked Restricted  Qty
-                                                                                                                    // else
-                                                                                                                    //     TempItemLedgEntry."KVS Assigned Quantity" += Round(ItemLedgEntry."Remaining Quantity", 0.0001); // QS Restricted  Qty
-                end;
-                if TempItemLedgEntry.Modify() then;;
+
+                isRestricted := false;
+                if ItemLedgEntry."KVSTEX Bin Code" <> '' then
+                    if BinRec.Get(ItemledgEntry."Location Code",ItemLedgEntry."KVSTEX Bin Code") then
+                        isRestricted := BinRec.O9restrictedQty;
+
+                if not isRestricted then
+                    if ItemLedgEntry."Location Code" <> '' then
+                        if LocationRec.Get(ItemLedgEntry."Location Code") then
+                            isRestricted := LocationRec.O9restrictedQty;
+
+                if isRestricted then
+                    TempItemLedgEntry."Invoiced Quantity" += Round(ItemLedgEntry."Remaining Quantity", 0.0001)
+                else
+                    TempItemLedgEntry."Remaining Quantity" += Round(ItemLedgEntry."Remaining Quantity", 0.0001);
+
+                if TempItemLedgEntry.Modify() then;
             until ItemLedgEntry.Next() = 0;
     end;
 
-    local procedure excludeItems(ItemNo: Code[20]): Boolean
+    local procedure excludeEntry(ItemNo: Code[20]; LocationCode: Code[10]): Boolean
     var
         Item: Record Item;
+        Location: Record Location;
         PolymerNA: Boolean;
     begin
-        if item.get(ItemNo) then begin
-            if (item."KVSTEX Item Type" = item."KVSTEX Item Type"::Standard) then
-                if item."KVSTEX Composition Key Total" = '' then
-                    if item."Gen. Prod. Posting Group" in ['OPW LAMFOL', 'SILIKON', 'SON BETRST', 'YARN', 'EKA', 'HILO'] then
+        // Check if location should be excluded (has customer or vendor)
+        if Location.Get(LocationCode) then
+            if (Location."KVSTEX Customer No." <> '')  then
+                exit(true);
+
+        // Check if item should be excluded
+        if Item.Get(ItemNo) then begin
+            if (Item."KVSTEX Item Type" = Item."KVSTEX Item Type"::Standard) then
+                if Item."KVSTEX Composition Key Total" = '' then
+                    if Item."Gen. Prod. Posting Group" in ['OPW LAMFOL', 'SILIKON', 'SON BETRST', 'YARN', 'EKA', 'HILO'] then
                         exit(false)
                     else
                         exit(true);
         end;
+        exit(false);
     end;
 
     var
         companyInfo: Record "Company Information";
         Plant: text;
+        o9ProjectLib: Codeunit "UTT O9 Project Lib";
 }

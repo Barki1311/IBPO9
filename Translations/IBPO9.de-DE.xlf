@@ -1,0 +1,2337 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="en-US" target-language="de-DE" original="IBPO9">
+    <body>
+      <group id="body">
+        <trans-unit id="Table 2207729660 - Field 883711285 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Entry No.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT IBPO9 Buffer - Field Entry No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2207729660 - Field 153731535 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Export Batch ID</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT IBPO9 Buffer - Field Export Batch ID - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2207729660 - Field 3813362964 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Export Date</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT IBPO9 Buffer - Field Export Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2207729660 - Field 157186525 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Field 1</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT IBPO9 Buffer - Field Field 1 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2207729660 - Field 632778397 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Field 10</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT IBPO9 Buffer - Field Field 10 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2207729660 - Field 1270475014 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Field 11</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT IBPO9 Buffer - Field Field 11 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2207729660 - Field 3652352459 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Field 12</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT IBPO9 Buffer - Field Field 12 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2207729660 - Field 4290049076 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Field 13</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT IBPO9 Buffer - Field Field 13 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2207729660 - Field 2376959225 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Field 14</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT IBPO9 Buffer - Field Field 14 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2207729660 - Field 3014655842 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Field 15</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT IBPO9 Buffer - Field Field 15 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2207729660 - Field 1101565991 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Field 16</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT IBPO9 Buffer - Field Field 16 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2207729660 - Field 1739262608 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Field 17</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT IBPO9 Buffer - Field Field 17 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2207729660 - Field 4121140053 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Field 18</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT IBPO9 Buffer - Field Field 18 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2207729660 - Field 463869374 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Field 19</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT IBPO9 Buffer - Field Field 19 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2207729660 - Field 3814457204 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Field 2</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT IBPO9 Buffer - Field Field 2 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2207729660 - Field 1424790860 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Field 20</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT IBPO9 Buffer - Field Field 20 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2207729660 - Field 787094243 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Field 21</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT IBPO9 Buffer - Field Field 21 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2207729660 - Field 2700184094 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Field 22</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT IBPO9 Buffer - Field Field 22 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2207729660 - Field 2062487477 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Field 23</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT IBPO9 Buffer - Field Field 23 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2207729660 - Field 3168971688 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Field 24</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT IBPO9 Buffer - Field Field 24 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2207729660 - Field 2531275071 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Field 25</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT IBPO9 Buffer - Field Field 25 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2207729660 - Field 149397626 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Field 26</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT IBPO9 Buffer - Field Field 26 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2207729660 - Field 3806668305 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Field 27</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT IBPO9 Buffer - Field Field 27 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2207729660 - Field 2231396500 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Field 28</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT IBPO9 Buffer - Field Field 28 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2207729660 - Field 1593699883 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Field 29</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT IBPO9 Buffer - Field Field 29 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2207729660 - Field 3176760587 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Field 3</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT IBPO9 Buffer - Field Field 3 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2207729660 - Field 1169046939 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Field 30</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT IBPO9 Buffer - Field Field 30 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2207729660 - Field 1806743556 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Field 31</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT IBPO9 Buffer - Field Field 31 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2207729660 - Field 2444440173 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Field 32</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT IBPO9 Buffer - Field Field 32 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2207729660 - Field 3082136790 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Field 33</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT IBPO9 Buffer - Field Field 33 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2207729660 - Field 2913227767 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Field 34</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT IBPO9 Buffer - Field Field 34 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2207729660 - Field 3550924384 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Field 35</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT IBPO9 Buffer - Field Field 35 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2207729660 - Field 4188621001 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Field 36</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT IBPO9 Buffer - Field Field 36 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2207729660 - Field 2539063970 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Field 4</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT IBPO9 Buffer - Field Field 4 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2207729660 - Field 1901367353 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Field 5</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT IBPO9 Buffer - Field Field 5 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2207729660 - Field 1263670736 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Field 6</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT IBPO9 Buffer - Field Field 6 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2207729660 - Field 625974119 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Field 7</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT IBPO9 Buffer - Field Field 7 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2207729660 - Field 4283244798 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Field 8</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT IBPO9 Buffer - Field Field 8 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2207729660 - Field 3645548181 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Field 9</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT IBPO9 Buffer - Field Field 9 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2248066159 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sales Buffer</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT SalesBuffer - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2248066159 - Field 2815691835 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Artikelkategorie</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT SalesBuffer - Field Artikelkategorie - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2248066159 - Field 1952859466 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Artikelnr.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT SalesBuffer - Field Artikelnr. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2248066159 - Field 2512543841 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Beschreibung</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT SalesBuffer - Field Beschreibung - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2248066159 - Field 714791889 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>City</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT SalesBuffer - Field City - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2248066159 - Field 2570638327 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Composition key total</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">DEU = Rohstoffschlüssel gesamt,DEA = Rohstoffschlüssel gesamt</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT SalesBuffer - Field Composition Key Total - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2248066159 - Field 3561154705 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Currency</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT SalesBuffer - Field Currency - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2248066159 - Field 1171137197 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Customer Name</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT SalesBuffer - Field Customer Name - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2248066159 - Field 3588447043 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Cutset FW</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT SalesBuffer - Field Cutset FW - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2248066159 - Field 1372346313 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Cutset Lfm</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT SalesBuffer - Field Cutset Lfm - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2248066159 - Field 1355905949 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Debitor</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT SalesBuffer - Field Debitor - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2248066159 - Field 2556090791 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Debitorengruppe</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT SalesBuffer - Field Debitorengruppe - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2248066159 - Field 3434933571 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>DocLineNo.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT SalesBuffer - Field DocLineNo. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2248066159 - Field 1080737852 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>document No.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT SalesBuffer - Field document No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2248066159 - Field 1404256814 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Einheit</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT SalesBuffer - Field Einheit - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2248066159 - Field 1627640004 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Entry Date</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT SalesBuffer - Field Entry Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2248066159 - Field 1016130111 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>EntryNo</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT SalesBuffer - Field EntryNo - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2248066159 - Field 3041400857 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Forecast Amount</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT SalesBuffer - Field Forecast Amount - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2248066159 - Field 2432002267 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Forecast Gesamt meter</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT SalesBuffer - Field Forecast Gesamt meter - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2248066159 - Field 3112647809 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Forecast KG</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT SalesBuffer - Field Forecast KG - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2248066159 - Field 1277270148 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Forecast Meter</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT SalesBuffer - Field Forecast Meter - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2248066159 - Field 1617305489 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Forecast QM</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT SalesBuffer - Field Forecast QM - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2248066159 - Field 2664755625 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Forecast QM-M</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT SalesBuffer - Field Forecast QM-M - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2248066159 - Field 1659395225 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Forecast Qty</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT SalesBuffer - Field Forecast Qty - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2248066159 - Field 3437610345 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Forecast STK</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT SalesBuffer - Field Forecast STK - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2248066159 - Field 3514889633 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Forecast STK-M</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT SalesBuffer - Field Forecast STK-M - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2248066159 - Field 2804154922 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Garneinsatz KG Forcast</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT SalesBuffer - Field Garneinsatz KG Forcast - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2248066159 - Field 2486883992 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Garneinsatz KG Forcast 2</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT SalesBuffer - Field Garneinsatz KG Forcast 2 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2248066159 - Field 1179727226 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Garneinsatz KG IST</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT SalesBuffer - Field Garneinsatz KG IST - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2248066159 - Field 1464639944 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Garneinsatz KG IST 2</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT SalesBuffer - Field Garneinsatz KG IST 2 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2248066159 - Field 170326576 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Garneinsatz KG SOLL</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT SalesBuffer - Field Garneinsatz KG SOLL - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2248066159 - Field 3130706754 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Garneinsatz KG SOLL 2</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT SalesBuffer - Field Garneinsatz KG SOLL 2 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2248066159 - Field 2916106990 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Garneinsatz Kosten Forcast</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT SalesBuffer - Field Garneinsatz Kosten Forcast - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2248066159 - Field 1252836700 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Garneinsatz Kosten Forcast 2</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT SalesBuffer - Field Garneinsatz Kosten Forcast 2 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2248066159 - Field 3794929982 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Garneinsatz Kosten IST</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT SalesBuffer - Field Garneinsatz Kosten IST - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2248066159 - Field 711545740 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Garneinsatz Kosten IST 2</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT SalesBuffer - Field Garneinsatz Kosten IST 2 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2248066159 - Field 1158024468 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Garneinsatz Kosten SOLL</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT SalesBuffer - Field Garneinsatz Kosten SOLL - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2248066159 - Field 324070566 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Garneinsatz Kosten SOLL 2</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT SalesBuffer - Field Garneinsatz Kosten SOLL 2 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2248066159 - Field 4225847198 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Gesamtmeter</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT SalesBuffer - Field Gesamtmeter - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2248066159 - Field 3077357015 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Incoterm</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT SalesBuffer - Field Incoterm - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2248066159 - Field 1535467159 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Invoice_Value</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT SalesBuffer - Field Invoice_Value - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2248066159 - Field 3061028720 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Ist Einstandsbetrag</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT SalesBuffer - Field Ist Einstandsbetrag - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2248066159 - Field 1532639742 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Ist Menge</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT SalesBuffer - Field Ist Menge - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2248066159 - Field 843499282 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>IST Menge KG</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT SalesBuffer - Field IST Menge KG - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2248066159 - Field 3024461227 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Ist Menge Meter</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT SalesBuffer - Field Ist Menge Meter - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2248066159 - Field 2219736274 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Ist Menge QM</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT SalesBuffer - Field Ist Menge QM - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2248066159 - Field 2692392555 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Ist Menge Stück</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT SalesBuffer - Field Ist Menge Stück - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2248066159 - Field 3560802771 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>IST STK Meter</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT SalesBuffer - Field IST STK Meter - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2248066159 - Field 196013486 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Ist Verkaufsbetrag</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT SalesBuffer - Field Ist Verkaufsbetrag - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2248066159 - Field 1383936768 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Kettgarn</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT SalesBuffer - Field Kettgarn - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2248066159 - Field 3034808 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Kettgarn Detex</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT SalesBuffer - Field Kettgarn Detex - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2248066159 - Field 873970724 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Kettgarn Kredior</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT SalesBuffer - Field Kettgarn Kredior - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2248066159 - Field 15765838 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Kostenträger</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT SalesBuffer - Field Kostenträger - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2248066159 - Field 1834815669 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Lagerbuchungsgruppe</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT SalesBuffer - Field Lagerbuchungsgruppe - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2248066159 - Field 1264839833 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Land</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT SalesBuffer - Field Land - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2248066159 - Field 36507580 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>location Code</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT SalesBuffer - Field location Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2248066159 - Field 2857370036 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Menge QM - M</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT SalesBuffer - Field Menge QM - M - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2248066159 - Field 1570954664 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>modifiedAt</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT SalesBuffer - Field modifiedAt - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2248066159 - Field 1535233717 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>OrderCreationDate</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT SalesBuffer - Field OrderCreationDate - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2248066159 - Field 1817760606 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>OrderDate</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT SalesBuffer - Field OrderDate - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2248066159 - Field 1240888606 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>OrderQty</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT SalesBuffer - Field OrderQty - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2248066159 - Field 2738587126 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>OrderRequestedDate</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT SalesBuffer - Field OrderRequestedDate - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2248066159 - Field 3874136290 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>OrderType</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT SalesBuffer - Field OrderType - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2248066159 - Field 497080364 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>OriginGar</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT SalesBuffer - Field OriginGar - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2248066159 - Field 1301555294 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>OustandingQty</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT SalesBuffer - Field OustandingQty - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2248066159 - Field 4206260792 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Parent</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT SalesBuffer - Field Parent - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2248066159 - Field 3869162072 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>PaymentTherm</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT SalesBuffer - Field PaymentTherm - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2248066159 - Field 40918654 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>PlanedDeliveryDate</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT SalesBuffer - Field PlanedDeliveryDate - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2248066159 - Field 1260828904 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>postingDate</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT SalesBuffer - Field postingDate - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2248066159 - Field 806763519 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Produktbuchungsgruppe</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT SalesBuffer - Field Produktbuchungsgruppe - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2248066159 - Field 4003021282 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Produktgruppe</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT SalesBuffer - Field Produktgruppe - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2248066159 - Field 1938811689 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>PromdisedDeliveryDate</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT SalesBuffer - Field PromdisedDeliveryDate - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2248066159 - Field 3089207737 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>QtyShipped</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT SalesBuffer - Field QtyShipped - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2248066159 - Field 141767210 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Schussleistung</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT SalesBuffer - Field Schussleistung - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2248066159 - Field 3078595112 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>ShipmentDate</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT SalesBuffer - Field ShipmentDate - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2248066159 - Field 265721687 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Soll Cutset FW</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT SalesBuffer - Field Soll Cutset FW - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2248066159 - Field 18697765 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Soll Cutset Lfm</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT SalesBuffer - Field Soll Cutset Lfm - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2248066159 - Field 614078938 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Soll Einstandsbetrag</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT SalesBuffer - Field Soll Einstandsbetrag - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2248066159 - Field 3488435346 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Soll Gesamtmeter</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT SalesBuffer - Field Soll Gesamtmeter - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2248066159 - Field 3245857716 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Soll Menge</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT SalesBuffer - Field Soll Menge - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2248066159 - Field 35218280 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Soll Menge KG</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT SalesBuffer - Field Soll Menge KG - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2248066159 - Field 2254796341 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Soll Menge Meter</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT SalesBuffer - Field Soll Menge Meter - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2248066159 - Field 4253893320 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Soll Menge QM</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT SalesBuffer - Field Soll Menge QM - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2248066159 - Field 1624176568 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Soll Menge QM - M</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT SalesBuffer - Field Soll Menge QM - M - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2248066159 - Field 493750597 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Soll Menge Stück</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT SalesBuffer - Field Soll Menge Stück - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2248066159 - Field 1790924548 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Soll Verkaufsbetrag</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT SalesBuffer - Field Soll Verkaufsbetrag - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2248066159 - Field 998393528 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>status</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT SalesBuffer - Field status - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2248066159 - Field 1160185565 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>unit Price</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT SalesBuffer - Field unit Price - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2248066159 - Field 1814464443 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>User</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT SalesBuffer - Field User - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2248066159 - Field 3656965065 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Verkäufercode</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT SalesBuffer - Field Verkäufercode - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2248066159 - Field 3017756276 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Item Type</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">DEU = Warenart,ENU = Item Type,DEA = Warenart</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTT SalesBuffer - Field Warenart - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1077104055 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>O9 Snapshot Configuration</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">DEU=O9-Snapshot-Konfiguration,DEA=O9-Snapshot-Konfiguration</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTTO9SnapshotConfig - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1077104055 - Field 1090351696 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Active</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">DEU=Aktiv,DEA=Aktiv</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTTO9SnapshotConfig - Field Active - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1077104055 - Field 3004954119 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Code</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">DEU=Code,DEA=Code</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTTO9SnapshotConfig - Field Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1077104055 - Field 567887726 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Currency Code</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">DEU=Währungscode,DEA=Währungscode</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTTO9SnapshotConfig - Field CurrencyCode - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1077104055 - Field 1593684093 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Date Formel</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">DEU=Datumsformel,DEA=Datumsformel</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTTO9SnapshotConfig - Field DateFormel - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1077104055 - Field 3461834954 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Description</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">DEU=Beschreibung,DEA=Beschreibung</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTTO9SnapshotConfig - Field Description - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1077104055 - Field 845401037 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>End Date</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">DEU=Enddatum,DEA=Enddatum</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTTO9SnapshotConfig - Field EndDate - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1077104055 - Field 1463529163 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Keep History</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">DEU=Historie behalten,DEA=Historie behalten</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTTO9SnapshotConfig - Field KeepHistory - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1077104055 - Field 3271638145 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No. Series</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">DEU=Nummernserie,DEA=Nummernserie</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTTO9SnapshotConfig - Field NoSeriesCode - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1077104055 - Field 3605153064 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Start Date</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">DEU=Startdatum,DEA=Startdatum</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTTO9SnapshotConfig - Field StartDate - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1077104055 - Field 1590693124 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Turnover Plan Filter</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">DEU=Umsatzplan-Filter,DEA=Umsatzplan-Filter</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTTO9SnapshotConfig - Field TurnoverPlanFilter - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1077104055 - Field 2874265441 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>XML Port Name</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">DEU=XML-Port-Name,DEA=XML-Port-Name</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTTO9SnapshotConfig - Field XMLPortName - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3771958491 - NamedType 365289664" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Actual_Sales</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit UTT O9 Project Lib - NamedType ActualSalesLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3771958491 - NamedType 1061812604" size-unit="char" translate="yes" xml:space="preserve">
+          <source>OpenSalesOrder</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit UTT O9 Project Lib - NamedType ActualSales_SPLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3771958491 - NamedType 796285598" size-unit="char" translate="yes" xml:space="preserve">
+          <source>BomMaster</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit UTT O9 Project Lib - NamedType BomLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3771958491 - NamedType 2693294317" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Customer_Association</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit UTT O9 Project Lib - NamedType CustomerAssocLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3771958491 - NamedType 76061626" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Customer</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit UTT O9 Project Lib - NamedType CustomerLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3771958491 - NamedType 1226526742" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Customer_SP</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit UTT O9 Project Lib - NamedType CustomerLbl_SP</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3771958491 - NamedType 1335751131" size-unit="char" translate="yes" xml:space="preserve">
+          <source>InventoryCostPerUnit</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit UTT O9 Project Lib - NamedType InventoryCostPerUnit_SP_Lbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3771958491 - NamedType 3691251604" size-unit="char" translate="yes" xml:space="preserve">
+          <source>OnHandInventory</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit UTT O9 Project Lib - NamedType InventoryLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3771958491 - NamedType 3629245473" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Location</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit UTT O9 Project Lib - NamedType LocationLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3771958491 - NamedType 2101577029" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Location_SP</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit UTT O9 Project Lib - NamedType LocationLbl_SP</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3771958491 - NamedType 403799042" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Material_Association</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit UTT O9 Project Lib - NamedType Materialassoc</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3771958491 - NamedType 437069768" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Material_Association</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit UTT O9 Project Lib - NamedType MaterialassocLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3771958491 - NamedType 1571190403" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Material</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit UTT O9 Project Lib - NamedType MaterialLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3771958491 - NamedType 705818990" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Material_SP</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit UTT O9 Project Lib - NamedType Material_SP_Lbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3771958491 - NamedType 213669539" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Are you sure you want to clean up old snapshots? This action cannot be undone.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit UTT O9 Project Lib - NamedType MsgCleanupOldSnapshots</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3771958491 - NamedType 626708126" size-unit="char" translate="yes" xml:space="preserve">
+          <source>OnHandInventory</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit UTT O9 Project Lib - NamedType OnHandInventoryLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3771958491 - NamedType 1703426201" size-unit="char" translate="yes" xml:space="preserve">
+          <source>PO_KPI</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit UTT O9 Project Lib - NamedType PO_PKI_Lbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3771958491 - NamedType 1128730261" size-unit="char" translate="yes" xml:space="preserve">
+          <source>PO_SP_KPI</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit UTT O9 Project Lib - NamedType PO_PKI_SP_Lbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3771958491 - NamedType 1952888329" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Pro</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit UTT O9 Project Lib - NamedType PROLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3771958491 - NamedType 2425298510" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Quality_Association</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit UTT O9 Project Lib - NamedType QualityAssocLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3771958491 - NamedType 3855936753" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Quality</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit UTT O9 Project Lib - NamedType QualityLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3771958491 - NamedType 2591728285" size-unit="char" translate="yes" xml:space="preserve">
+          <source>ResourceAvailability</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit UTT O9 Project Lib - NamedType ResourceAvaillbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3771958491 - NamedType 112888418" size-unit="char" translate="yes" xml:space="preserve">
+          <source>ResourceAvailabilityTimeGrain</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit UTT O9 Project Lib - NamedType ResourceAvailTimelbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3771958491 - NamedType 352633045" size-unit="char" translate="yes" xml:space="preserve">
+          <source>RoutingMaster</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit UTT O9 Project Lib - NamedType RtgLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3771958491 - NamedType 50701934" size-unit="char" translate="yes" xml:space="preserve">
+          <source>STO</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit UTT O9 Project Lib - NamedType STOLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3771958491 - NamedType 3791389978" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Supplier</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit UTT O9 Project Lib - NamedType SupplierLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3771958491 - NamedType 1875437046" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Supplier_SP</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit UTT O9 Project Lib - NamedType SupplierLbl_SP</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3771958491 - NamedType 1055414451" size-unit="char" translate="yes" xml:space="preserve">
+          <source>UOM_Conversiion</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit UTT O9 Project Lib - NamedType UOMConvLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3771958491 - NamedType 1215069719" size-unit="char" translate="yes" xml:space="preserve">
+          <source>UOM</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit UTT O9 Project Lib - NamedType UOMLbl</note>
+        </trans-unit>
+        <trans-unit id="Page 276133518 - Control 153731535 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Export Batch ID field.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">%</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UTT IBPO9 Buffer List - Control Export Batch ID - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 276133518 - Control 3813362964 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Export Date field.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">%</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UTT IBPO9 Buffer List - Control Export Date - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 276133518 - Control 157186525 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Field 1 field.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">%</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UTT IBPO9 Buffer List - Control Field 1 - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 276133518 - Control 632778397 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Field 10 field.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">%</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UTT IBPO9 Buffer List - Control Field 10 - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 276133518 - Control 1270475014 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Field 11 field.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">%</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UTT IBPO9 Buffer List - Control Field 11 - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 276133518 - Control 3652352459 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Field 12 field.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">%</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UTT IBPO9 Buffer List - Control Field 12 - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 276133518 - Control 4290049076 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Field 13 field.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">%</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UTT IBPO9 Buffer List - Control Field 13 - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 276133518 - Control 2376959225 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Field 14 field.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">%</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UTT IBPO9 Buffer List - Control Field 14 - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 276133518 - Control 3014655842 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Field 15 field.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">%</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UTT IBPO9 Buffer List - Control Field 15 - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 276133518 - Control 1101565991 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Field 16 field.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">%</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UTT IBPO9 Buffer List - Control Field 16 - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 276133518 - Control 1739262608 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Field 17 field.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">%</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UTT IBPO9 Buffer List - Control Field 17 - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 276133518 - Control 4121140053 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Field 18 field.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">%</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UTT IBPO9 Buffer List - Control Field 18 - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 276133518 - Control 463869374 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Field 19 field.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">%</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UTT IBPO9 Buffer List - Control Field 19 - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 276133518 - Control 3814457204 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Field 2 field.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">%</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UTT IBPO9 Buffer List - Control Field 2 - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 276133518 - Control 1424790860 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Field 20 field.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">%</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UTT IBPO9 Buffer List - Control Field 20 - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 276133518 - Control 787094243 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Field 21 field.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">%</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UTT IBPO9 Buffer List - Control Field 21 - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 276133518 - Control 2700184094 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Field 22 field.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">%</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UTT IBPO9 Buffer List - Control Field 22 - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 276133518 - Control 2062487477 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Field 23 field.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">%</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UTT IBPO9 Buffer List - Control Field 23 - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 276133518 - Control 3168971688 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Field 24 field.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">%</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UTT IBPO9 Buffer List - Control Field 24 - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 276133518 - Control 2531275071 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Field 25 field.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">%</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UTT IBPO9 Buffer List - Control Field 25 - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 276133518 - Control 149397626 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Field 26 field.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">%</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UTT IBPO9 Buffer List - Control Field 26 - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 276133518 - Control 3806668305 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Field 27 field.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">%</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UTT IBPO9 Buffer List - Control Field 27 - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 276133518 - Control 2231396500 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Field 28 field.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">%</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UTT IBPO9 Buffer List - Control Field 28 - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 276133518 - Control 1593699883 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Field 29 field.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">%</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UTT IBPO9 Buffer List - Control Field 29 - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 276133518 - Control 3176760587 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Field 3 field.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">%</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UTT IBPO9 Buffer List - Control Field 3 - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 276133518 - Control 2539063970 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Field 4 field.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">%</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UTT IBPO9 Buffer List - Control Field 4 - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 276133518 - Control 1901367353 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Field 5 field.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">%</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UTT IBPO9 Buffer List - Control Field 5 - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 276133518 - Control 1263670736 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Field 6 field.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">%</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UTT IBPO9 Buffer List - Control Field 6 - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 276133518 - Control 625974119 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Field 7 field.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">%</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UTT IBPO9 Buffer List - Control Field 7 - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 276133518 - Control 4283244798 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Field 8 field.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">%</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UTT IBPO9 Buffer List - Control Field 8 - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 276133518 - Control 3645548181 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Field 9 field.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">%</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UTT IBPO9 Buffer List - Control Field 9 - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 582089943 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>O9 Snapshot Configurations</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">DEU=O9-Snapshot-Konfigurationen,DEA=O9-Snapshot-Konfigurationen</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UTT O9 Snapshot Config - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 582089943 - NamedType 4181623697" size-unit="char" translate="yes" xml:space="preserve">
+          <source>All active snapshots successfully updated.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">DEU=Alle aktiven Snapshots erfolgreich aktualisiert.,DEA=Alle aktiven Snapshots erfolgreich aktualisiert.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UTT O9 Snapshot Config - NamedType MsgAllSnapshotsDone</note>
+        </trans-unit>
+        <trans-unit id="Page 582089943 - NamedType 1037665539" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Old snapshots cleaned up successfully.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">DEU=Alte Snapshots erfolgreich bereinigt.,DEA=Alte Snapshots erfolgreich bereinigt.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UTT O9 Snapshot Config - NamedType MsgcleanupOldSnapshots</note>
+        </trans-unit>
+        <trans-unit id="Page 582089943 - NamedType 2858246647" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Snapshot for configuration "%1" successfully updated.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">DEU=Snapshot für Konfiguration "%1" erfolgreich aktualisiert.,DEA=Snapshot für Konfiguration "%1" erfolgreich aktualisiert.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UTT O9 Snapshot Config - NamedType MsgSnapshotDone</note>
+        </trans-unit>
+        <trans-unit id="Page 582089943 - Control 1090351696 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies whether this configuration is included in the automated job queue run.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UTT O9 Snapshot Config - Control Active - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 582089943 - Control 3004954119 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the unique code for this snapshot configuration.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UTT O9 Snapshot Config - Control Code - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 582089943 - Control 567887726 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the currency code for amount calculations. Leave blank for LCY.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UTT O9 Snapshot Config - Control CurrencyCode - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 582089943 - Control 225251741 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies a date formula to calculate the Start and End Date. If this field is filled, it will override the values in the Start Date and End Date fields.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">%DEU=Datumsformel,DEA=Datumsformel</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UTT O9 Snapshot Config - Control dateFormel - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 582089943 - Control 3461834954 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies a description for this snapshot configuration.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UTT O9 Snapshot Config - Control Description - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 582089943 - Control 845401037 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the End Date field.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">%DEU=Enddatum,DEA=Enddatum</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UTT O9 Snapshot Config - Control EndDate - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 582089943 - Control 1463529163 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies whether to keep historical snapshot data when running new snapshots. If true, new snapshot entries will be added without deleting old ones. If false, old snapshot entries for the same configuration will be deleted before inserting new ones.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UTT O9 Snapshot Config - Control KeepHistory - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 582089943 - Control 3605153064 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the start date of the reporting period. The end date is always today.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UTT O9 Snapshot Config - Control StartDate - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 582089943 - Control 1590693124 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the turnover plan name used as filter for this snapshot.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UTT O9 Snapshot Config - Control TurnoverPlanFilter - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 582089943 - Control 2874265441 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the XML Port used for exporting the snapshot data. The XML Port must be designed to export data in a specific format expected by the recipients of the snapshot.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UTT O9 Snapshot Config - Control XMLPortName - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 582089943 - Action 4133851388 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Deletes old snapshot entries for configurations that are set to not keep history.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UTT O9 Snapshot Config - Action CleanupOldSnapshots - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 582089943 - Action 4133851388 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Cleanup Old Snapshots</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">DEU=Alte Snapshots bereinigen,DEA=Alte Snapshots bereinigen</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UTT O9 Snapshot Config - Action CleanupOldSnapshots - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 582089943 - Action 2296351848 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Runs the SIV snapshot for all active configurations.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UTT O9 Snapshot Config - Action RunAllActive - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 582089943 - Action 2296351848 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Run All Active</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">DEU=Alle aktiven ausführen,DEA=Alle aktiven ausführen</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UTT O9 Snapshot Config - Action RunAllActive - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 582089943 - Action 1272526135 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Runs the SIV snapshot calculation for this configuration immediately.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UTT O9 Snapshot Config - Action RunSnapshot - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 582089943 - Action 1272526135 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Run Snapshot</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">DEU=Snapshot ausführen,DEA=Snapshot ausführen</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UTT O9 Snapshot Config - Action RunSnapshot - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 582089943 - Action 3011362049 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Opens the snapshot entries for this configuration.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">DEU=Öffnet die Snapshot-Einträge für diese Konfiguration.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UTT O9 Snapshot Config - Action ShowSnapshotData - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 582089943 - Action 3011362049 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Show Snapshot Data</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">DEU=Snapshot-Daten anzeigen,DEA=Snapshot-Daten anzeigen</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UTT O9 Snapshot Config - Action ShowSnapshotData - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 424395056 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Einkaufsbestellungen – Mengenübersicht (Audit)</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Purchase Order Qty Audit - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 424395056 - NamedType 3407708076" maxwidth="30" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Vollst. geliefert</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Purchase Order Qty Audit - NamedType Txt_FullDelivered</note>
+        </trans-unit>
+        <trans-unit id="Report 424395056 - NamedType 1410952451" maxwidth="30" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Vollst. fakturiert</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Purchase Order Qty Audit - NamedType Txt_FullInvoiced</note>
+        </trans-unit>
+        <trans-unit id="Report 424395056 - NamedType 2657949186" maxwidth="30" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Nicht geliefert</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Purchase Order Qty Audit - NamedType Txt_NotDelivered</note>
+        </trans-unit>
+        <trans-unit id="Report 424395056 - NamedType 2455768969" maxwidth="30" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Nicht fakturiert</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Purchase Order Qty Audit - NamedType Txt_NotInvoiced</note>
+        </trans-unit>
+        <trans-unit id="Report 424395056 - NamedType 3862516216" maxwidth="30" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Teilw. geliefert</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Purchase Order Qty Audit - NamedType Txt_PartDelivered</note>
+        </trans-unit>
+        <trans-unit id="Report 424395056 - NamedType 3737381327" maxwidth="30" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Teilw. fakturiert</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Purchase Order Qty Audit - NamedType Txt_PartInvoiced</note>
+        </trans-unit>
+        <trans-unit id="Report 424395056 - ReportColumn 127102179 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Menge fakturiert</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Purchase Order Qty Audit - ReportColumn QtyInvoiced - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 424395056 - ReportColumn 717498173 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Menge bestellt</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Purchase Order Qty Audit - ReportColumn QtyOrdered - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 424395056 - ReportColumn 2835122866 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Ausstehend (noch nicht geliefert)</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Purchase Order Qty Audit - ReportColumn QtyOutstanding - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 424395056 - ReportColumn 2331465981 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Menge empfangen (WE)</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Purchase Order Qty Audit - ReportColumn QtyReceived - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 424395056 - ReportColumn 3394478574 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Empfangen, noch nicht fakturiert</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Purchase Order Qty Audit - ReportColumn QtyRecvNotInv - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 424395056 - Control 2683654807 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Optionen</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Purchase Order Qty Audit - Control grpOptions - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 424395056 - Control 2753980182 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Schränkt den Bericht auf bestimmte Lieferanten ein (kommagetrennt oder Bereich z.B. 10000..19999).</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Purchase Order Qty Audit - Control fldVendorFilter - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 424395056 - Control 2753980182 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Lieferantenfilter</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Purchase Order Qty Audit - Control fldVendorFilter - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 424395056 - Control 3269194199 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Aktivieren, um Zeilen mit vollständiger Lieferung UND vollständiger Fakturierung auszublenden.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Purchase Order Qty Audit - Control ShowOnlyOpenItems - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 424395056 - Control 3269194199 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Nur offene / teilweise gelieferte Zeilen</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Purchase Order Qty Audit - Control ShowOnlyOpenItems - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 424395056 - Control 2963606990 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Aktivieren, um nur Zeilen anzuzeigen, bei denen Wareneingang gebucht, aber noch keine Rechnung vorhanden ist.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Purchase Order Qty Audit - Control ShowOnlyRNI - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 424395056 - Control 2963606990 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Nur „Empfangen, nicht fakturiert"</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Purchase Order Qty Audit - Control ShowOnlyRNI - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 392597765 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>UTT Actual Sales</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">DEU=offene verlaufszahlen</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report UTT actualSales - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 392597765 - NamedType 2690307972" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Reference No.:</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">DEU = Referenznr.:, ENU = Reference No.:, DEA = Referenznr.:</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report UTT actualSales - NamedType C_KVS013</note>
+        </trans-unit>
+        <trans-unit id="Report 392597765 - NamedType 2476940767" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Period: %1</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">ENU = Period: %1, DEA = Periode: %1</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report UTT actualSales - NamedType Text000</note>
+        </trans-unit>
+        <trans-unit id="Report 392597765 - NamedType 3103188864" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Datum</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">DEU = Datum, ENU = Date, ESM = Fecha, DEA = Datum</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report UTT actualSales - NamedType TxtDate</note>
+        </trans-unit>
+        <trans-unit id="Report 392597765 - NamedType 194507899" size-unit="char" translate="yes" xml:space="preserve">
+          <source>please set as filter the  sales plan name!! </source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">DEU = bitte Umsatzplanname eingeben!!, ENU = please set as filter the  sales plan name!! , DEA = bitte Umsatzplanname eingeben!!</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report UTT actualSales - NamedType TxtError1</note>
+        </trans-unit>
+        <trans-unit id="Report 392597765 - NamedType 1435897494" size-unit="char" translate="yes" xml:space="preserve">
+          <source>plase set the start and end date !!</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">DEU = bitte Start- und Enddatum eingeben !!, ENU = plase set the start and end date !!, DEA = bitte Start- und Enddatum eingeben !!</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report UTT actualSales - NamedType txtError2</note>
+        </trans-unit>
+        <trans-unit id="Report 392597765 - NamedType 3489588747" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Soll-Ist-Vergleich Excel</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">ENU = Soll-Ist-Vergleich Excel, ESM = Soll-Ist-Vergleich Excel, DEA = Soll-Ist-Vergleich Excel</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report UTT actualSales - NamedType TxtReportName</note>
+        </trans-unit>
+        <trans-unit id="Report 392597765 - NamedType 3835800219" size-unit="char" translate="yes" xml:space="preserve">
+          <source>User</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">DEU = Benutzer, ENU = User, ESM = Usuario, DEA = Benutzer</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report UTT actualSales - NamedType TxtUser</note>
+        </trans-unit>
+        <trans-unit id="Report 392597765 - ReportDataItem 2010677570 - Property 1806354803" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Delivery Schedule Header</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">ENU = Delivery Schedule Header,ESM = Delivery Schedule Header,DEA = Lieferplan</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report UTT actualSales - ReportDataItem Delivery Schedule Header - Property RequestFilterHeading</note>
+        </trans-unit>
+        <trans-unit id="Report 392597765 - Control 2346885236 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Options</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Report UTT actualSales - Control Options - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 392597765 - Control 845401037 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the End Date field</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Report UTT actualSales - Control EndDate - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 392597765 - Control 845401037 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>End Date</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Report UTT actualSales - Control EndDate - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 392597765 - Control 3605153064 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Start Date field</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Report UTT actualSales - Control StartDate - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 392597765 - Control 3605153064 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Start Date</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Report UTT actualSales - Control StartDate - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 4143221238 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>UTT O9IBP Jobs</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Report UTT O9 Project Jobs - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 4143221238 - NamedType 365289664" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Actual_Sales</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Report UTT O9 Project Jobs - NamedType ActualSalesLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 4143221238 - NamedType 1061812604" size-unit="char" translate="yes" xml:space="preserve">
+          <source>cust_orders</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Report UTT O9 Project Jobs - NamedType ActualSales_SPLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 4143221238 - NamedType 1943427447" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Application_Association</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Report UTT O9 Project Jobs - NamedType ApplicationAssocLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 4143221238 - NamedType 2575927644" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Application Dim Export</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Report UTT O9 Project Jobs - NamedType ApplicationDimLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 4143221238 - NamedType 1494598140" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Application</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Report UTT O9 Project Jobs - NamedType ApplicationLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 4143221238 - NamedType 2381846362" size-unit="char" translate="yes" xml:space="preserve">
+          <source>BOM Master Export</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Report UTT O9 Project Jobs - NamedType BomMasterLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 4143221238 - NamedType 2693294317" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Customer_Association</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Report UTT O9 Project Jobs - NamedType CustomerAssocLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 4143221238 - NamedType 2292211658" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Customer Export.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">DEU=Debitoren Export</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report UTT O9 Project Jobs - NamedType CustomerDimLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 4143221238 - NamedType 631260934" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Customer DP Export.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">DEU=Debitoren DP Export</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report UTT O9 Project Jobs - NamedType CustomerDimLbl_SP</note>
+        </trans-unit>
+        <trans-unit id="Report 4143221238 - NamedType 76061626" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Customer</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Report UTT O9 Project Jobs - NamedType CustomerLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 4143221238 - NamedType 1226526742" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Customer</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Report UTT O9 Project Jobs - NamedType CustomerLbl_SP</note>
+        </trans-unit>
+        <trans-unit id="Report 4143221238 - NamedType 1936534969" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Incoterm</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Report UTT O9 Project Jobs - NamedType IncotermLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 4143221238 - NamedType 1335751131" size-unit="char" translate="yes" xml:space="preserve">
+          <source>InventoryCostPerUnit</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Report UTT O9 Project Jobs - NamedType InventoryCostPerUnit_SP_Lbl</note>
+        </trans-unit>
+        <trans-unit id="Report 4143221238 - NamedType 1575017944" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Inventory Export</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">DEU=Inventory export</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report UTT O9 Project Jobs - NamedType InventoryExportLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 4143221238 - NamedType 3691251604" size-unit="char" translate="yes" xml:space="preserve">
+          <source>OnHandInventory</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Report UTT O9 Project Jobs - NamedType InventoryLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 4143221238 - NamedType 540943315" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Item Inventory Export</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">DEU=Item Inventory export</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report UTT O9 Project Jobs - NamedType ItemInventoryExportLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 4143221238 - NamedType 2994621465" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Location Export</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">DEU=Lagerort export</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report UTT O9 Project Jobs - NamedType LocationDimLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 4143221238 - NamedType 3737205325" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Location Export DP</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">DEU=Lagerort export DP</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report UTT O9 Project Jobs - NamedType LocationDimLbl_SP</note>
+        </trans-unit>
+        <trans-unit id="Report 4143221238 - NamedType 3629245473" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Location</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Report UTT O9 Project Jobs - NamedType LocationLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 4143221238 - NamedType 2101577029" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Location_SP</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Report UTT O9 Project Jobs - NamedType LocationLbl_SP</note>
+        </trans-unit>
+        <trans-unit id="Report 4143221238 - NamedType 437069768" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Material_Association</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Report UTT O9 Project Jobs - NamedType MaterialassocLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 4143221238 - NamedType 1397068679" maxwidth="30" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Material Export</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">DEU=Artikel Export</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report UTT O9 Project Jobs - NamedType MaterialExportLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 4143221238 - NamedType 3951279538" maxwidth="30" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Material _SP Export</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">DEU=Artikel Export</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report UTT O9 Project Jobs - NamedType MaterialExport_SP_Lbl</note>
+        </trans-unit>
+        <trans-unit id="Report 4143221238 - NamedType 1571190403" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Material</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Report UTT O9 Project Jobs - NamedType MaterialLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 4143221238 - NamedType 705818990" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Material_SP</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Report UTT O9 Project Jobs - NamedType Material_SP_Lbl</note>
+        </trans-unit>
+        <trans-unit id="Report 4143221238 - NamedType 626708126" size-unit="char" translate="yes" xml:space="preserve">
+          <source>OnHandInventory</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Report UTT O9 Project Jobs - NamedType OnHandInventoryLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 4143221238 - NamedType 725036817" size-unit="char" translate="yes" xml:space="preserve">
+          <source>PO_KPI</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Report UTT O9 Project Jobs - NamedType PO_KPI_Lbl</note>
+        </trans-unit>
+        <trans-unit id="Report 4143221238 - NamedType 3969738301" size-unit="char" translate="yes" xml:space="preserve">
+          <source>PO_SP_KPI</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Report UTT O9 Project Jobs - NamedType PO_KPI_SP_Lbl</note>
+        </trans-unit>
+        <trans-unit id="Report 4143221238 - NamedType 572017737" size-unit="char" translate="yes" xml:space="preserve">
+          <source>PrO</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Report UTT O9 Project Jobs - NamedType ProLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 4143221238 - NamedType 3348895535" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Purchase Export</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">DEU=Einkaufszahlen Export</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report UTT O9 Project Jobs - NamedType PurchaseExportLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 4143221238 - NamedType 315367882" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Purchase Export SP</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Report UTT O9 Project Jobs - NamedType PurchaseExportSPLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 4143221238 - NamedType 2425298510" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Quality_Association</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Report UTT O9 Project Jobs - NamedType QualityAssocLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 4143221238 - NamedType 3495117225" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Quality Dim Export</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Report UTT O9 Project Jobs - NamedType QualityDimLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 4143221238 - NamedType 3855936753" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Quality</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Report UTT O9 Project Jobs - NamedType QualityLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 4143221238 - NamedType 2555252413" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Resource Availability Export</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Report UTT O9 Project Jobs - NamedType ResourceAvailLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 4143221238 - NamedType 76412546" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Resource Availability Time Export</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Report UTT O9 Project Jobs - NamedType ResourceAvailTimeLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 4143221238 - NamedType 2861219832" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Resource Master Export</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Report UTT O9 Project Jobs - NamedType ResourceMasterLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 4143221238 - NamedType 1347639190" size-unit="char" translate="yes" xml:space="preserve">
+          <source>RoutingMaster</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Report UTT O9 Project Jobs - NamedType routingMasterLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 4143221238 - NamedType 25080977" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Routing Master Export</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Report UTT O9 Project Jobs - NamedType RtgMasterLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 4143221238 - NamedType 840224530" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sales Export</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">DEU=Verkaufszahlen Export</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report UTT O9 Project Jobs - NamedType SalesExportLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 4143221238 - NamedType 50701934" size-unit="char" translate="yes" xml:space="preserve">
+          <source>STO</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Report UTT O9 Project Jobs - NamedType STOLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 4143221238 - NamedType 1381568810" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Supplier Export</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">DEU=Kreditoren Export</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report UTT O9 Project Jobs - NamedType SupplierDimLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 4143221238 - NamedType 491022822" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Supplier DP Export </source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">DEU=Kreditoren DP Export</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report UTT O9 Project Jobs - NamedType SupplierDimLbl_SP</note>
+        </trans-unit>
+        <trans-unit id="Report 4143221238 - NamedType 3791389978" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Supplier</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Report UTT O9 Project Jobs - NamedType SupplierLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 4143221238 - NamedType 1875437046" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Supplier</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Report UTT O9 Project Jobs - NamedType SupplierLbl_SP</note>
+        </trans-unit>
+        <trans-unit id="Report 4143221238 - NamedType 2887625039" size-unit="char" translate="yes" xml:space="preserve">
+          <source>UOM Conversion</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">DEU=Einheiten Umtrechnung</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report UTT O9 Project Jobs - NamedType UOMConversionLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 4143221238 - NamedType 1055414451" size-unit="char" translate="yes" xml:space="preserve">
+          <source>UOM_Conversiion</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Report UTT O9 Project Jobs - NamedType UOMConvLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 4143221238 - NamedType 521435651" size-unit="char" translate="yes" xml:space="preserve">
+          <source>UOM Export</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">DEU=Einheiten export</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report UTT O9 Project Jobs - NamedType UOMExportLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 4143221238 - NamedType 1215069719" size-unit="char" translate="yes" xml:space="preserve">
+          <source>UOM</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Report UTT O9 Project Jobs - NamedType UOMLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 4143221238 - Control 1600012512 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Demand planning</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Report UTT O9 Project Jobs - Control DP - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 4143221238 - Control 1833845803 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Customer Association</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Report UTT O9 Project Jobs - Control CustomerAssoc - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 4143221238 - Control 1278988208 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Customer Export</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">DEU=Debitoren Export</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report UTT O9 Project Jobs - Control CustomerDim - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 4143221238 - Control 14381576 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Item Inventory Export</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">DEU= Artikel Lagerbestand Export</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report UTT O9 Project Jobs - Control InventoryExport2 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 4143221238 - Control 4156239031 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Location Export</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">DEU=Lagerort Export</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report UTT O9 Project Jobs - Control LocationDim - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 4143221238 - Control 1971316450 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Material Association</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Report UTT O9 Project Jobs - Control MaterialAssoc - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 4143221238 - Control 687863993 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Material Export</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">DEU=Artikel Export</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report UTT O9 Project Jobs - Control MaterialExport - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 4143221238 - Control 821546017 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Purchase Export</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">DEU=Einkaufszahlen Export</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report UTT O9 Project Jobs - Control PurchaseExport - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 4143221238 - Control 1922064685 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Quality Association</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">DEU= Quality Association</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report UTT O9 Project Jobs - Control QualityAsso - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 4143221238 - Control 87963015 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Quality Dim</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">DEU= Quality Dim</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report UTT O9 Project Jobs - Control QualityDim - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 4143221238 - Control 1290684024 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sales Export</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">DEU= Verkaufszahlen Export</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report UTT O9 Project Jobs - Control SalesExport - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 4143221238 - Control 699349264 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Supplier Export</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">DEU=Kreditoren Export</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report UTT O9 Project Jobs - Control SupplierDim - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 4143221238 - Control 1709879745 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>UOM Conversion</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">Einheitenumrechungstabelle</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report UTT O9 Project Jobs - Control UOMConversion - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 4143221238 - Control 4097614277 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Supply planning</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Report UTT O9 Project Jobs - Control SP - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 4143221238 - Control 221239808 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>BOM Master</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Report UTT O9 Project Jobs - Control BOMMaster - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 4143221238 - Control 107505740 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Customer SP Export</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Report UTT O9 Project Jobs - Control CustomerDim_SP - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 4143221238 - Control 3500548323 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Incoterm</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Report UTT O9 Project Jobs - Control IncotermExport - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 4143221238 - Control 1701856864 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>InventoryCostPerUnit</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Report UTT O9 Project Jobs - Control InventoryCostPerUnit_SP - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 4143221238 - Control 3513036795 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Location_SP Export</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Report UTT O9 Project Jobs - Control LocationDim_SP - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 4143221238 - Control 294683117 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Material_SP Export</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Report UTT O9 Project Jobs - Control MaterialExport_SP - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 4143221238 - Control 2890429752 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>OnHandInventory_SP</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Report UTT O9 Project Jobs - Control OnHandInventory_SP - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 4143221238 - Control 3296042535 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Pro</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">DEU=Pro Export</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report UTT O9 Project Jobs - Control Pro - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 4143221238 - Control 3514445125 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Purchase Export SP</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Report UTT O9 Project Jobs - Control PurchaseExport_SP - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 4143221238 - Control 2947950779 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Resource Availability</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Report UTT O9 Project Jobs - Control ResourceAvail - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 4143221238 - Control 1839981928 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Resource Availability Time</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Report UTT O9 Project Jobs - Control ResourceAvailTime - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 4143221238 - Control 2209076146 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Resource Master</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Report UTT O9 Project Jobs - Control ResourceMaster - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 4143221238 - Control 3322760687 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Routing Master</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Report UTT O9 Project Jobs - Control RtgMaster - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 4143221238 - Control 62358884 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>ActualSales_SP</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Report UTT O9 Project Jobs - Control SalesExport_SP - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 4143221238 - Control 735627692 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Supplier SP Export</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Report UTT O9 Project Jobs - Control SupplierDim_SP - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 4143221238 - Control 1080879461 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>UOM Conversion</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">Einheitenumrechungstabelle</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report UTT O9 Project Jobs - Control UOMConversion_SP - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 3395350290 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>UTT 09 Incoterm</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Report UTT o9Incoterm - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 3395350290 - NamedType 2690307972" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Reference No.:</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">DEU = Referenznr.:, ENU = Reference No.:, DEA = Referenznr.:</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report UTT o9Incoterm - NamedType C_KVS013</note>
+        </trans-unit>
+        <trans-unit id="Report 3395350290 - NamedType 2476940767" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Period: %1</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">ENU = Period: %1, DEA = Periode: %1</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report UTT o9Incoterm - NamedType Text000</note>
+        </trans-unit>
+        <trans-unit id="Report 3395350290 - NamedType 3103188864" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Datum</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">DEU = Datum, ENU = Date, ESM = Fecha, DEA = Datum</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report UTT o9Incoterm - NamedType TxtDate</note>
+        </trans-unit>
+        <trans-unit id="Report 3395350290 - NamedType 194507899" size-unit="char" translate="yes" xml:space="preserve">
+          <source>please set as filter the  sales plan name!! </source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">DEU = bitte Umsatzplanname eingeben!!, ENU = please set as filter the  sales plan name!! , DEA = bitte Umsatzplanname eingeben!!</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report UTT o9Incoterm - NamedType TxtError1</note>
+        </trans-unit>
+        <trans-unit id="Report 3395350290 - NamedType 1435897494" size-unit="char" translate="yes" xml:space="preserve">
+          <source>plase set the start and end date !!</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">DEU = bitte Start- und Enddatum eingeben !!, ENU = plase set the start and end date !!, DEA = bitte Start- und Enddatum eingeben !!</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report UTT o9Incoterm - NamedType txtError2</note>
+        </trans-unit>
+        <trans-unit id="Report 3395350290 - NamedType 3489588747" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Soll-Ist-Vergleich Excel</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">ENU = Soll-Ist-Vergleich Excel, ESM = Soll-Ist-Vergleich Excel, DEA = Soll-Ist-Vergleich Excel</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report UTT o9Incoterm - NamedType TxtReportName</note>
+        </trans-unit>
+        <trans-unit id="Report 3395350290 - NamedType 3835800219" size-unit="char" translate="yes" xml:space="preserve">
+          <source>User</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">DEU = Benutzer, ENU = User, ESM = Usuario, DEA = Benutzer</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report UTT o9Incoterm - NamedType TxtUser</note>
+        </trans-unit>
+        <trans-unit id="Report 3395350290 - Control 2346885236 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Options</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Report UTT o9Incoterm - Control Options - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 3395350290 - Control 845401037 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the End Date field</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Report UTT o9Incoterm - Control EndDate - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 3395350290 - Control 845401037 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>End Date</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Report UTT o9Incoterm - Control EndDate - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 3395350290 - Control 3605153064 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Start Date field</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Report UTT o9Incoterm - Control StartDate - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 3395350290 - Control 3605153064 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Start Date</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Report UTT o9Incoterm - Control StartDate - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="XmlPort 1254785002 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>UTT O9 Pro</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">XmlPort UTT O9 Pro - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="XmlPort 3934680416 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>UTT O9 Purchase Export</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">XmlPort UTT O9 Purchase Export - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="XmlPort 1439369692 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>UTT O9 Purchase Export_SP</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">XmlPort UTT O9 Purchase Export_SP - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="XmlPort 3428038917 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>UTT O9 STO</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">XmlPort UTT O9 STO - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="XmlPort 1631571120 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>UTT O9ApplicationAssocation</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">XmlPort UTT O9ApplicationAssoc - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="XmlPort 2106335582 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>UTT O9AppliCationDim</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">XmlPort UTT O9ApplicationsDim - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="XmlPort 1057329041 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>UTT O9 Bom Master</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">XmlPort UTT O9BOMMaster - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="XmlPort 3182473518 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>UTT O9CustomerAssoc</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">XmlPort UTT O9CustomerAssoc - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="XmlPort 3172700625 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>UTT O9CustomerDim_DP</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">XmlPort UTT O9CustomerDim - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="XmlPort 178447893 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>UTT O9CustomerDim_SP</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">XmlPort UTT O9CustomerDim_SP - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="XmlPort 1694542962 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>UTT O9IncoTerm</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">XmlPort UTT O9InCoTerm - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="XmlPort 3741985186 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>UTT O9 Inventory KPI</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">XmlPort UTT O9Inventory-KPI - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="XmlPort 2986750305 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>UTT O9InventoryCostPerUnit_SP</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">XmlPort UTT O9InventoryCostPerUnit_SP - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="XmlPort 3600604389 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>UTT O9 Inventory KPI per Item</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">XmlPort UTT O9ItemInventory-KPI - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="XmlPort 176009130 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>UTT O9LocationDim</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">XmlPort UTT O9LocationDim - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="XmlPort 777000038 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>UTT O9LocationDim_SP</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">XmlPort UTT O9LocationDim_SP - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="XmlPort 3528326463 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>UTT O9 MAterialAssoc</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">XmlPort UTT O9MaterialAssoc - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="XmlPort 2654403676 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>UTT O9 MAterialDim</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">XmlPort UTT O9MaterialDim - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="XmlPort 383001568 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>UTT O9 MAterialDim_SP</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">XmlPort UTT O9MaterialDim_SP - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="XmlPort 2755694422 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>UTT O9MaterialPurchasePrice_SP</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">XmlPort UTT O9MaterialPurchasePrice_SP - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="XmlPort 439205025 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>UTT O9OnHandInventory_SP</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">XmlPort UTT O9OnHandInventory_SP - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="XmlPort 1544344601 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>UTT O9 QualityAssociation</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">XmlPort UTT O9QualityAssociation - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="XmlPort 3659338562 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>UTT O9QualityDim</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">XmlPort UTT O9QualityDim - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="XmlPort 369646676 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>UTT O9 Resource Availabiliy</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">XmlPort UTT O9ResourceAvailability - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="XmlPort 3971167693 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>UTT O9 Resource Availabiliy Time</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">XmlPort UTT O9ResourceAvailTime_SP - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="XmlPort 990415943 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>UTT O9 Resource Master</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">XmlPort UTT O9ResourceMaster - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="XmlPort 1184548943 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>UTT O9 Routing Master</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">XmlPort UTT O9RountingMaster - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="XmlPort 3609456487 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>UTT O9SalesActual</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">XmlPort UTT O9SalesActual - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="XmlPort 3167398219 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>UTT O9SalesActual_SP</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">XmlPort UTT O9SalesActual_SP - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="XmlPort 3027286737 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>UTT O9SupplierDim</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">XmlPort UTT O9SupplierDim - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="XmlPort 1678165781 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>UTT O9SupplierDim_SP</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">XmlPort UTT O9SupplierDim_SP - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="XmlPort 4221267840 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>UTT O9UOMConversion</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">XmlPort UTT O9UOMConversion - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="XmlPort 2960557816 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>UTT O9UOMDim</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">XmlPort UTT O9UOMDim - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2218010495 - Control 2398776233 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3448049138">
+          <source>O9 restricted Qty</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension UTT Bin Card Ext - Control O9restrictedQty - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3949873439 - Control 2398776233 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3870787835">
+          <source>O9 restricted Qty</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension UTT Location Card Ext - Control O9restrictedQty - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 91961587 - Field 2398776233 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 400793991">
+          <source>O9restrictedQty</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension UTT Bin Ext - Field O9restrictedQty - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1952298515 - Field 2398776233 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3891454143">
+          <source>O9restrictedQty</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension UTT Location Ext - Field O9restrictedQty - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 916832089 - Field 3143360248 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1379888169">
+          <source>IBPO9ExportPath</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension UTT MfgSetupExt - Field IBPO9ExportPath - Property Caption</note>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

@@ -92,7 +92,7 @@ var
                     IBPO9Buffer.Init(); 
                     IBPO9Buffer."Entry No.":= EntryNo;
                     IBPO9Buffer."Export Date" := CurrentDateTime();
-                    IBPO9Buffer."Export Batch ID" := 'MATPURCHPRICE_SP';
+                    IBPO9Buffer."Export Batch ID" := o9ProjectLib.GetCurrentXMLPortName(67032);
                     IBPO9Buffer.Insert();
                 end;
             }
@@ -198,7 +198,7 @@ var
                     IBPO9Buffer.Init(); 
                     IBPO9Buffer."Entry No.":= EntryNo;
                     IBPO9Buffer."Export Date" := CurrentDateTime();
-                    IBPO9Buffer."Export Batch ID" := 'MATPURCHPRICE_SP';
+                    IBPO9Buffer."Export Batch ID" := o9ProjectLib.GetCurrentXMLPortName(67032);
                     IBPO9Buffer.Insert();
                 end;
 
@@ -235,4 +235,5 @@ var
         PurchUOM: Code[20];
         purchCurrency: code[20];
         IBPO9Buffer: Record "UTT IBPO9 Buffer";
+        o9ProjectLib: Codeunit "UTT O9 Project Lib";
 }

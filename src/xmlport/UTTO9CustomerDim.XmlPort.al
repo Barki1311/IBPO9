@@ -1,11 +1,11 @@
 ﻿xmlport 67001 "UTT O9CustomerDim"
 {
-    Caption = 'UTT O9CustomerDim_SP';
+    Caption = 'UTT O9CustomerDim_DP';
     Format = VariableText;
     Direction = Export;
     TextEncoding = UTF8;
     UseRequestPage = false;
-    FileName = 'CustomerDim_SP.dsv';
+    FileName = 'CustomerDim_DP.dsv';
     TableSeparator = '<NewLine>';
     FieldSeparator = '|';
     schema
@@ -22,6 +22,8 @@
                     trigger OnBeforePassVariable()
                     begin
                         ShipToLbl := 'ShipTo';
+                        IBPO9Buffer."Field 1" := ShipToLbl;
+                        IBPO9Buffer.Modify();
                     end;
                 }
                 textelement(ShipToDescLbl)
@@ -29,14 +31,17 @@
                     trigger OnBeforePassVariable()
                     begin
                         ShipToDescLbl := 'ShipToDescription';
+                        IBPO9Buffer."Field 2" := ShipToDescLbl;
+                        IBPO9Buffer.Modify();
                     end;
                 }
-
                 textelement(SoldTocustLbl)
                 {
                     trigger OnBeforePassVariable()
                     begin
                         SoldTocustLbl := 'SoldTo';
+                        IBPO9Buffer."Field 3" := SoldTocustLbl;
+                        IBPO9Buffer.Modify();
                     end;
                 }
                 textelement(SoldToCustDesctLbl)
@@ -44,15 +49,17 @@
                     trigger OnBeforePassVariable()
                     begin
                         SoldToCustDesctLbl := 'SoldToDescription';
+                        IBPO9Buffer."Field 4" := SoldToCustDesctLbl;
+                        IBPO9Buffer.Modify();
                     end;
                 }
-
-
                 textelement(KeyAccountLbl)
                 {
                     trigger OnBeforePassVariable()
                     begin
                         KeyAccountLbl := 'KeyAccounts';
+                        IBPO9Buffer."Field 5" := KeyAccountLbl;
+                        IBPO9Buffer.Modify();
                     end;
                 }
                 textelement(KeyAccountDescLbl)
@@ -60,6 +67,8 @@
                     trigger OnBeforePassVariable()
                     begin
                         KeyAccountDescLbl := 'KeyAccountsDescription';
+                        IBPO9Buffer."Field 6" := KeyAccountDescLbl;
+                        IBPO9Buffer.Modify();
                     end;
                 }
                 textelement(KeyCustomerLbl)
@@ -67,6 +76,8 @@
                     trigger OnBeforePassVariable()
                     begin
                         KeyCustomerLbl := 'KeyCustomer';
+                        IBPO9Buffer."Field 7" := KeyCustomerLbl;
+                        IBPO9Buffer.Modify();
                     end;
                 }
                 textelement(CustomerGrpLbl)
@@ -74,6 +85,8 @@
                     trigger OnBeforePassVariable()
                     begin
                         CustomerGrpLbl := 'CustomerGroup';
+                        IBPO9Buffer."Field 8" := CustomerGrpLbl;
+                        IBPO9Buffer.Modify();
                     end;
                 }
                 textelement(CustomerGrpDescLbl)
@@ -81,14 +94,17 @@
                     trigger OnBeforePassVariable()
                     begin
                         CustomerGrpDescLbl := 'CustomerGroupDescription';
+                        IBPO9Buffer."Field 9" := CustomerGrpDescLbl;
+                        IBPO9Buffer.Modify();
                     end;
                 }
-
                 textelement(RegionLbl)
                 {
                     trigger OnBeforePassVariable()
                     begin
                         RegionLbl := 'Region';
+                        IBPO9Buffer."Field 10" := RegionLbl;
+                        IBPO9Buffer.Modify();
                     end;
                 }
                 textelement(RegionDescLbl)
@@ -96,6 +112,8 @@
                     trigger OnBeforePassVariable()
                     begin
                         RegionDescLbl := 'RegionDescription';
+                        IBPO9Buffer."Field 11" := RegionDescLbl;
+                        IBPO9Buffer.Modify();
                     end;
                 }
                 textelement(CountryLbl)
@@ -103,6 +121,8 @@
                     trigger OnBeforePassVariable()
                     begin
                         CountryLbl := 'Country';
+                        IBPO9Buffer."Field 12" := CountryLbl;
+                        IBPO9Buffer.Modify();
                     end;
                 }
                 textelement(CountryDescLbl)
@@ -110,6 +130,8 @@
                     trigger OnBeforePassVariable()
                     begin
                         CountryDescLbl := 'CountryDescription';
+                        IBPO9Buffer."Field 13" := CountryDescLbl;
+                        IBPO9Buffer.Modify();
                     end;
                 }
                 textelement(SalesManagerLbl)
@@ -117,6 +139,8 @@
                     trigger OnBeforePassVariable()
                     begin
                         SalesManagerLbl := 'SalesManager';
+                        IBPO9Buffer."Field 14" := SalesManagerLbl;
+                        IBPO9Buffer.Modify();
                     end;
                 }
                 textelement(SalesManagerDescLbl)
@@ -124,6 +148,8 @@
                     trigger OnBeforePassVariable()
                     begin
                         SalesManagerDescLbl := 'SalesManagerDescription';
+                        IBPO9Buffer."Field 15" := SalesManagerDescLbl;
+                        IBPO9Buffer.Modify();
                     end;
                 }
                 textelement(SalesOfficeLbl)
@@ -131,6 +157,8 @@
                     trigger OnBeforePassVariable()
                     begin
                         SalesOfficeLbl := 'SalesOffice';
+                        IBPO9Buffer."Field 16" := SalesOfficeLbl;
+                        IBPO9Buffer.Modify();
                     end;
                 }
                 textelement(SalesOfficeDescLbl)
@@ -138,6 +166,8 @@
                     trigger OnBeforePassVariable()
                     begin
                         SalesOfficeDescLbl := 'SalesOfficeDescription';
+                        IBPO9Buffer."Field 17" := SalesOfficeDescLbl;
+                        IBPO9Buffer.Modify();
                     end;
                 }
                 textelement(SalesOrgLbl)
@@ -145,6 +175,8 @@
                     trigger OnBeforePassVariable()
                     begin
                         SalesOrgLbl := 'SalesOrg';
+                        IBPO9Buffer."Field 18" := SalesOrgLbl;
+                        IBPO9Buffer.Modify();
                     end;
                 }
                 textelement(SalesOrgDescLbl)
@@ -152,14 +184,17 @@
                     trigger OnBeforePassVariable()
                     begin
                         SalesOrgDescLbl := 'SalesOrgDescription';
+                        IBPO9Buffer."Field 19" := SalesOrgDescLbl;
+                        IBPO9Buffer.Modify();
                     end;
                 }
-
                 textelement(SegmentLbl)
                 {
                     trigger OnBeforePassVariable()
                     begin
                         SegmentLbl := 'SegmentCode';
+                        IBPO9Buffer."Field 20" := SegmentLbl;
+                        IBPO9Buffer.Modify();
                     end;
                 }
                 textelement(SegmentDescLbl)
@@ -167,6 +202,8 @@
                     trigger OnBeforePassVariable()
                     begin
                         SegmentDescLbl := 'SegmentDescription';
+                        IBPO9Buffer."Field 21" := SegmentDescLbl;
+                        IBPO9Buffer.Modify();
                     end;
                 }
                 textelement(DistributionLbl)
@@ -174,6 +211,8 @@
                     trigger OnBeforePassVariable()
                     begin
                         DistributionLbl := 'DistributionChannel';
+                        IBPO9Buffer."Field 22" := DistributionLbl;
+                        IBPO9Buffer.Modify();
                     end;
                 }
                 textelement(CustomerTypeLbl)
@@ -181,6 +220,8 @@
                     trigger OnBeforePassVariable()
                     begin
                         CustomerTypeLbl := 'CustomerType';
+                        IBPO9Buffer."Field 23" := CustomerTypeLbl;
+                        IBPO9Buffer.Modify();
                     end;
                 }
                 textelement(IsCustomerActiveLbl)
@@ -188,6 +229,8 @@
                     trigger OnBeforePassVariable()
                     begin
                         IsCustomerActiveLbl := 'IsCustomerActive';
+                        IBPO9Buffer."Field 24" := IsCustomerActiveLbl;
+                        IBPO9Buffer.Modify();
                     end;
                 }
                 textelement(LocationcodeLbl)
@@ -195,6 +238,8 @@
                     trigger OnBeforePassVariable()
                     begin
                         LocationcodeLbl := 'LocationCode';
+                        IBPO9Buffer."Field 25" := LocationcodeLbl;
+                        IBPO9Buffer.Modify();
                     end;
                 }
                 // textelement(ProductMarketLbl)
@@ -205,7 +250,17 @@
                 //     end;
                 // }
 
-
+                trigger OnAfterGetRecord()
+                var
+                    EntryNo: Integer;
+                begin
+                    EntryNo := IBPO9Buffer.getNextEntry();
+                    IBPO9Buffer.Init();
+                    IBPO9Buffer."Entry No." := EntryNo;
+                    IBPO9Buffer."Export Date" := CurrentDateTime();
+                    IBPO9Buffer."Export Batch ID" := o9ProjectLib.GetCurrentXMLPortName(67001);
+                    IBPO9Buffer.Insert();
+                end;
 
             }
             tableelement(Customer; Customer)
@@ -293,21 +348,6 @@
                         CustomerGrp := 'N/A';
                         IBPO9Buffer."Field 8" := CustomerGrp;
                         IBPO9Buffer.Modify();
-                        // CustomerGrp := Customer."KVS Customer Group";
-                        // if CustomerGrp = '' then
-                        //     CustomerGrp := '900';
-
-                        // case CustomerGrp of
-                        //     '100':
-                        //         CustomerGrp := 'Airbag';
-                        //     '501':
-                        //         CustomerGrp := 'Airbag';
-                        //     else
-                        //         CustomerGrp := 'Specialties'
-
-                        // end;
-
-
                     end;
                 }
 
@@ -320,12 +360,6 @@
                         CustomerGrpDesc := 'N/A';
                         IBPO9Buffer."Field 9" := CustomerGrpDesc;
                         IBPO9Buffer.Modify();
-                        // clear(CustomerGrpDesc);
-                        // if DimValue.Get('Debitorengruppe', Customer."KVS Customer Group") then
-                        //     CustomerGrpDesc := DimValue.Name;
-                        // if CustomerGrpDesc = '' then
-                        //     CustomerGrpDesc := 'N/A';
-
                     end;
                 }
 
@@ -404,10 +438,6 @@
                         Salesperson: Record "Salesperson/Purchaser";
                     begin
                         Clear(SalesManagerDesc);
-                        // if Salesperson.get(Customer."Salesperson Code") then
-                        //     SalesManagerDesc := Salesperson.Name
-                        // else
-                        //     SalesManagerDesc := '';
                         SalesManagerDesc := 'N/A';
                         IBPO9Buffer."Field 15" := SalesManagerDesc;
                         IBPO9Buffer.Modify();
@@ -425,9 +455,6 @@
                                 SalesOffice := 'IVMK';
                             'MX':
                                 SalesOffice := 'IVMP';
-                        // else
-                        //     Salesoffice := 'N/A';
-
                         end;
                         IBPO9Buffer."Field 16" := SalesOffice;
                         IBPO9Buffer.Modify();
@@ -568,14 +595,14 @@
                     end;
                 }
                 trigger OnAfterGetRecord()
-var
-    EntryNo: Integer;
+                var
+                    EntryNo: Integer;
                 begin
-                     EntryNo:= IBPO9Buffer.getNextEntry();
-                    IBPO9Buffer.Init(); 
-                    IBPO9Buffer."Entry No.":= EntryNo;
+                    EntryNo := IBPO9Buffer.getNextEntry();
+                    IBPO9Buffer.Init();
+                    IBPO9Buffer."Entry No." := EntryNo;
                     IBPO9Buffer."Export Date" := CurrentDateTime();
-                    IBPO9Buffer."Export Batch ID" := 'CUSTOMERASSOC';
+                    IBPO9Buffer."Export Batch ID" := O9ProjectLib.GetCurrentXMLPortName(67001);
                     IBPO9Buffer.Insert();
                 end;
 
@@ -606,6 +633,7 @@ var
     }
     var
         IBPO9Buffer: Record "UTT IBPO9 Buffer";
+        o9ProjectLib: Codeunit "UTT O9 Project Lib";
 
 
 

@@ -61,7 +61,7 @@ xmlport 67004 "UTT O9UOMConversion"
                     IBPO9Buffer.Init();
                     IBPO9Buffer."Entry No." := EntryNo;
                     IBPO9Buffer."Export Date" := CurrentDateTime();
-                    IBPO9Buffer."Export Batch ID" := 'UOMDIM';
+                    IBPO9Buffer."Export Batch ID" := o9ProjectLib.GetCurrentXMLPortName(67004);
                     IBPO9Buffer.Insert();
                 end;
             }
@@ -141,7 +141,7 @@ xmlport 67004 "UTT O9UOMConversion"
                     IBPO9Buffer.Init();
                     IBPO9Buffer."Entry No." := EntryNo;
                     IBPO9Buffer."Export Date" := CurrentDateTime();
-                    IBPO9Buffer."Export Batch ID" := 'UOMDIM';
+                    IBPO9Buffer."Export Batch ID" := o9ProjectLib.GetCurrentXMLPortName(67004);
                     IBPO9Buffer.Insert();
                 end;
 
@@ -150,7 +150,7 @@ xmlport 67004 "UTT O9UOMConversion"
                     myInt: Integer;
                 begin
                     item.SetFilter("KVS Default Location Code", '<>%1&<>%2&<>%3&<>%4&<>%5', 'ERSATZTEIL', 'REFACCIONE', 'REVISTA', 'MAGAZIN', 'PRODUCION');
-                    item.SetFilter("Net Weight", '>=%1', 0.001);
+                    item.SetFilter("Net Weight", '>=%1', 0);
                 end;
             }
         }
@@ -175,4 +175,5 @@ xmlport 67004 "UTT O9UOMConversion"
         CompanyInfo: Record "Company Information";
         Plant: text;
         IBPO9Buffer: Record "UTT IBPO9 Buffer";
+        o9ProjectLib: Codeunit "UTT O9 Project Lib";
 }

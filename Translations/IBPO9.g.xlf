@@ -653,6 +653,66 @@
           <note from="Developer" annotates="general" priority="2">DEU = Warenart,ENU = Item Type,DEA = Warenart</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table UTT SalesBuffer - Field Warenart - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 1077104055 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>O9 Snapshot Configuration</source>
+          <note from="Developer" annotates="general" priority="2">DEU=O9-Snapshot-Konfiguration,DEA=O9-Snapshot-Konfiguration</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTTO9SnapshotConfig - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1077104055 - Field 1090351696 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Active</source>
+          <note from="Developer" annotates="general" priority="2">DEU=Aktiv,DEA=Aktiv</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTTO9SnapshotConfig - Field Active - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1077104055 - Field 3004954119 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Code</source>
+          <note from="Developer" annotates="general" priority="2">DEU=Code,DEA=Code</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTTO9SnapshotConfig - Field Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1077104055 - Field 567887726 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Currency Code</source>
+          <note from="Developer" annotates="general" priority="2">DEU=Währungscode,DEA=Währungscode</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTTO9SnapshotConfig - Field CurrencyCode - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1077104055 - Field 1593684093 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Date Formel</source>
+          <note from="Developer" annotates="general" priority="2">DEU=Datumsformel,DEA=Datumsformel</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTTO9SnapshotConfig - Field DateFormel - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1077104055 - Field 3461834954 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Description</source>
+          <note from="Developer" annotates="general" priority="2">DEU=Beschreibung,DEA=Beschreibung</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTTO9SnapshotConfig - Field Description - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1077104055 - Field 845401037 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>End Date</source>
+          <note from="Developer" annotates="general" priority="2">DEU=Enddatum,DEA=Enddatum</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTTO9SnapshotConfig - Field EndDate - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1077104055 - Field 1463529163 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Keep History</source>
+          <note from="Developer" annotates="general" priority="2">DEU=Historie behalten,DEA=Historie behalten</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTTO9SnapshotConfig - Field KeepHistory - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1077104055 - Field 3271638145 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No. Series</source>
+          <note from="Developer" annotates="general" priority="2">DEU=Nummernserie,DEA=Nummernserie</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTTO9SnapshotConfig - Field NoSeriesCode - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1077104055 - Field 3605153064 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Start Date</source>
+          <note from="Developer" annotates="general" priority="2">DEU=Startdatum,DEA=Startdatum</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTTO9SnapshotConfig - Field StartDate - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1077104055 - Field 1590693124 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Turnover Plan Filter</source>
+          <note from="Developer" annotates="general" priority="2">DEU=Umsatzplan-Filter,DEA=Umsatzplan-Filter</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTTO9SnapshotConfig - Field TurnoverPlanFilter - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1077104055 - Field 2874265441 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>XML Port Name</source>
+          <note from="Developer" annotates="general" priority="2">DEU=XML-Port-Name,DEA=XML-Port-Name</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table UTTO9SnapshotConfig - Field XMLPortName - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Codeunit 3771958491 - NamedType 365289664" size-unit="char" translate="yes" xml:space="preserve">
           <source>Actual_Sales</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -722,6 +782,11 @@
           <source>Material_SP</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit UTT O9 Project Lib - NamedType Material_SP_Lbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3771958491 - NamedType 213669539" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Are you sure you want to clean up old snapshots? This action cannot be undone.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit UTT O9 Project Lib - NamedType MsgCleanupOldSnapshots</note>
         </trans-unit>
         <trans-unit id="Codeunit 3771958491 - NamedType 626708126" size-unit="char" translate="yes" xml:space="preserve">
           <source>OnHandInventory</source>
@@ -947,6 +1012,116 @@
           <source>Specifies the value of the Field 9 field.</source>
           <note from="Developer" annotates="general" priority="2">%</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page UTT IBPO9 Buffer List - Control Field 9 - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 582089943 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>O9 Snapshot Configurations</source>
+          <note from="Developer" annotates="general" priority="2">DEU=O9-Snapshot-Konfigurationen,DEA=O9-Snapshot-Konfigurationen</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UTT O9 Snapshot Config - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 582089943 - NamedType 4181623697" size-unit="char" translate="yes" xml:space="preserve">
+          <source>All active snapshots successfully updated.</source>
+          <note from="Developer" annotates="general" priority="2">DEU=Alle aktiven Snapshots erfolgreich aktualisiert.,DEA=Alle aktiven Snapshots erfolgreich aktualisiert.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UTT O9 Snapshot Config - NamedType MsgAllSnapshotsDone</note>
+        </trans-unit>
+        <trans-unit id="Page 582089943 - NamedType 1037665539" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Old snapshots cleaned up successfully.</source>
+          <note from="Developer" annotates="general" priority="2">DEU=Alte Snapshots erfolgreich bereinigt.,DEA=Alte Snapshots erfolgreich bereinigt.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UTT O9 Snapshot Config - NamedType MsgcleanupOldSnapshots</note>
+        </trans-unit>
+        <trans-unit id="Page 582089943 - NamedType 2858246647" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Snapshot for configuration "%1" successfully updated.</source>
+          <note from="Developer" annotates="general" priority="2">DEU=Snapshot für Konfiguration "%1" erfolgreich aktualisiert.,DEA=Snapshot für Konfiguration "%1" erfolgreich aktualisiert.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UTT O9 Snapshot Config - NamedType MsgSnapshotDone</note>
+        </trans-unit>
+        <trans-unit id="Page 582089943 - Control 1090351696 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies whether this configuration is included in the automated job queue run.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UTT O9 Snapshot Config - Control Active - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 582089943 - Control 3004954119 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the unique code for this snapshot configuration.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UTT O9 Snapshot Config - Control Code - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 582089943 - Control 567887726 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the currency code for amount calculations. Leave blank for LCY.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UTT O9 Snapshot Config - Control CurrencyCode - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 582089943 - Control 225251741 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies a date formula to calculate the Start and End Date. If this field is filled, it will override the values in the Start Date and End Date fields.</source>
+          <note from="Developer" annotates="general" priority="2">%DEU=Datumsformel,DEA=Datumsformel</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UTT O9 Snapshot Config - Control dateFormel - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 582089943 - Control 3461834954 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies a description for this snapshot configuration.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UTT O9 Snapshot Config - Control Description - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 582089943 - Control 845401037 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the End Date field.</source>
+          <note from="Developer" annotates="general" priority="2">%DEU=Enddatum,DEA=Enddatum</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UTT O9 Snapshot Config - Control EndDate - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 582089943 - Control 1463529163 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies whether to keep historical snapshot data when running new snapshots. If true, new snapshot entries will be added without deleting old ones. If false, old snapshot entries for the same configuration will be deleted before inserting new ones.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UTT O9 Snapshot Config - Control KeepHistory - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 582089943 - Control 3605153064 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the start date of the reporting period. The end date is always today.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UTT O9 Snapshot Config - Control StartDate - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 582089943 - Control 1590693124 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the turnover plan name used as filter for this snapshot.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UTT O9 Snapshot Config - Control TurnoverPlanFilter - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 582089943 - Control 2874265441 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the XML Port used for exporting the snapshot data. The XML Port must be designed to export data in a specific format expected by the recipients of the snapshot.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UTT O9 Snapshot Config - Control XMLPortName - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 582089943 - Action 4133851388 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Deletes old snapshot entries for configurations that are set to not keep history.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UTT O9 Snapshot Config - Action CleanupOldSnapshots - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 582089943 - Action 4133851388 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Cleanup Old Snapshots</source>
+          <note from="Developer" annotates="general" priority="2">DEU=Alte Snapshots bereinigen,DEA=Alte Snapshots bereinigen</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UTT O9 Snapshot Config - Action CleanupOldSnapshots - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 582089943 - Action 2296351848 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Runs the SIV snapshot for all active configurations.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UTT O9 Snapshot Config - Action RunAllActive - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 582089943 - Action 2296351848 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Run All Active</source>
+          <note from="Developer" annotates="general" priority="2">DEU=Alle aktiven ausführen,DEA=Alle aktiven ausführen</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UTT O9 Snapshot Config - Action RunAllActive - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 582089943 - Action 1272526135 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Runs the SIV snapshot calculation for this configuration immediately.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UTT O9 Snapshot Config - Action RunSnapshot - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 582089943 - Action 1272526135 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Run Snapshot</source>
+          <note from="Developer" annotates="general" priority="2">DEU=Snapshot ausführen,DEA=Snapshot ausführen</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UTT O9 Snapshot Config - Action RunSnapshot - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 582089943 - Action 3011362049 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Opens the snapshot entries for this configuration.</source>
+          <note from="Developer" annotates="general" priority="2">DEU=Öffnet die Snapshot-Einträge für diese Konfiguration.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UTT O9 Snapshot Config - Action ShowSnapshotData - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 582089943 - Action 3011362049 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Show Snapshot Data</source>
+          <note from="Developer" annotates="general" priority="2">DEU=Snapshot-Daten anzeigen,DEA=Snapshot-Daten anzeigen</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page UTT O9 Snapshot Config - Action ShowSnapshotData - Property Caption</note>
         </trans-unit>
         <trans-unit id="Report 424395056 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Einkaufsbestellungen – Mengenübersicht (Audit)</source>
@@ -1619,7 +1794,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">XmlPort UTT O9CustomerAssoc - Property Caption</note>
         </trans-unit>
         <trans-unit id="XmlPort 3172700625 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>UTT O9CustomerDim_SP</source>
+          <source>UTT O9CustomerDim_DP</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">XmlPort UTT O9CustomerDim - Property Caption</note>
         </trans-unit>
@@ -1742,6 +1917,31 @@
           <source>UTT O9UOMDim</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">XmlPort UTT O9UOMDim - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2218010495 - Control 2398776233 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3448049138">
+          <source>O9 restricted Qty</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension UTT Bin Card Ext - Control O9restrictedQty - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3949873439 - Control 2398776233 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3870787835">
+          <source>O9 blocked Qty</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension UTT Location Card Ext - Control O9restrictedQty - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 91961587 - Field 2398776233 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 400793991">
+          <source>O9restrictedQty</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension UTT Bin Ext - Field O9restrictedQty - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1952298515 - Field 2398776233 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3891454143">
+          <source>O9 blocked Qty</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension UTT Location Ext - Field O9restrictedQty - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 916832089 - Field 3143360248 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1379888169">
+          <source>IBPO9ExportPath</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension UTT MfgSetupExt - Field IBPO9ExportPath - Property Caption</note>
         </trans-unit>
       </group>
     </body>

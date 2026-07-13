@@ -26,8 +26,7 @@ report 67035 "UTT O9 Project Jobs"
 
             begin
                 CompanyInfo.get();
-                O9Buffer.deleteAll();
-
+              
                 DataCompression.CreateZipArchive();
 
                 if MaterialExport then begin

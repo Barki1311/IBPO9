@@ -85,14 +85,14 @@
                 }
 
                 trigger OnAfterGetRecord()
-var
-    EntryNo: Integer;
+                var
+                    EntryNo: Integer;
                 begin
-                    EntryNo:= IBPO9Buffer.getNextEntry();
-                    IBPO9Buffer.Init(); 
-                    IBPO9Buffer."Entry No.":= EntryNo;
+                    EntryNo := IBPO9Buffer.getNextEntry();
+                    IBPO9Buffer.Init();
+                    IBPO9Buffer."Entry No." := EntryNo;
                     IBPO9Buffer."Export Date" := CurrentDateTime();
-                    IBPO9Buffer."Export Batch ID" := 'INVCOSTPERUNIT_SP';
+                    IBPO9Buffer."Export Batch ID" := o9ProjectLib.GetCurrentXMLPortName(67031);
                     IBPO9Buffer.Insert();
                 end;
             }
@@ -178,7 +178,7 @@ var
 
                 trigger OnAfterGetRecord()
                 var
-    EntryNo: Integer;
+                    EntryNo: Integer;
                     myInt: Integer;
                     ItemledEntry: Record "Item Ledger Entry";
                     PolymerNA: Boolean;
@@ -196,11 +196,11 @@ var
                     if itemledEntry.IsEmpty then
                         currXMLport.skip;
 
-                      EntryNo:= IBPO9Buffer.getNextEntry();
-                    IBPO9Buffer.Init(); 
-                    IBPO9Buffer."Entry No.":= EntryNo;
+                    EntryNo := IBPO9Buffer.getNextEntry();
+                    IBPO9Buffer.Init();
+                    IBPO9Buffer."Entry No." := EntryNo;
                     IBPO9Buffer."Export Date" := CurrentDateTime();
-                    IBPO9Buffer."Export Batch ID" := 'INVCOSTPERUNIT_SP';
+                    IBPO9Buffer."Export Batch ID" := O9ProjectLib.GetCurrentXMLPortName(67031);
                     IBPO9Buffer.Insert();
                 end;
 
@@ -219,4 +219,5 @@ var
     var
         GLSetup: Record "General Ledger Setup";
         IBPO9Buffer: Record "UTT IBPO9 Buffer";
+        o9ProjectLib: Codeunit "UTT O9 Project Lib";
 }

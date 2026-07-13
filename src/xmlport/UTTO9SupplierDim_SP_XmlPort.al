@@ -88,7 +88,7 @@ xmlport 67022 "UTT O9SupplierDim_SP"
                     IBPO9Buffer.Init();
                     IBPO9Buffer."Entry No." := EntryNo;
                     IBPO9Buffer."Export Date" := CurrentDateTime();
-                    IBPO9Buffer."Export Batch ID" := 'SUPPLIERDIM_SP';
+                    IBPO9Buffer."Export Batch ID" := o9ProjectLib.GetCurrentXMLPortName(67022);
                     IBPO9Buffer.Insert();
                 end;
             }
@@ -194,7 +194,7 @@ xmlport 67022 "UTT O9SupplierDim_SP"
                     IBPO9Buffer.Init();
                     IBPO9Buffer."Entry No." := EntryNo;
                     IBPO9Buffer."Export Date" := CurrentDateTime();
-                    IBPO9Buffer."Export Batch ID" := 'UOMDIM';
+                    IBPO9Buffer."Export Batch ID" := o9ProjectLib.GetCurrentXMLPortName(67022);
                     IBPO9Buffer.Insert();
                 end;
             }
@@ -203,4 +203,5 @@ xmlport 67022 "UTT O9SupplierDim_SP"
 
     var
         IBPO9Buffer: Record "UTT IBPO9 Buffer";
+        o9ProjectLib: Codeunit "UTT O9 Project Lib";
 }

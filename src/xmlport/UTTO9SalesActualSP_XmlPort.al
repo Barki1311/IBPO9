@@ -396,7 +396,7 @@ xmlport 67028 "UTT O9SalesActual_SP"
                     IBPO9Buffer.Init();
                     IBPO9Buffer."Entry No." := EntryNo;
                     IBPO9Buffer."Export Date" := CurrentDateTime();
-                    IBPO9Buffer."Export Batch ID" := 'UOMDIM';
+                    IBPO9Buffer."Export Batch ID" := o9ProjectLib.GetCurrentXMLPortName(67028);
                     IBPO9Buffer.Insert();
                 end;
 
@@ -875,7 +875,7 @@ xmlport 67028 "UTT O9SalesActual_SP"
                     IBPO9Buffer.Init();
                     IBPO9Buffer."Entry No." := EntryNo;
                     IBPO9Buffer."Export Date" := CurrentDateTime();
-                    IBPO9Buffer."Export Batch ID" := 'UOMDIM';
+                    IBPO9Buffer."Export Batch ID" := o9ProjectLib.GetCurrentXMLPortName(67028);
                     IBPO9Buffer.Insert();
                 end;
             }
@@ -921,5 +921,6 @@ xmlport 67028 "UTT O9SalesActual_SP"
         CompanyInfo: Record "Company Information";
         Plant: text;
         IBPO9Buffer: Record "UTT IBPO9 Buffer";
+        o9ProjectLib: Codeunit "UTT O9 Project Lib";
 
 }

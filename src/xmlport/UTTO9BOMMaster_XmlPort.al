@@ -154,14 +154,14 @@
                 }
 
                 trigger OnAfterGetRecord()
-var
-    EntryNo: Integer;
+                var
+                    EntryNo: Integer;
                 begin
-                       EntryNo:= IBPO9Buffer.getNextEntry();
-                    IBPO9Buffer.Init(); 
-                    IBPO9Buffer."Entry No.":= EntryNo;
+                    EntryNo := IBPO9Buffer.getNextEntry();
+                    IBPO9Buffer.Init();
+                    IBPO9Buffer."Entry No." := EntryNo;
                     IBPO9Buffer."Export Date" := CurrentDateTime();
-                    IBPO9Buffer."Export Batch ID" := 'BOMMASTER';
+                    IBPO9Buffer."Export Batch ID" := O9ProjectLib.GetCurrentXMLPortName(67015);
                     IBPO9Buffer.Insert();
                 end;
             }
@@ -195,7 +195,7 @@ var
                             IBPO9Buffer.Modify();
                         end;
                     }
-                  
+
                     textelement(Quality)
                     {
                         trigger OnBeforePassVariable()
@@ -356,14 +356,14 @@ var
 
                     trigger OnAfterGetRecord()
                     var
-    EntryNo: Integer;
+                        EntryNo: Integer;
                         myInt: Integer;
                     begin
-                       EntryNo:= IBPO9Buffer.getNextEntry();
-                    IBPO9Buffer.Init(); 
-                    IBPO9Buffer."Entry No.":= EntryNo;
-                    IBPO9Buffer."Export Date" := CurrentDateTime();
-                        IBPO9Buffer."Export Batch ID" := 'BOMMASTER';
+                        EntryNo := IBPO9Buffer.getNextEntry();
+                        IBPO9Buffer.Init();
+                        IBPO9Buffer."Entry No." := EntryNo;
+                        IBPO9Buffer."Export Date" := CurrentDateTime();
+                        IBPO9Buffer."Export Batch ID" := O9ProjectLib.GetCurrentXMLPortName(67015);
                         IBPO9Buffer.Insert();
                     end;
 
@@ -409,6 +409,8 @@ var
         }
     }
 
+     
+
     var
         companyInfo: Record "Company Information";
         ActiveVersionCode: Text;
@@ -418,4 +420,5 @@ var
         RtgHeader: Record "Routing Header";
         IBPO9Buffer: Record "UTT IBPO9 Buffer";
         EntryNo: Integer;
+        O9ProjectLib: Codeunit "UTT O9 Project Lib";
 }

@@ -1,19 +1,16 @@
 codeunit 67004 "UTT O9 Project Lib"
 {
     TableNo = "Job Queue Entry";
-    Permissions = TableData "UTT SalesBuffer" = rimd;
+    Permissions = TableData "UTT SalesBuffer" = rimd,
+                  TableData "UTT IBPO9 Buffer" = rimd;
+    
 
 
     trigger OnRun()
     begin
-        CompanyInfo.get();
-        case CompanyInfo."Country/Region Code" of
-            'DE':
-                LegalEntity := 'IVMK';
-            'MX':
-                LegalEntity := 'IVMP';
-        end;
-
+        GetLegalEntry();
+        CreateDailySnapshot();
+         
         //initZipFile();
         if StrPos(Rec."Parameter String", 'MATERIAL') > 0 then begin
 
@@ -188,6 +185,97 @@ codeunit 67004 "UTT O9 Project Lib"
             SaveOutStream(TempBlob, LegalEntity + '_' + OnHandInventoryLbl + '_' + Format(today, 0, '<year4><month,2><day,2>'));
         end;
 
+
+    end;
+
+    procedure CreateDailySnapshot()
+    var
+        SnapshotConfig: Record utto9SnapshotConfig;
+    begin
+        SnapshotConfig.SetRange(Active, true);
+        if SnapshotConfig.FindSet() then
+            repeat
+                RunSnapshot(SnapshotConfig);
+            until SnapshotConfig.Next() = 0;
+    end;
+
+    procedure RunSnapshot(SnapshotConfig: Record utto9SnapshotConfig)
+    var
+
+        AllObjWithCaption: Record AllObjWithCaption;
+        XmlPortId: Integer;
+        O9Buffer: record "UTT IBPO9 Buffer";
+    begin
+        GetLegalEntry();
+        SnapshotConfig.TestField(XMLPortName);
+
+        SetStartEndDate(SnapshotConfig.StartDate, SnapshotConfig.EndDate, SnapshotConfig.DateFormel);
+        clear(TempBlob);
+        TempBlob.CreateOutStream(OutS);
+
+        // Clear the buffer table before export
+        CleanBuffer(SnapshotConfig);
+
+        // Find the XMLPort object by name
+        AllObjWithCaption.SetRange("Object Type", AllObjWithCaption."Object Type"::XMLport);
+        AllObjWithCaption.SetRange("Object Name", SnapshotConfig.XMLPortName);
+        if AllObjWithCaption.FindFirst() then begin
+            XmlPortId := AllObjWithCaption."Object ID";
+
+
+            SetStartEndDate(SnapshotConfig.StartDate, SnapshotConfig.EndDate, SnapshotConfig.DateFormel);
+
+            case SnapshotConfig.XMLPortName of
+                'UTT O9SalesActual':
+                    begin
+                        // SetStartEndDate(SnapshotConfig.StartDate, SnapshotConfig.EndDate, SnapshotConfig.DateFormel);
+                        SalesExport(OutS);
+                        SaveOutStream(TempBlob, LegalEntity + '_' + SnapshotConfig.Description + '_' + Format(today, 0, '<year4><month,2><day,2>'));
+                    end;
+
+                'UTT O9SalesActual_SP':
+                    begin
+                        // SetStartEndDate(SnapshotConfig.StartDate, SnapshotConfig.EndDate, SnapshotConfig.DateFormel);
+                        SalesExport_SP(OutS);
+                        SaveOutStream(TempBlob, LegalEntity + '_' + SnapshotConfig.Description + '_' + Format(today, 0, '<year4><month,2><day,2>'));
+
+
+                    end;
+
+                'UTT O9InCoTerm':
+                    begin
+                        // SetStartEndDate(SnapshotConfig.StartDate, SnapshotConfig.EndDate, SnapshotConfig.DateFormel);
+                        IncotermExport(OutS);
+                        SaveOutStream(TempBlob, LegalEntity + '_' + SnapshotConfig.Description + '_' + Format(today, 0, '<year4><month,2><day,2>'));
+
+                    end;
+                'UTT O9 Purchase Export':
+                    begin
+                        // SetStartEndDate(SnapshotConfig.StartDate, SnapshotConfig.EndDate, SnapshotConfig.DateFormel);
+                        PurchaseExport(OutS);
+                        SaveOutStream(TempBlob, LegalEntity + '_' + SnapshotConfig.Description + '_' + Format(today, 0, '<year4><month,2><day,2>'));
+
+                    end;
+                'UTT O9 Purchase Export_SP':
+                    begin
+                        // SetStartEndDate(SnapshotConfig.StartDate, SnapshotConfig.EndDate, SnapshotConfig.DateFormel);
+                        PurchaseExport_SP(OutS);
+                        SaveOutStream(TempBlob, LegalEntity + '_' + SnapshotConfig.Description + '_' + Format(today, 0, '<year4><month,2><day,2>'));
+                    end;
+                'UTT O9 Pro':
+                    begin
+                        // SetStartEndDate(SnapshotConfig.StartDate, SnapshotConfig.EndDate, SnapshotConfig.DateFormel);
+                        Pro_Export(OutS);
+                        SaveOutStream(TempBlob, LegalEntity + '_' + SnapshotConfig.Description + '_' + Format(today, 0, '<year4><month,2><day,2>'));
+                    end;
+                else begin
+                    Xmlport.Export(XmlPortId, OutS);
+                    SaveOutStream(TempBlob, LegalEntity + '_' + SnapshotConfig.Description + '_' + Format(today, 0, '<year4><month,2><day,2>'));
+                end;
+
+
+            end;
+        end;
     end;
 
     procedure MaterialExport(var Outs: OutStream)
@@ -338,7 +426,7 @@ codeunit 67004 "UTT O9 Project Lib"
             evaluate(StartDateFormel, '<1y>'); //purchase for last one year 
             StartDate := CalcDate(StrSubstNo('-%1', StartDateFormel), RefStartDate);
             EndDate := CalcDate(StrSubstNo('+%1', StartDateFormel), RefStartDate);
-            
+
         end else begin
             StartDate := RefStartDate;
             EndDate := RefEndDate;
@@ -370,7 +458,7 @@ codeunit 67004 "UTT O9 Project Lib"
             evaluate(StartDateFormel, '<3y>'); //purchase for last one year 
             StartDate := CalcDate(StrSubstNo('-%1', StartDateFormel), RefStartDate);
             EndDate := CalcDate(StrSubstNo('+%1', StartDateFormel), RefStartDate);
-            
+
         end else begin
             StartDate := RefStartDate;
             EndDate := RefEndDate;
@@ -566,7 +654,7 @@ codeunit 67004 "UTT O9 Project Lib"
             evaluate(StartDateFormel, '<1y>'); //purchase for last one year 
             StartDate := CalcDate(StrSubstNo('-%1', StartDateFormel), RefStartDate);
             EndDate := CalcDate(StrSubstNo('+%1', StartDateFormel), RefStartDate);
-            
+
         end else begin
             StartDate := RefStartDate;
             EndDate := RefEndDate;
@@ -596,6 +684,17 @@ codeunit 67004 "UTT O9 Project Lib"
         Xmlport.Export(xmlport::"UTT O9InventoryCostPerUnit_SP", OutS);
     end;
 
+    internal procedure CleanupOldSnapshots()
+    var
+        O9Buffer: record "UTT IBPO9 Buffer";
+    begin
+        if Confirm(MsgCleanupOldSnapshots) then begin
+            O9Buffer.DeleteAll();
+            Message('Old snapshot data cleaned up successfully.');
+        end;
+
+    end;
+
 
     local procedure SaveOutStream(var TempBlob: Codeunit "Temp Blob"; FileName: Text)
     var
@@ -608,10 +707,10 @@ codeunit 67004 "UTT O9 Project Lib"
         Extension: Text;
     begin
         MfgSetup.Get();
-       // MfgSetup.TestField(O9ExportPath);
-        
-        //FileName := MfgSetup.O9ExportPath + FileName;
-        FileName := '\\ivmkfs10.utt.de\programs\NAVISION\o9IBP\IVMK\' + FileName;
+        MfgSetup.TestField("IBPO9ExportPath");
+
+        FileName := MfgSetup."IBPO9ExportPath" + FileName;
+        //FileName := '\\ivmkfs10.utt.de\programs\NAVISION\o9IBP\IVMK\' + FileName;
 
         DirName := FileMgt.GetDirectoryName(FileName);
         Extension := FileMgt.GetExtension(FileName);
@@ -713,6 +812,41 @@ codeunit 67004 "UTT O9 Project Lib"
         TempBlob.CreateInStream(InS);
     end;
 
+    local procedure GetLegalEntry(): text
+    begin
+        CompanyInfo.get();
+        case CompanyInfo."Country/Region Code" of
+            'DE':
+                LegalEntity := 'IVMK';
+            'MX':
+                LegalEntity := 'IVMP';
+        end;
+    end;
+
+    procedure GetCurrentXMLPortName(ObjectID: Integer): Text
+    var
+        AllObjWithCaption: Record AllObjWithCaption;
+    begin
+        AllObjWithCaption.SetRange("Object Type", AllObjWithCaption."Object Type"::XMLport);
+        AllObjWithCaption.SetRange("Object ID", ObjectID);
+        if AllObjWithCaption.FindFirst() then
+            exit(AllObjWithCaption."Object Name")
+
+    end;
+
+    procedure CleanBuffer(SnapshotConfig: Record utto9SnapshotConfig)
+    var
+        O9Buffer: record "UTT IBPO9 Buffer";
+    begin
+        if SnapshotConfig.KeepHistory then
+            exit;
+
+        o9buffer.reset();
+        o9buffer.setrange("Export Batch ID", SnapshotConfig.XMLPortName);
+        o9buffer.deleteall();
+
+    end;
+
 
 
     var
@@ -755,6 +889,7 @@ codeunit 67004 "UTT O9 Project Lib"
         PROLbl: Label 'Pro';
         ActualSales_SPLbl: Label 'OpenSalesOrder';
         InventoryCostPerUnit_SP_Lbl: label 'InventoryCostPerUnit';
+        MsgCleanupOldSnapshots: Label 'Are you sure you want to clean up old snapshots? This action cannot be undone.';
 
 
 }

@@ -223,7 +223,7 @@ var
                     IBPO9Buffer.Init(); 
                     IBPO9Buffer."Entry No.":= EntryNo;
                     IBPO9Buffer."Export Date" := CurrentDateTime();
-                    IBPO9Buffer."Export Batch ID" := 'PRO';
+                    IBPO9Buffer."Export Batch ID" := o9ProjectLib.GetCurrentXMLPortName(67026);
                     IBPO9Buffer.Insert();
                 end;
             }
@@ -308,7 +308,7 @@ var
                     begin
                         BOMVersion := ProdOrderLine."Production BOM Version Code";
                         if BomVersion = '' then
-                            BomVersion := '1';
+                            BomVersion := '99';
                         IBPO9Buffer."Field 8" := BOMVersion;
                         IBPO9Buffer.Modify();
                     end;
@@ -488,7 +488,7 @@ var
                     IBPO9Buffer."Entry No.":= EntryNo;
                     IBPO9Buffer."Export Date" := CurrentDateTime();
                     IBPO9Buffer."Export Date" := CurrentDateTime();
-                    IBPO9Buffer."Export Batch ID" := 'PRO';
+                    IBPO9Buffer."Export Batch ID" := o9ProjectLib.GetCurrentXMLPortName(67026);
                     IBPO9Buffer.Insert();
                 end;
             }
@@ -515,4 +515,5 @@ var
         StartDate: date;
         EndDate: Date;
         IBPO9Buffer: Record "UTT IBPO9 Buffer";
+        o9ProjectLib: Codeunit "UTT O9 Project Lib";
 }

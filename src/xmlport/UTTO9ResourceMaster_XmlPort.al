@@ -70,7 +70,7 @@ xmlport 67014 "UTT O9ResourceMaster"
                     IBPO9Buffer.Init(); 
                     IBPO9Buffer."Entry No.":= EntryNo;
                     IBPO9Buffer."Export Date" := CurrentDateTime();
-                    IBPO9Buffer."Export Batch ID" := 'RESOURCEMASTER';
+                    IBPO9Buffer."Export Batch ID" := o9ProjectLib.GetCurrentXMLPortName(67014);
                     IBPO9Buffer.Insert();
                 end;
             }
@@ -151,7 +151,7 @@ xmlport 67014 "UTT O9ResourceMaster"
                     IBPO9Buffer.Init(); 
                     IBPO9Buffer."Entry No.":= EntryNo;
                     IBPO9Buffer."Export Date" := CurrentDateTime();
-                    IBPO9Buffer."Export Batch ID" := 'RESOURCEMASTER';
+                    IBPO9Buffer."Export Batch ID" := o9ProjectLib.GetCurrentXMLPortName(67014);
                     IBPO9Buffer.Insert();
                 end;
             }
@@ -161,4 +161,5 @@ xmlport 67014 "UTT O9ResourceMaster"
     var
         companyInfo: Record "Company Information";
         IBPO9Buffer: Record "UTT IBPO9 Buffer";
+        o9ProjectLib: Codeunit "UTT O9 Project Lib";
 }
