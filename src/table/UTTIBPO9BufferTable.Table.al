@@ -7,6 +7,7 @@ table 67026 "UTT IBPO9 Buffer"
         field(1; "Entry No."; Integer)
         {
             DataClassification = ToBeClassified;
+            AutoIncrement = true;
         }
         field(2; "Field 1"; Text[100])
         {
@@ -163,7 +164,7 @@ table 67026 "UTT IBPO9 Buffer"
             DataClassification = CustomerContent;
         }
     }
-     keys
+    keys
     {
         key(PK; "Entry No.")
         {
@@ -171,12 +172,22 @@ table 67026 "UTT IBPO9 Buffer"
         }
 
     }
-   
 
-    internal procedure getNextEntry():Integer
+    trigger OnInsert()
+    var
+        ExportBatchFilter: Text;
+    begin
+        if "Export Batch ID" = '' then begin
+            ExportBatchFilter := GetFilter("Export Batch ID");
+            if (ExportBatchFilter <> '') and (ExportBatchFilter <> '*') then
+                "Export Batch ID" := CopyStr(ExportBatchFilter, 1, MaxStrLen("Export Batch ID"));
+        end;
+    end;
+
+    internal procedure getNextEntry(): Integer
     begin
         if FindLast() then
             exit("Entry No." + 1);
-        exit(1);    
+        exit(1);
     end;
 }

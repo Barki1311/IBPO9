@@ -11,7 +11,7 @@ page 67041 "UTT IBPO9 Buffer List"
         {
             repeater(GroupName)
             {
-               
+
                 field("Field 1"; Rec."Field 1")
                 {
                     ApplicationArea = All;
@@ -147,7 +147,7 @@ page 67041 "UTT IBPO9 Buffer List"
                     ApplicationArea = All;
                     ToolTip = 'Specifies the value of the Field 27 field.', Comment = '%';
                 }
-              
+
                 field("Field 28"; Rec."Field 28")
                 {
                     ApplicationArea = All;
@@ -168,7 +168,7 @@ page 67041 "UTT IBPO9 Buffer List"
                     ApplicationArea = All;
                     ToolTip = 'Specifies the value of the Export Date field.', Comment = '%';
                 }
-               
+
 
             }
         }
